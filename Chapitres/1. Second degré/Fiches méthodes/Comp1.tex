@@ -1,0 +1,155 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{sp_decla2.tex}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\tiny Lycée T. Edison - Lorgues}
+\fancyhead[C]{\textsc{Fiche méthode \no 1}}
+\fancyhead[R]{\tiny Mathématiques - 1S}
+%\fancyfoot[R]{\footnotesize{Page \thepage~sur~\pageref{LastPage}}}
+\fancyfoot[C]{\footnotesize{Page \thepage~}}
+
+
+
+\begin{document}
+%\chapter{Second degré}
+\cadretitremethode{Déterminer et utiliser la forme canonique d'une fonction polynôme de degré 2}
+
+\setcounter{page}{1}
+\leavevmode\exerciceR 
+
+Soit $f$ la fonction polynôme du second degré définie sur $\R$ par $f(x)=-2x^2+3x-5$.
+\begin{enumerate}
+\item Déterminer la forme canonique de $f$.
+\item En déduire le maximum de la fonction $f$ sur $\R$.
+\end{enumerate}
+
+\leavevmode\corrmethode
+
+\begin{enumerate}
+\item $f(x)=-2x^2+3x-5$ est une forme développée du type $ax^2+bx+c$ avec $a=-2$ ; $b=3$ et $c=-5$.
+
+On sait, d'après le cours, que toute fonction polynôme du second degré admet une forme canonique s'exprimant sous la forme \boldmath $f(x)=a(x-\alpha)^2+\beta$  \unboldmath avec $\alpha=-\dfrac{b}{2a}$ et $\beta=f(\alpha)$.
+
+\begin{minipage}{0.6\textwidth}
+Ainsi, ici on a $\alpha=-\dfrac{b}{2a}=-\dfrac{3}{2\times (-2)}=\dfrac{3}{4}$ et
+
+$\beta=f(\alpha)=f\left(\dfrac{3}{4}\right)=-2\times\left(\dfrac{3}{4}\right)^2+3\times\dfrac{3}{4}-5 =-\dfrac{9}{8}+\dfrac{9}{4}-5=-\dfrac{31}{8}$.
+
+Donc la forme canonique de $f$ est : \fbox{$f(x)=-2\left(x-\dfrac{3}{4}\right)^2-\dfrac{31}{8}$}
+\end{minipage}
+\hfill\idee{Conseil}{Pensez à contrôler le résultat graphiquement à l'aide de la calculatrice.\\
+\Ecran[width=4.5, height=3, graphic=true,origin={(1,3)},xgrad=1.5,nbgrady=20]{%
+-2*\x*\x+3*\x-5/-4:4,}%
+}{0.3}
+
+\item $a=-2<0$ donc $f$ admet un \underline{maximum} sur $\R$.
+
+Ce maximum est atteint pour $x=-\dfrac{b}{2a}=\dfrac{3}{4}$ et vaut \fbox{$\beta=-\dfrac{31}{8}$}
+\end{enumerate}
+
+\rule{\textwidth}{0.7pt}
+
+\medskip
+\leavevmode\exerciceR 
+
+Voici le tableau de variation d'une fonction polynôme $f$ de degré 2.
+
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[lgt=2,espcl=2]{$x$/1,Variations de $f$/2}{$-\infty$, $\dfrac{5}{6}$, $+\infty$}
+\tkzTabVar{-/ $$,+/ $\dfrac{13}{12}$ / $$ / $$ ,-/ $$ / } 
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+De plus, on sait que $f(0)=1$.
+
+Déterminer la forme canonique de $f$.
+\end{minipage}
+
+\medskip
+
+\leavevmode\corrmethode
+
+Le tableau de variations nous indique que la fonction $f$ est croissante sur $\left]-\infty;\dfrac{5}{6}\right]$ et décroissante sur $\left[\dfrac{5}{6};+\infty\right[$.
+
+$f$ admet donc un maximum en $x=\dfrac{5}{6}$ et ce maximum vaut $\dfrac{13}{12}$.
+
+Dans la forme canonique $f(x)=a(x-\alpha)^2+\beta$, on a donc $\alpha=\dfrac{5}{6}$ et $\beta=\dfrac{13}{12}$.
+
+Donc la forme canonique de $f$ est $f(x)=a\left(x-\dfrac{5}{6}\right)^2+\dfrac{13}{12}$.
+
+Il reste à déterminer la valeur du réel $a$.
+
+Or, d'après l'énoncé, on sait que $f(0)=-1$.
+
+Donc $f(0)=a\left(0-\dfrac{5}{6}\right)^2+\dfrac{13}{12}=a\times \dfrac{25}{36}+\dfrac{13}{12}=-1$.
+
+\newpage
+On résout l'équation en isolant $a$ :
+
+\hspace*{1cm}
+$
+\begin{aligned}
+\addLnode{A}&&a\times \dfrac{25}{36}+\dfrac{13}{12}&=-1  &\addRnode{A}\\
+\addLnode{B}&&a\times \dfrac{25}{36}&=-1 -\dfrac{13}{12}    &\addRnode{B}\linkboth{A}{B}{-\dfrac{13}{12}}\\
+&&a\times \dfrac{25}{36}&=-\dfrac{12}{12} -\dfrac{13}{12}    &\\
+\addLnode{C}&&a\times \dfrac{25}{36}&=-\dfrac{25}{12}   &\addRnode{C}\\
+\addLnode{D}&&a&=-\dfrac{25}{12} \div \dfrac{25}{36} &\addRnode{D}\linkboth{C}{D}{\div \dfrac{25}{36}}\\
+&&a&=-\dfrac{25}{12} \times \dfrac{36}{25} &\addRnode{E}\linkRnode{D}{E}{\text{diviser c'est multiplier par l'inverse}}\\
+&&a       &=-3&
+\end{aligned}$
+
+Finalement, la forme canonique de $f$ est \fbox{$f(x)=-3\left(x-\dfrac{5}{6}\right)^2+\dfrac{13}{12}$}
+
+\rule{\textwidth}{0.7pt}
+
+\medskip
+\leavevmode\exerciceR 
+
+On donne, ci-dessous, la représentation graphique $\mathcal{C}_f$ d'une fonction polynôme $f$ de degré 2.
+\begin{center}
+\def\xmin{-1.1} \def\xmax{9.1} \def\ymin{-1} \def\ymax{6.1}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%%%%%%%%%%%%%%%%%%%%%
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-2,-2)(18,18)
+\psset{xunit=1.5cm,yunit=1cm,,dotstyle=*}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(6,\ymax)
+\uput[dl](0,0){$\text{O}$}
+\uput[ul](6,0){$x$}
+\uput[dr](0,\ymax){$f(x)$}
+\psdot(4,5)
+\psdot(3,3)
+\uput[u](4,5){\large $B$}
+\uput[l](3,3){\large $A$}
+\uput[r](5,4){\large $\mathcal{C}_f$}
+
+\psplot[plotpoints=200,algebraic=true]{0}{\xmax}{-2*(x-4)^2+5}
+
+\end{pspicture*}
+\end{center}
+
+
+Les points $A(3;3)$ et $B(4;5)$ appartiennent à la courbe $\mathcal{C}_f$.
+
+En déduire une conjecture sur l'expression de $f(x)$ sous sa forme canonique.
+
+\medskip
+
+\leavevmode\corrmethode
+
+Le point $B(4;5)$ semble être le sommet de la parabole $\mathcal{C}_f$.
+
+Ainsi, dans la forme canonique de $f$ , $f(x)=a(x-\alpha)^2+\beta$, on a donc $\alpha=4$ et $\beta=5$, ce qui donne une $f(x)=a\left(x-4\right)^2+5$.
+
+De plus, le point $A(3;3) \in \mathcal{C}_f$. Ses coordonnées vérifient donc l'équation $f(3)=3$.
+
+$f(3)=a\left(3-4\right)^2+5 = a\left(-1\right)^2+5 =a+5$. Donc, $a$ vérifie l'équation $a+5=3$ soit $a=-2$.
+
+Finalement, la forme canonique de $f$ peut être \fbox{$f(x)=-2\left(x-4\right)^2+5$}
+
+\attention{Il s'agit ici d'une conjecture car le raisonnement est basé sur une représentation graphique. Ici, il n'est pas dit que le point $B$ soit le maximum de la fonction, même si cela semble fortement être le cas. Dans ce type de situation, on conclura donc toujours avec prudence et on se contentera alors d'employer des mots comme \og il semble que \fg{}, \og probablement \fg{}, \og peut-être \fg{} ...  }{01}
+
+\end{document}
