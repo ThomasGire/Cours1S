@@ -1,0 +1,523 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %encodage universel
+\usepackage[francais]{babel} %package pour la typographie française
+\frenchbsetup{StandardLists=true} % à inclure si on utilise \usepackage[french]{babel}
+\usepackage{amsfonts,amsmath,amssymb,amsthm} %package maths
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{pgf,tikz} %package pour les graphiques
+\usetikzlibrary{arrows} %pour les fleches
+\usepackage{framed} % pour les encadrés
+\usepackage{enumitem} % pour les listes
+\usepackage{boiboites} % pour les encadrés stylisés
+\usepackage[calcwidth]{titlesec} % pour personnaliser les titres
+\usepackage{tkz-tab}
+%\usepackage{pifont} % pour utiliser les caractères "spéciaux" avec \ding{}
+\usepackage{fancyhdr} % en tête et pied de page
+\usepackage{mathrsfs} % pour les lettres script (courbe représentative) ex : \mathscr{C}
+\usepackage{lastpage} % pour la numérotation des pages
+\usepackage[babel=true]{csquotes} % pour les guillemets français
+\usepackage{graphicx} %pour les graphiques
+\usepackage{pstricks,pst-plot,pst-all,pstricks-add,pst-tree,pst-3dplot,pst-func,pst-node} %pour les encadrés arrondis et dessins
+\usepackage{eso-pic}
+\usepackage[mathcal,mathbf]{euler}
+\usepackage{calrsfs} % pour de belles cursives
+\usepackage[np]{numprint} % groupement par 3 des chiffres avec la commande \np{..}
+\usepackage{siunitx} % pour composer aisément les unités scientifiques
+\usetikzlibrary{arrows}
+\usepackage{array,color,multirow,multicol,tabularx}
+\usepackage[tikz]{bclogo}
+\usepackage{xkeyval}
+\usepackage{etoolbox}
+\usepackage{mdframed}
+\usepackage{ifpdf}
+\usepackage{frcursive}
+\usetikzlibrary{shapes.geometric}
+\usepackage{eurosym} %pour le symbole euro : \euro{}
+\usetikzlibrary{calc}
+\usepackage{colortbl}
+\usepackage[overload]{empheq} % Pour alignement des equations à gauche \begin{flalign*}  .. \end{flalign*}
+\usepackage{pifont} % pour utiliser \ding{numéro}  zapf dingbats
+\usepackage{listings} % environnement Python
+\usepackage[boxed,french,algo2e]{algorithm2e} %pseudo-code
+\usepackage{tipfr}%%% pour affichage calculatrice
+
+\setlength{\textwidth}{530pt} % Largeur de la zone de texte (17cm)
+\setlength{\topmargin}{-10pt} % Pas de marge en haut
+\setlength{\headwidth}{530pt} % Largeur Haut de page
+\setlength{\columnsep}{15pt} % Espace de séparation verticale des colonnes (30pt)
+\setlength{\hoffset}{-30pt}         
+\setlength{\oddsidemargin}{-10pt} % Marge gauche sur pages impaires
+\setlength{\evensidemargin}{-10pt} % Marge gauche sur pages paires
+%\setlength{\marginparwidth}{50pt} % Largeur de note dans la marge
+\setlength{\voffset}{-18pt}
+\setlength{\marginparsep}{5pt} % Séparation de la marge
+\setlength{\headheight}{0pt} % Hauteur Haut de page
+\setlength{\footskip}{10pt} % Bas de page + séparation
+\setlength{\textheight}{730pt} % Hauteur de la zone de texte (25cm)
+\setlength{\headsep}{15pt} % Entre le haut de page et le texte
+
+
+
+\DecimalMathComma
+% Pour que toutes les lettres majuscules en maths ne soient pas en italique
+\DeclareMathSymbol{A}{\mathalpha}{operators}{`A}
+\DeclareMathSymbol{B}{\mathalpha}{operators}{`B}
+\DeclareMathSymbol{C}{\mathalpha}{operators}{`C}
+\DeclareMathSymbol{D}{\mathalpha}{operators}{`D}
+\DeclareMathSymbol{E}{\mathalpha}{operators}{`E}
+\DeclareMathSymbol{F}{\mathalpha}{operators}{`F}
+\DeclareMathSymbol{G}{\mathalpha}{operators}{`G}
+\DeclareMathSymbol{H}{\mathalpha}{operators}{`H}
+\DeclareMathSymbol{I}{\mathalpha}{operators}{`I}
+\DeclareMathSymbol{J}{\mathalpha}{operators}{`J}
+\DeclareMathSymbol{K}{\mathalpha}{operators}{`K}
+\DeclareMathSymbol{L}{\mathalpha}{operators}{`L}
+\DeclareMathSymbol{M}{\mathalpha}{operators}{`M}
+\DeclareMathSymbol{N}{\mathalpha}{operators}{`N}
+\DeclareMathSymbol{O}{\mathalpha}{operators}{`O}
+\DeclareMathSymbol{P}{\mathalpha}{operators}{`P}
+\DeclareMathSymbol{Q}{\mathalpha}{operators}{`Q}
+\DeclareMathSymbol{R}{\mathalpha}{operators}{`R}
+\DeclareMathSymbol{S}{\mathalpha}{operators}{`S}
+\DeclareMathSymbol{T}{\mathalpha}{operators}{`T}
+\DeclareMathSymbol{U}{\mathalpha}{operators}{`U}
+\DeclareMathSymbol{V}{\mathalpha}{operators}{`V}
+\DeclareMathSymbol{W}{\mathalpha}{operators}{`W}
+\DeclareMathSymbol{X}{\mathalpha}{operators}{`X}
+\DeclareMathSymbol{Y}{\mathalpha}{operators}{`Y}
+\DeclareMathSymbol{Z}{\mathalpha}{operators}{`Z}
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\tiny Lycée T. Edison - Lorgues}
+\fancyhead[R]{}
+%\fancyfoot[R]{\footnotesize{Page \thepage~sur~\pageref{LastPage}}}
+\fancyfoot[C]{\footnotesize{Page \thepage~}}
+
+\frenchbsetup{StandardLists=true}
+\titlespacing{\subsection}{0pt}{5pt}{5pt}
+
+\renewcommand{\footrulewidth}{0.7pt}
+
+\newtheoremstyle{break}
+  {0pt}{0pt}%
+  {\normalfont}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+ \newtheorem{theoreme}{Theorème}
+%\newtheorem*{Demo}{Démonstration}
+\newtheorem{definition}{Définition}
+\newtheorem{propriete}{Propriété} 
+  
+\theoremstyle{break}
+
+
+\newboxedtheorembis[boxcolor=black, background=blue!5, titlebackground=green!20,
+titleboxcolor = black]{cadre}{#1}
+
+\newrgbcolor{Rfond}{.995 0.945 .985}  
+\newcommand{\cadreR}[1]{%
+\psframebox[framesep=.8em,linecolor=black,linewidth=0.25pt,framearc=0.2,fillstyle=solid,fillcolor=Rfond]{\begin{minipage}{1\linewidth}%
+#1\end{minipage}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+
+% PACKAGES NECESSAIRES POUR ALGO
+
+\SetKwInput{KwIn}{Entrée}
+\SetKwInput{KwData}{Variables}
+\SetKwInput{KwResult}{Traitement}
+\SetKwInput{KwOut}{Sortie}
+\SetKwIF{If}{ElseIf}{Else}{Si}{alors}{Sinon Si}{Sinon}{FinSi}
+\SetKwFor{For}{Pour}{Faire}{Fin Pour}
+\SetKwFor{While}{Tant que}{Faire}{Fin Tant Que}
+\SetKwRepeat{Repeat}{Répéter}{Jusqu'à ce que}
+
+
+
+%======Redefinition du signe vectoriel
+\renewcommand{\Vec}[1]{\overrightarrow{#1\vphantom(}}
+%======presentation des couples de nombres -- coordonnée
+\newcommand{\coord}[2]{\setbox0\hbox{$#1$}%
+\setbox1\hbox{$#2$}%
+\ifnum\ht0<\ht1\dimen0=\ht1\else\dimen0=\ht0\fi%
+\ifnum\dp0<\dp1\dimen1=\dp1\else\dimen1=\dp0\fi%
+\advance\dimen0 2pt%
+\advance\dimen1 1pt%
+\left(\vrule width0pt height\dimen0 depth\dimen1 #1\,{\string;}\,#2\right)}
+\newcommand{\Coord}[3]{\setbox0\hbox{$#1$}%
+\setbox1\hbox{$#2$}%
+\setbox2\hbox{$#3$}%
+\ifnum\ht0<\ht1\dimen0=\ht1\else\dimen0=\ht0\fi%
+\ifnum\dimen0<\ht2\dimen0\ht2\fi%
+\ifnum\dp0<\dp1\dimen1=\dp1\else\dimen1=\dp0\fi%
+\ifnum\dimen1<\dp2\dimen1=\dp2\fi%
+\advance\dimen0 2pt%
+\advance\dimen1 1pt%
+\left(\vrule width0pt height\dimen0 depth\dimen1 #1\,{\string;}\,#2\,{\string;}\,#3\right)}
+\newcommand{\COORD}[3]{\left(\vcenter{\hbox{#1}\hbox{#2}\hbox{#3}}\right)}
+\newcommand{\coordcol}[2]{\left(\vcenter{\hbox{#1}\hbox{#2}}\right)}
+
+%%=========== ?
+\newcommand{\FracR}[2]{{{\strut\textstyle\ #1\ } \special{pdf: bcolor [1 0 0]}\over{\strut\textstyle\ #2\ }\special{pdf:ec} }}
+
+
+
+\usefont{U}{cmss}{bx}{n}
+
+%Insertion renvoi au livre de l'élève
+\newcommand{\livre}[1]{\begin{minipage}{0.1\textwidth}
+\includegraphics[scale=0.2]{livre}\end{minipage}%
+\begin{minipage}{0.9\textwidth} \textit{#1} \end{minipage}\smallbreak}
+
+%Insertion renvoi fiche méthode
+\newcommand{\fichemetho}[1]{\includegraphics[scale=0.4]{fichemetho} \textsc{\textbf{Fiche méthode \no #1}} \smallbreak}
+
+\titlelabel{\thetitle.\quad}
+
+
+%% ajout de texte ou d'images en haut à gauche, en haut à droite, etc.
+%\AddToShipoutPicture{%
+%%\AtLowerRightCorner{2cm}{5cm}{\ifodd\c@page\rotatebox{90}{PRELIMINARY VERSION \raisebox{0.1ex}{--} DO NOT CITE WITHOUT PERMISSION}\fi}
+%\AtUpperRightCorner{1cm}{3cm}{\color{cyan}{\rule{1cm}{3cm}}}
+%\AtUpperRightCorner{0.55cm}{2.8cm}{\rotatebox{90}{\scriptsize{\color{white}{FONCTIONS}}}}}
+%\makeatother
+
+
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\setlength{\parindent}{0pt}
+\def\tikztitlebox#1#2{
+      \tikzstyle{titlebox} = [rectangle,,rounded corners=6pt, inner sep=10pt, inner ysep=5pt]
+      \tikzstyle{title}=[text=red,above,rotate=90]
+      \bigskip\noindent\begin{tikzpicture}
+      \node[titlebox] (box){#1};
+      \useasboundingbox (box);
+      \draw[color=red,very thick] (box.north west)--(box.south west);
+      \node[title] at (box.west) {#2};
+      \end{tikzpicture}
+}
+
+\def\newtikztheorem#1#2#3{
+\expandafter\newsavebox\csname temp#1box \endcsname
+\newcounter{#1}
+\setcounter{#1}{0}
+\newenvironment{#1}
+     {\begin{lrbox}{\csname temp#1box \endcsname}\begin{minipage}{#3\textwidth}}
+     {\end{minipage}\end{lrbox}%
+      \tikztitlebox{\usebox{\csname temp#1box \endcsname}}%
+                   {\refstepcounter{#1}\textbf{#2~\expandafter\csname \endcsname}}
+     }
+}
+\newtikztheorem{Remarque}{REMARQUE}{1} % Remarque avec indication verticale dans la marge en rouge
+\renewcommand{\thetheoreme}{\arabic{REMARQUE}}
+
+%Encadrés bclogo
+
+
+\newcommand{\attention}[2]{\begin{minipage}{#2\textwidth}%
+\begin{bclogo}[couleur=Red!15,noborder=true,logo=\bctakecare,epBord=1,marge=3,barre=snake]{\textbf{ ATTENTION !}}{#1}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\crayon}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[noborder=true,logo=\bccrayon,epBord=1,marge=3,barre=none]{\textbf{ #1}}{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\methode}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[couleur=LimeGreen!15,noborder=true,logo=\bcoutil,epBord=1,marge=3,barre=none]{\textbf{ #1}}{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\idee}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[couleur=Peach!15,noborder=false,logo=\bclampe,epBord=1,marge=3,barre=none]{\textbf{ #1}}{#2}\end{bclogo}%
+\end{minipage}}
+
+
+\newcommand{\question}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[noborder=true,logo=\bcquestion,epBord=1,marge=3,barre=zigzag]{\textbf{ #1}}{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\info}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[cadreTitre = false,noborder=false,logo=\bcinfo,epBord=1,marge=3,barre=none]{\textbf{ #1}}{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\theoremebc}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[couleur=blue!5,arrondi=0.1,noborder=false,ombre=true,couleurOmbre=black!30,logo=\bcplume,epBord=1,marge=3,barre=none,sousTitre=#1]{Théorème }{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\propbc}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[couleur=blue!5,arrondi=0.1,noborder=false,ombre=true,couleurOmbre=black!30,logo=\bcetoile,epBord=1,marge=3,barre=none,sousTitre=#1]{Propriété }{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\defbc}[3]{\begin{minipage}{#3\textwidth}%
+\begin{bclogo}[couleur=orange!5,arrondi=0.1,noborder=false,ombre=false,couleurOmbre=black!30,logo=\bcplume,marge=3,barre=none,sousTitre=#1]{Définition }{#2}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\exemple}[2]{\begin{minipage}{#2\textwidth}%
+\begin{bclogo}[noborder=true,logo=$\bullet$]{Exemple : }{#1}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\demonstration}[2]{\begin{minipage}{#2\textwidth}%
+\begin{bclogo}[noborder=true,logo=\ding{229},barre=snake]{Démonstration}{\color{Blue}\textit{#1}}\end{bclogo}%
+\end{minipage}}
+
+\newcommand{\demo}{\ding{229} \textit{Démonstration faite en classe.}}
+
+\newenvironment{titledbox}[2]{\begin{minipage}{#1}%
+\hrulefill~\raisebox{-0.4ex}{#2}~\hrulefill\par\smallskip}%
+{\par\hrulefill\end{minipage}}
+
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+%%% Mise en forme des titres et sous-titres %%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{darkblue}{rgb}{0.12,0.47,0.87}
+\definecolor{bleuf}{rgb}{.15,0,.44}
+\definecolor{fondtitre}{rgb}{1,0.415,0.415}
+
+\newcommand{\bleuf}[1]{{\color{bleuf}#1}}
+\newcommand{\centre}[1]{\leavevmode\hbox to\linewidth{\null\hfill #1\hfill\null}}
+
+\renewcommand\thesubsubsection{\thesection.\alph{subsubsection}}
+\newcommand{\titrestyle}[2][50]{{\centre{\fontsize{#1}{50pt}\bleuf{#2}}}}
+\newcommand{\soussoustitrestyle}[2][2]{{\fontsize{#1}{0pt}\rmfamily\selectfont\bfseries\bleuf{\thesubsubsection \underline{#2}}}}
+\newcommand{\soustitrestyle}[2][2]{{\fontsize{#1}{0pt}\rmfamily\selectfont\scshape\bfseries\cadret{\thesubsection. \underline{#2}}}}
+\newcommand{\cadret}[1]{\psframebox*[linewidth=2pt,linecolor=black, fillcolor=darkblue,boxsep=false,linecolor=darkgray,framearc=0.3] {\white #1}}
+
+%%%% titre encadré chapitre %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cadretitre}[1]{%
+\fcolorbox{white}{white}{%
+\begin{minipage}{1.0\textwidth}%
+\vspace*{2ex}\centering \begin{minipage}{0.95\textwidth}%
+\color{black} \rule{\textwidth}{0.7pt}%
+
+\vspace{2ex}%
+\centering\bfseries\fontsize{60}{10}\selectfont #1 %
+
+\vspace{0.5ex}%
+\rule{\textwidth}{0.7pt}%
+
+\vspace*{0.5ex}%
+\end{minipage}
+\end{minipage}}}
+
+
+%%%% titre encadré fiche methode %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cadretitremethode}[1]{%
+\fcolorbox{black}{white}{%
+\begin{minipage}{1.0\textwidth}%
+\centering \begin{minipage}{0.95\textwidth}%
+\color{black}%
+\centering\bfseries\fontsize{20}{24}\selectfont \textsc{#1} %
+\end{minipage}
+\end{minipage}}}
+
+
+
+
+
+%\titleformat{\section}[frame]%
+%{\titleline[r]{}\Large}%
+%{\filright%
+%\normalfont{}}%
+%{10pt}{\titrestyle[40pt]}{}
+
+
+\titlespacing{\subsection}{0pt}{0pt}{1pt}
+\titlespacing{\subsubsection}{0pt}{1pt}{1pt}
+
+\titleformat{\subsection}[display]{}{}{0pt}{\soustitrestyle[14pt]}{}
+\titleformat{\subsubsection}[display]{}{}{0pt}{\soussoustitrestyle[12pt]}{}
+
+\newcommand{\reponse}[1]{\vspace*{#1 cm}}
+
+%%% Arbre pondéré Bernoulli
+%----------------------------------début de la fonction Bernoutree
+\makeatletter 
+ 
+\newcount\@Bernoudepth 
+\newcount\@Bernoumaxdepth 
+ 
+\newcommand\Bernoutree[8][treemode=R,nodesep=1ex,levelsep=12ex]{% 
+  % #2 = profondeur de l'arbre 
+  % #3 = nom de l'évènement réussite 
+  % #4 = nom de l'évènement échec 
+  % #5 = proba de l'événement réussite 
+  % #6 = placement de #5 
+  % #7 = proba de l'évènement échec 
+  % #8 = placement de #7 
+  \begingroup 
+  % initialise paramètres 
+  \psset{treemode=R,nodesep=1ex,levelsep=12ex}% 
+  \psset{#1}% 
+  \@Bernoumaxdepth #2\relax 
+  \def\@Reussite{#3}% 
+  \def\@Echec{#4}% 
+  \def\@probareussite{#5}% 
+  \def\@Argreussite{#6}% 
+  % Si pas de spécification de placement, 
+  % on place au centre 
+  \ifx\empty\@Argreussite 
+    \def\@Argreussite{0.5}% 
+  \fi 
+  \def\@probaechec{#7}% 
+  \def\@Argechec{#8} 
+  \ifx\empty\@Argechec 
+    \def\@Argechec{0.5}% 
+  \fi 
+  % Premier appel (racine vide, niveau 1) 
+  \pstree{\TR{}}{\@Bernoutree{1}} 
+  \endgroup 
+} 
+\newcommand\@Bernoutree[1]{% 
+  % #1 = profondeur récursive 
+  % initialise profondeur en cours 
+  \@Bernoudepth #1\relax 
+  \ifnum\@Bernoudepth=\@Bernoumaxdepth 
+    % si la profondeur max est atteinte 
+    % on place les deux noeuds terminaux 
+    \TR{\@Reussite}\taput[tpos=\@Argreussite]{\@probareussite} 
+    \TR{\@Echec}\tbput[tpos=\@Argechec]{\@probaechec} 
+    % et c'est tout 
+  \else 
+    % sinon on construit récursivement 
+    % les deux sous-arbres de niveau supérieur 
+    \advance\@Bernoudepth \@ne 
+    \pstree{\TR{\@Reussite}\taput[tpos=\@Argreussite] 
+           {\@probareussite}}{\@Bernoutree{\the\@Bernoudepth}} 
+    \pstree{\TR{\@Echec}\tbput[tpos=\@Argechec] 
+           {\@probaechec}}{\@Bernoutree{\the\@Bernoudepth}} 
+  \fi 
+} 
+\makeatother 
+%----------------------------------fin de la fonction Bernoutree
+
+%----------------------------------macro pour commenter étapes de calcul dans environnement équations
+\makeatletter
+\newcommand\add@node[2]{%
+   \rput(0,0.75ex){\Rnode{#2u@#1}{\vphantom(}}
+   \rput(0,0.35ex){\Rnode{#2d@#1}{\vphantom(}}}
+\newcommand\addLnode[1]{\add@node{#1}l}
+\newcommand\addRnode[1]{\add@node{#1}r}
+\newcommand\linkboth[3]{\linkRnode{#1}{#2}{#3}\linkLnode{#1}{#2}{\scriptsize{#3}}}
+\newcommand\linkRnode[3]{\ncdiag[angleA=0,angleB=0,arm=.5,linearc=.2]{->}{rd@#1}{ru@#2}\naput{#3}}
+\newcommand\linkLnode[3]{\ncdiag[angleA=190,angleB=170,arm=.3,linearc=.2]{->}{ld@#1}{lu@#2}\nbput{#3}}
+\makeatother
+%----------------------------------fin macro pour commenter étapes de calcul dans environnement équations
+
+
+%#####
+
+
+\setlength\leftmargini{2em}
+\setlength\leftmarginii{1em}
+\setlength\leftmarginiii{0.8em}
+
+\def\espL@bel{0.75em}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\newcommand{\labeli}[1]{\colorbox[rgb]{0.8706,0.7216,0.5294}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumi}{\labeli{\theenumi}}
+
+\renewcommand{\theenumii}{\alph{enumii}}
+\newcommand{\labelii}[1]{\colorbox[rgb]{0.82627,0.8627,0.8627}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumii}{\labelii{\theenumii}}
+
+\renewcommand{\theenumiii}{\roman{enumiii}}
+\newcommand{\labeliii}[1]{\colorbox[rgb]{0.6,0.9,0.65}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumiii}{\labeliii{\theenumiii}}
+
+\def\changelabel{\def\theenumi{\alph{enumi}}}
+
+
+
+\newcommand{\questioni}[2][t]{\leavevmode\vtop{\lineskiplimit6pt\lineskip6pt
+\halign{\hglue\leftmargini\labeli{##} &$##$\hfil&&\if t#1\hglue1cm\else\hglue#1\fi\labeli{##} &$##$\hfil\cr
+#2}}}
+
+\newcommand{\questionii}[2][t]{\leavevmode\vtop{\lineskiplimit6pt\lineskip6pt
+\halign{\hglue\leftmarginii\labelii{##} &$##$\hfil&&\if t#1\hglue1cm\else\hglue#1\fi\labelii{##} &$##$\hfil\cr
+#2}}} 
+
+%=====================Boite en couleur avec bordure
+\newcommand{\boiteCouleur}[3]{\setbox0\hbox{#3}%
+\rlap{{\dimen1\wd0\advance\dimen1 9pt%
+\dimen2\ht0\advance\dimen2 4pt%
+\dimen3\dp0\advance\dimen3 3pt%
+\color[rgb]{#1}\vrule width\dimen1 height\dimen2 depth\dimen3}}%
+\hglue1pt
+\rlap{{\dimen1\wd0\advance\dimen1 7pt%
+\dimen2\ht0\advance\dimen2 3pt%
+\dimen3\dp0\advance\dimen3 2pt%
+\color[rgb]{#2}\vrule width\dimen1 height\dimen2 depth\dimen3}}%
+\hglue3pt{\copy0}%
+\dimen1\ht0\advance\dimen1 5pt%
+\dimen2\dp0\advance\dimen2 6pt\vrule width0pt height \dimen1 depth \dimen2%
+\hglue5pt}
+%==================Affichage numero des exercices
+\newcount\numExo
+\numExo1
+\newcount\numCorrec
+\numCorrec1
+\newcommand{\activite}[1][]{\afficheExo{#1}{1,0.8784,0.6902}{Activité}}
+\newcommand{\exercice}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice}}
+\newcommand{\exerciceO}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice obligatoire}}
+\newcommand{\exerciceF}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice facultatif}}
+\newcommand{\correction}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Corrigé}}
+\newcommand{\Exercice}[1][]{\afficheExo{#1}{0.933,0.467,0.467}{Exercice}}
+\newcommand{\afficheExo}[3]{\def\xXxExo{#3}\def\yYyExo{Exercice}{\leavevmode\null\hskip-0,2cm%
+\usefont{T1}{phv}{b}{it}%
+%\colorbox[rgb]{0.6902,0.8784,0.902}
+\boiteCouleur{0.745,0.745,0.745}{#2}{#3\ifx \yYyExo\xXxExo%
+%Affichage pour les exercices
+\ifnum -1 = \numExo \else~\the\numExo\fi\global\advance\numExo1%
+%Affichage pour les corrections
+\else\ifnum -1 = \numCorrec \else~\the\numCorrec\fi\global\advance\numCorrec1%
+\fi\expandafter\ifx #1* #1\fi}%
+%Gestion du commentaire
+\expandafter\ifx #1\@empty\else \expandafter\ifx #1*\else{\it\quad(#1)}\fi\fi}}
+
+\newcommand{\exerciceR}[1][]{\afficheExoResol{1,0.8784,0.6902}{Exercice résolu}}
+\newcommand{\activitenn}[1][]{\afficheExoResol{1,0.8784,0.6902}{Activité}}
+\newcommand{\actappro}[1][]{\afficheExoResol{0.6902,0.8784,1}{Activité d'approche}}
+\newcommand{\corrmethode}[1][]{\afficheExoResol{0.635,0.804,0.352}{Solution}}
+
+\newcommand{\afficheExoResol}[2]{\def\xXxExo{#2}\def\yYyExo{Exercice}{\leavevmode\null\hskip-0,2cm%
+\usefont{T1}{phv}{b}{it}%
+%\colorbox[rgb]{0.6902,0.8784,0.902}
+\boiteCouleur{0.745,0.745,0.745}{#1}{#2}}}
+
+
+
+%Couleurs code Python
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    %backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    %numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+

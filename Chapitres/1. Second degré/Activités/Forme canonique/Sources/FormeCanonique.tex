@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{sp_decla2.tex}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\tiny Lycée T. Edison - Lorgues}
+\fancyhead[C]{Second degré}
+\fancyhead[R]{\tiny Mathématiques - 1S}
+%\fancyfoot[R]{\footnotesize{Page \thepage~sur~\pageref{LastPage}}}
+\fancyfoot[C]{\footnotesize{Page \thepage~}}
+
+
+
+\begin{document}
+%\chapter{Second degré}
+\cadretitre{Forme canonique}
+
+\leavevmode\actappro
+
+  Soit $f$ la fonction du second degré définie sur $\R$ par
+  $f\left(x\right)={2x}^2-8x-6$ dont la représentation graphique $\mathcal{C}_f$ est donnée ci-dessous :
+
+\begin{center}
+\def\xmin{-3.1} \def\xmax{7.1} \def\ymin{-14.3} \def\ymax{8.1}
+\psset{xunit=1cm,yunit=0.5cm}
+\psscalebox{0.8}{
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%%%%%%%%%%%%%%%%%%%%%
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=0](0,0)(-6,-14)(14,8)
+\psset{xunit=1cm,yunit=0.5cm}
+\psaxes[labels=none,ticks=all,ticksize=3pt,labelsep=1pt, Dx=1,Dy=2]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dl](0,0){$\text{O}$}
+\uput[ul](\xmax,0){$x$}
+\uput[d](1,0){$1$}
+\uput[l](0,2){$2$}
+\uput[u](2,-14){S}
+\psdot(2,-14)
+\uput[dr](0,\ymax){$f(x)$}
+\uput[dr](4.5,6){$\mathcal{C}_f$}
+\psplot[plotpoints=200,algebraic=true,linewidth=1.5pt,linecolor=blue]{-3}{\xmax}{2*x*x-8*x-6}
+
+\end{pspicture*}}
+\end{center}
+
+  \begin{enumerate}
+  \item Lecture graphique
+    \begin{enumerate}
+    \item Lire les coordonnées du sommet S de la parabole $\mathcal{C}_f$.
+
+    \item La fonction $f$ peut s'écrire sous la
+      forme $f\left(x\right)=a{\left(x-\alpha{}\right)}^2+\beta{}$,
+      appelée forme canonique de la fonction $f$ et cette écriture est
+      unique. Développer cette forme.  
+
+    \item En déduire les valeurs de $a$, $\alpha{}$ et~$\beta{}$, puis la forme canonique de $f$.
+    
+    \item Que peut-on dire des valeurs de  $\alpha{}$ et~$\beta{}$ trouvées ?
+    \end{enumerate}
+
+  \item Sans utiliser la courbe représentative de la fonction $f$, on
+    peut mener le raisonnement suivant pour déterminer la forme
+    canonique :
+    \begin{enumerate}
+    \item Trouver le nombre réel $d$ tel que
+      ${2x}^2-8x-6=2\left(x^2-4x-d\right)$.
+
+    \item En développant $(x - 2){^2}$, déterminer $e$ tel que
+      $x^2-4x-d={\left(x-2\right)}^2+e$.
+
+    \item En déduire la forme canonique de $f$.
+    \end{enumerate}
+
+  \item Reprendre la démarche précédente pour déterminer la forme
+    canonique de la fonction $g$ définie sur $\R$ par :
+    \[g\left(x\right)={4x}^2+8x+10.\]
+
+\newpage
+
+  \item Dans le cas g\'{e}n\'{e}ral, une fonction $f$ du second
+    degr\'{e} est d\'{e}finie sur $\R$ par :
+    \[f\left(x\right)={ax}^2+bx+c \text{ avec } a\neq 0.\]
+\begin{enumerate}
+\item D\'{e}velopper $a{\left(x+\dfrac{b}{2a}\right)}^2$.
+
+\item En d\'{e}duire que
+  ${ax}^2+bx+c=a{\left(x+\dfrac{b}{2a}\right)}^2+d$ o\`{u} $d$ est un
+  nombre r\'{e}el que l'on d\'{e}terminera.
+
+\item On pose $\alpha{}=-\dfrac{b}{2a}$. Calculer
+  $f\left(\alpha{}\right)$.
+
+\item Conclure sur la forme canonique de $f$.
+\end{enumerate}
+  \end{enumerate}
+
+
+
+\end{document}
