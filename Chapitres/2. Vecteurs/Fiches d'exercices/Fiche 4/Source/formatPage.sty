@@ -1,0 +1,77 @@
+%%Valeur par defaut de la taille
+\@ifundefined{tailleDefautPage}
+{\margeVerticale=0.75cm
+\margeHorizontale=0.75cm}
+{\tailleDefautPage}
+%\margeVerticale=0.75cm\margeHorizontale=0.75cm
+%%% Définit la taille par défaut des pages
+\if \pageSizeDefault t
+\setlength{\paperheight}{29.7cm}
+\setlength{\paperwidth}{21cm}
+\fi
+
+\@ifundefined{beamer}
+{
+  \setlength{\voffset}{-1in}
+  \addtolength{\voffset}{\margeVerticale}
+  \setlength{\hoffset}{-1in}
+  \addtolength{\hoffset}{\margeHorizontale}
+  
+  \setlength{\textheight}{\paperheight}
+  \addtolength{\textheight}{-2\margeVerticale}
+  
+  \setlength{\textwidth}{\paperwidth}
+  \addtolength{\textwidth}{-2\margeHorizontale}
+
+  \setlength{\evensidemargin}{0pt}
+  \setlength{\oddsidemargin}{0pt}
+  \setlength{\marginparsep}{0pt}
+  \setlength{\marginparwidth}{0pt}
+  % Gestion de l'espace vertical
+  \setlength{\topmargin}{0pt}
+  \setlength{\headheight}{0pt}
+  \setlength{\headsep}{0pt}
+  \setlength{\topskip}{0pt}
+  \setlength{\footskip}{20pt}
+  % je sais pas d'ou sort celui la
+  \setlength{\linewidth}{0pt}
+  \setlength{\marginparpush}{0pt}
+  \setlength{\rightmargin}{0pt}
+
+  %% Ajustement pour existence ou non du pied de page
+  \if t\nofootskip \setlength{\footskip}{0pt}\typeout{yes}\else\typeout{no}\addtolength{\textheight}{-\footskip} \fi
+}
+{}
+
+
+
+
+
+%%===============
+%%En cas de presence de muticol
+%\csname multicolsep\endcsname
+\@ifundefined{multicols}
+{}
+{%Espace inter-colonne
+\setlength{\columnsep}{25pt}
+%Definit l'espace entre les colonnes(epaisseur du trait?)
+\setlength{\columnseprule}{1pt}
+%Largeur d'une colonne
+\setlength{\columnwidth}{1pt}
+%Espace avant et apres environnement multicols
+\setlength{\multicolsep}{0pt}}
+
+
+
+%%===============
+%%Dans le cas d'utilisation de pdftex ou dvipdf
+\if \the\pdfoutput0
+%\if {\the\pdfoutput}{0}%Pour dvipdfm
+\newtoks\espacePage
+\espacePage={ }
+\edef\t{pdf: pagesize width \the\paperwidth\the\espacePage height \the\paperheight}
+\special{\t}%
+\else%Pour pdftex
+\setlength{\pdfpagewidth}{\the\paperwidth}
+\setlength{\pdfpageheight}{\the\paperheight}
+\fi
