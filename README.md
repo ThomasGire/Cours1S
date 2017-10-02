@@ -8,8 +8,8 @@
 
 ## Chapitre 2: Vecteurs:
 
-* [Présentation]()
+* [Présentation](https://github.com/ThomasGire/Cours1S/blob/master/Chapitres/2.%20Vecteurs/presentation/vecteurs.pdf)
 
-* [Polycopié]()
+* [Polycopié](https://github.com/ThomasGire/Cours1S/blob/master/Chapitres/2.%20Vecteurs/polycopie/vecteurs.pdf)
 
-* [Compétences]()
+* [Compétences](https://github.com/ThomasGire/Cours1S/tree/master/Chapitres/2.%20Vecteurs/Comp%C3%A9tences)
