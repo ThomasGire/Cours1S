@@ -1,0 +1,738 @@
+\documentclass{book}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Tangentes et nombre dérivé - Fiche d'exercices 5}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+Etablir les \'egalit\'es suivantes :
+
+\questioni{a&\dfrac{x}{x+1}-\dfrac{2x-3}{x-1}=\dfrac{3-x^2}{x^2-1}\cr
+b&\dfrac1x+\dfrac1{x+1}+\dfrac1{(x+1)^2}=\dfrac{2x^2+4x+1}{x{\cdot}\big(x+1\big)^2}\cr
+c&\dfrac{\dfrac1{x+1}+\dfrac2{2x-1}}{x}=\dfrac{4x+1}{x{\cdot}(x+1){\cdot}(2x-1)}\cr}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $f$ la fonction d\'efinie par la relation :\newline
+\hglue\leftmarginii$f(x)
+=x^2-3{\cdot}x+2$
+
+D\'eterminer, pour $\Se h\in\mathbb{R}$, un expression simplifi\'ee de $f(1{+}h)$.
+
+\item Soit $g$ la fonction d\'efinie par la relation :\newline
+\hglue\leftmarginii$g(x)
+=\dfrac{\sqrt{2x-1\mathstrut}-3}{x-5}$
+
+Etablir , pour tout $\Se h\in\mathbb{R}^*$, l'\'egalit\'e :\newline
+\hglue\leftmarginii$g(h{+}5)
+=\dfrac{2}{\sqrt{2h+9\mathstrut}+3}$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Ci-dessous est repr\'esent\'ee, dans le rep\`ere $\Se(O\,;\,I\,;\,J)$, la courbe $\mathscr{C}_f$ et quatre de ses tangentes :
+
+\leavevmode\hfil\hbox{\Image{2809_graph-1.pdf}{1}{91}{61}}
+
+\vskip\parskip
+\begin{enumerate}
+\item La droite $(T_1)$ s'appelle :
+
+\hglue1\leftmarginii``{\sl La tangente \`a la courbe $\mathscr{C}_f$ au point d'abscisse $-1,5$''}
+
+Nommez de m\^eme les trois autres droites.
+
+\item D\'eterminer l'\'equation r\'eduite de chacune de ces quatres tangentes.
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+D\'eterminer les coefficients directeurs des quatre droites repr\'esent\'ees ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{2291_graph-1.pdf}{1}{92}{70}}
+
+\leavevmode\exercice
+
+
+Tracer la courbe repr\'esentative d'une fonction passant par tous les points indiqu\'ees et respectant en chacun d'eux la tangente repr\'esent\'ee :
+
+\leavevmode\hfil\hbox{\Image{2313_graph-1.pdf}{1}{92}{64}}
+
+\leavevmode\exercice
+
+
+On consid\`ere le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ dans lequel sont repr\'esent\'ees :
+\begin{itemize}
+\item La courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$ ;
+
+\item Les cordes $(d_1)$, $(d_2)$, $(d_3)$ et $(d_4)$ \`a la courbe $\mathscr{C}_f$.
+\end{itemize}
+
+\leavevmode\hfil\hbox{\Image{5945_graph-1.pdf}{1}{91}{78}}
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coefficients directeurs des quatre cordes \`a la courbe $\mathscr{C}_f$.
+
+\item \begin{enumerate}
+\item Tracer, \`a l'aide d'un r\`egle, la tangente \`a la courbe $\mathscr{C}_f$ au point de coordonn\'ees $\Se\coord{5}{-1}$.
+
+\item Donner une valeur approch\'ee du coefficient directeur de la tangente $(T)$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+%y=1.5x^3-5x^2+x+2
+\dimen0=4.5cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Dans le rep\`ere $\Se(O\,;\,I\,;\,J)$ orthonorm\'e ci-contre est donn\'ee la courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$.
+
+On consid\`ere les points $A$, $B$, $C$ de la courbe $\mathscr{C}_f$ d'abscisses respectives $0$, $1$ et $2$
+
+\vskip0.2cm
+\begin{enumerate}
+\item Placer les points $A$, $B$ et $C$ et par lecture graphique, donner leur coordonn\'ee.
+
+\item Calculer le taux de variation de la fonction $f$ :
+
+\vskip\parskip\begin{enumerate}
+\item entre $0$ et $2$
+
+\item entre $1$ et $2$
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{76}\hbox{\Image{2292_graph-1.pdf}{1}{43}{77}}
+\end{minipage}
+
+\leavevmode\exercice
+
+
+On donne ci-dessous la courbe $\mathscr{C}$ repr\'esentative d'une fonction dans un rep\`ere $\big(0\,;\,I\,;\,J\big)$ :
+
+\leavevmode\hfil{\Image{6878_graph-1.pdf}{1}{92}{75}}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Tracer la tangente $(d)$ \`a la courbe $\mathscr{C}$ au point d'abscisse $4$.
+
+\item Donner le coefficient directeur de la droite $(d)$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Tracer la tangente $(\Delta)$ \`a la courbe $\mathscr{C}$ au point d'abscisse $1$.
+
+\item Donner le coefficient directeur de la droite $(\Delta)$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\leavevmode\exercice
+
+
+On consid\`ere trois fonctions $f$, $g$ et $h$ trois fonctions d\'efinies sur $\mathbb{R}_+^*$ par les relations :\newline
+\leavevmode$f(x)=\dfrac{x+2}{x^2+3}$%
+\hfill\string;\hfill%
+$g(x)=\dfrac{2{\cdot}x-1}{\sqrt{x}}$
+\hfill\string;\hfill%
+$h(x)=\dfrac{2{\cdot}x^2+x}{5{\cdot}x}$
+
+On donne ci-dessous un tableau de valeurs pour chacune des fonctions :
+
+\def\x{\vrule width0pt height12pt depth4pt}
+\def\y{\vrule width0pt height16pt depth7pt}
+
+\def\esp{\hglue8pt}
+\leavevmode\hfil\vbox{\offinterlineskip
+\halign{\vrule\ $#$\ \hfil\vrule&&\esp\hfil$#$\hfil\esp\vrule\cr
+\noalign{\hrule}
+\x x&1&0,1&0,01&0,001&0,0001\cr
+\noalign{\hrule}
+\y f(x)&\dfrac34&\dfrac{2,1}{3,01}&\dfrac{2,01}{3,000\,1}&\dfrac{2,000\,1}{3,000\,001}&\dfrac{2,0000\,1}{3,000\,000\,01}\cr
+\noalign{\hrule}}}
+
+\def\esp{\hglue19.8pt}
+\leavevmode\hfil\vbox{\offinterlineskip
+\halign{\vrule\ $#$\ \hfil\vrule&&\esp\hfil$#$\hfil\esp\vrule\cr
+\noalign{\hrule}
+\x x&0,01&0,000\,1&0,000\,001\cr
+\noalign{\hrule}
+\y g(x)&\dfrac{-0,98}{0,1}&\dfrac{-0,999\,8}{0,01}&\dfrac{-0,999\,998}{0,00\,1}\cr
+\noalign{\hrule}}}
+
+\def\esp{\hglue8pt}
+\leavevmode\hfil\vbox{\offinterlineskip
+\halign{\vrule\ $#$\ \hfil\vrule&&\esp\hfil$#$\hfil\esp\vrule\cr
+\noalign{\hrule}
+\x x&1&0,1&0,01&0,001&0,000\,1\cr
+\noalign{\hrule}
+\y h(x)&\dfrac{3}{5}&\dfrac{0,12}{0,5}&\dfrac{0,010\,2}{0,05}&\dfrac{0,001\,002}{0,005}&\dfrac{0,000\,100\,02}{0,000\,5}\cr
+\noalign{\hrule}}}
+
+Remarquez que, dans chaque tableau, les valeurs de $x$ ``{\sl progressent lentement}'' vers $0$.
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Pour chaque tableau et \`a l'aide de la calculatrice, observer la progression de des valeurs approch\'ees de ces quotients.
+
+\item Dans chaque cas, faire une conjecture sur la valeur limite de ces images lorsque :\newline
+\hglue\leftmarginii``{\sl $x$ tend vers $0$ par des valeurs sup\'erieures \`a 0}''\newline
+Pour la fonction $f$, cette valeur se note :\newline
+\hglue\leftmarginii$\lim_{x\mapsto 0\atop x>0} f(x)$ ou $\lim_{x\mapsto 0^+} f(x)$
+\end{enumerate}
+
+\item A l'aide de votre calculatrice, tracer les courbes repr\'esentatives de ces fonctions et observer la courbe au ``{\sl voisinage}'' de l'axe des ordonn\'ees.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+D\'eterminer les limites suivantes :
+
+\def\x{\lim_{h\mapsto0}\ }
+\questioni{a&\x h-2&
+b&\x\dfrac{2h^2+h}h\cr
+c&\x\dfrac{5h^3+2h^2}h&
+d&\x\dfrac{h+1}{h+2}\cr
+e&\x\dfrac{2h^2+h}{3h}&
+f&\x\dfrac{h^3+2h^2}{2h}\cr}
+
+\leavevmode\exercice
+
+
+\dimen0=4.5cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Dans un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$, on consid\`ere la courbe repr\'esentative de la fonction $f$ d\'efinie sur $\mathbb{R}$ par la relation :\newline
+\hglue\leftmargini$f(x)=x^2-4x+2$
+
+\vskip0.2cm
+Au cours de cet exercice, nous allons d\'eterminer l'\'equation r\'eduite de la tangente \`a la courbe $\mathscr{C}_f$ au point $\Se A\coord{1}{-1}$.
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{39}\hbox{\Image{6059_graph-1.pdf}{1}{43}{43}}
+\end{minipage}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Etablir l'\'egalit\'e suivante :\newline
+\hglue\leftmarginii$\dfrac{f(x)-f(1)}{x-1}=x-3$\qquad pour tout $\Se x\in\mathbb{R}\backslash\{1\}$
+
+\item En d\'eduire le coefficient directeur de la corde \`a la courbe $\mathscr{C}_f$ passant par les points $A$ et $\Se B\coord{2}{-2}$. V\'erifier graphiquement votre r\'eponse.
+\end{enumerate}
+
+\item On consid\`ere les deux fonctions $u$ et $v$ d\'efinie sur $\mathbb{R}\backslash\{1\}$ par les relations :\newline
+\hglue\leftmarginii$u(x)=\dfrac{f(x)-f(1)}{x-1}$%
+\quad\string;\quad%
+$v(x)=x-3$
+
+\vskip\parskip
+\begin{enumerate}
+\item Voici deux tableaux de valeurs de $u$ et de $v$ :
+
+\hglue-3\leftmarginii\hfil\vbox{\vbox{\offinterlineskip
+\def\h{\vrule width0pt height12pt}
+\def\b{\vrule width0pt depth4pt}
+\halign{\vrule\vrule width0pt height12pt depth4pt\ $#$\ \hfill\vrule&&\hbox to2.1cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+x&1,1&1,01&1,001&1,000\,1\cr
+\noalign{\hrule}
+u(x)&\dfrac{-0,19}{0,1}&\dfrac{-0,0199\h}{0,01\b}&\dfrac{-0,001999}{0,001}&\dfrac{-0,00019999}{0,0001}\cr
+\noalign{\hrule}}}
+\vskip\parskip
+\vbox{\offinterlineskip
+\def\h{\vrule width0pt height12pt}
+\def\b{\vrule width0pt depth4pt}
+\halign{\vrule\vrule width0pt height12pt depth4pt\ $#$\ \hfill\vrule&&\hbox to2.1cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+x&1,1&1,01&1,001&1,000\,1\cr
+\noalign{\hrule}
+v(x)&-1,9&-1,99&-1,999&-1,9999\cr
+\noalign{\hrule}}}}
+
+Que peut-on dire de la valeur de $u(x)$ lorsque le nombre $x$ se rapproche de la valeur $1$?
+
+\item Tracer dans le rep\`ere la droite $(d)$ d'\'equation :\newline
+\hglue\leftmarginii$(d):\ y=-2x+1$
+\end{enumerate}
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\mathbb{R}$ par la relation :\newline
+\hglue\leftmargini$f{:x}\longmapsto \dfrac12{\cdot}x^2-2{\cdot}x+1$
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Montrer que, pour tout $\Se h\in\mathbb{R}$, on a :\newline
+\hglue\leftmarginii$f(4{+}h)-f(4)=\dfrac12{\cdot}h^2+2{\cdot}h$
+
+\item D\'eterminer la valeur de la limite : $\lim_{h\mapsto 0}\dfrac{f(4{+}h)-f(4)}h$
+\end{enumerate}
+
+\item Dans le plan muni d'un rep\`ere $\Se(O\,;\,I\,;\,J)$ orthonormal, on donne la courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$ :
+
+\hglue-\leftmargini\hfil{\Image{2810_graph-1.pdf}{1}{92}{56}}
+
+\begin{enumerate}
+\item Tracer dans le rep\`ere ci-dessous, la droite $(d)$ admettant pour \'equation r\'eduite :%
+\quad$y=2x-7$
+
+\item Justifier que la droite $(d)$ est une tangente \`a la courbe $\mathscr{C}_f$ dont on pr\'ecisera le point de contact.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Le nombre d\'eriv\'e de la fonction carr\'e en $2$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Pour $\Se x\neq2$, \'etablir l'\'egalit\'e suivante :%
+\quad$\Se \dfrac{x^2-2^2}{x-2}=x+2$
+
+\item Soit $f$ la fonction carr\'ee.\newline
+En d\'eduire la valeur de la limite :%
+\quad$\lim_{x\mapsto2} \dfrac{f(x)-f(2)}{x-2}$
+\end{enumerate}
+
+
+\item Le nombre d\'eriv\'ee de la fonction inverse en $3$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Pour $\Se x\neq3$, \'eetablir l'\'egalit\'e suivante :%
+\quad$\Se\dfrac{\ \dfrac1{x}-\dfrac13\ }{x-3}=-\dfrac1{3x}$
+
+\item Soit $g$ la fonction inverse.\newline
+En d\'eduire la limite suivante :%
+\quad$\lim_{x\mapsto3} \dfrac{g(x)-g(3)}{x-3}$
+\end{enumerate}
+
+
+\item Le nombre d\'eriv\'ee de la fonction racine carr\'ee en $3$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Pour $\Se x\neq2$, \'etablir que :%
+\quad$\Se\dfrac{\sqrt{x\mathstrut}-\sqrt{2\mathstrut}}{x-2}=\dfrac1{\sqrt{x\mathstrut}+2}$
+
+\item Soit $h$ la fonction racine carr\'ee.\newline
+En d\'eduire la valeur de la limite :%
+\quad$\lim_{x\mapsto2} \dfrac{h(x)-h(2)}{x-2}$
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\leavevmode\exercice
+
+
+D\'eterminer l'expression des fonctions d\'eriv\'ees des fonctions polynomiales suivantes :
+
+\questioni[0.5cm]{1&f{:x}\longmapsto -3x+2&
+2&g{:x}\longmapsto 4x^2-4\cr
+3&h{:x}\longmapsto 2x^2+3x&
+4&j{:x}\longmapsto 5x^3-2x^2\cr
+5&k{:x}\longmapsto -2x^2+2x&
+6&\ell{:x}\longmapsto (3x+11)(4-x)\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ dont l'image de $x$ est d\'efinie par la relation :
+
+\hglue\leftmargini$f(x)=\dfrac18x^3-\dfrac12x^2-\dfrac12x+1$
+
+\leavevmode\hfil\hbox{\Image{2347_graph-1.pdf}{1}{93}{53}}
+
+On note $\mathscr{C}_f$ la courbe repr\'esentative de la fonction $f$ dans un rep\`ere orthonorm\'e.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression de la fonction $f'$ d\'eriv\'ee de la fonction $f$.
+
+\item On consid\`ere la tangente $(T)$ \`a la courbe $\mathscr{C}_f$ au point d'abscisse $2$.
+
+\vskip\parskip\begin{enumerate}
+\item Donner la valeur du coefficient directeur de $(T)$.
+
+\item D\'eterminer l'\'equation r\'eduite de la tangente $(T)$.
+
+\item Dans le rep\`ere ci-dessous, tracer la tangente $(T)$.
+\end{enumerate}
+
+\item On consid\`ere la droite $(d)$ admettant l'\'equation r\'eduite :\newline
+\hglue\leftmarginii$(d):\ y=-x+1$\newline
+D\'eterminer les coordonn\'ees des points d'intersection de la droite $(d)$ et de la courbe $\mathscr{C}_f$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+D\'eterminer les fonctions d\'eriv\'ees associ\'ees aux fonctions suivantes :
+
+\def\x {{:x}\longmapsto}
+\questioni{a&f\x x-2\sqrt{x\mathstrut} &
+b&g\x 2\times\dfrac1x\cr
+c&h\x \dfrac{-5}x+\sqrt{x\mathstrut}&
+d&k\x x^2-\dfrac1x\cr}
+
+\leavevmode\exercice
+
+
+D\'eterminer l'expression de la d\'eriv\'ee de chacune des fonctions ci-dessous :
+
+\questioni{1&f{:x}\longmapsto x-\dfrac1x&
+2&g{:x}\longmapsto 2{\cdot}\sqrt{x\mathstrut}\cr
+3&h{:x}\longmapsto \dfrac{3}x-2\sqrt{x\mathstrut}&
+4&j{:x}\longmapsto 2x^3+\dfrac2x\cr}
+
+On pr\'esentera l'expression des d\'eriv\'ees sous la forme d'un quotient.
+
+\leavevmode\exercice
+
+
+D\'eterminer l'expression des d\'eriv\'ees des fonctions suivantes :
+
+\hglue-\leftmargini\questioni[0.75cm]{a&f(x)=3x^2&
+b&g(x)=\dfrac1{12}x^6&
+c&h(x)=4\sqrt{x\mathstrut}\cr
+d&j(x)=\dfrac{\sqrt{x\mathstrut}}2&
+e&k(x)=\dfrac1{2x}&
+f&l(x)=-\dfrac2x\cr}
+
+\leavevmode\exercice[*]
+
+
+D\'eterminer l'expression de la d\'eriv\'ee de chacune des fonctions suivantes :
+
+\questioni{a&f{:x}\longmapsto 3x^2+5x&
+b&g{:x}\longmapsto \dfrac3x+2\sqrt{x}\cr
+c&h{:x}\longmapsto 5x^3-\dfrac3{x}&
+d&j{:x}\longmapsto \dfrac{8x^3-2x^2}{x}\cr}
+
+Les d\'eriv\'ees des fonctions $g$ et $h$ seront pr\'esent\'ees sous forme de quotient.
+
+\leavevmode\exercice[*]
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\Se\big]0\,;\,+\infty\big[$ par la relation :\newline
+\hglue\leftmargini$f(x)=x+\dfrac2x-2$
+
+La courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$ est donn\'ee ci-dessous dans un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e :
+
+\leavevmode\hfil\hbox{\Image{5216_graph-1.pdf}{1}{92}{65}}
+
+\vskip\parskip
+\begin{enumerate}
+\item Montrer que la fonction $f$ admet pour d\'eriv\'ee la fonction $f'$ dont l'expression est donn\'ee par :\newline
+\hglue\leftmarginii$f'(x)=\dfrac{x^2-2}{x^2}$
+
+\item On souhaite d\'eterminer l'\'equation r\'eduite de la tangente $(T)$ \`a la courbe $\mathscr{C}_f$ au point d'abscisse $2$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner le coefficient directeur de la tangente $(T)$. Justifier votre d\'emarche.
+
+\item D\'eterminer l'\'equation r\'eduite de la tangente $(T)$.
+
+\item Tracer la droite $(T)$ dans le rep\`ere ci-dessus.
+\end{enumerate}
+
+\item On consid\`ere la droite $(d)$ d'\'equation r\'eduite :\newline
+\hglue\leftmarginii$(d):\ y=\dfrac12{\cdot}x$
+
+\vskip\parskip
+\begin{enumerate}
+\item Sur $\Se\big]0\,;\,+\infty\big[$, \'etudier le signe de l'expression :\newline
+\hglue\leftmarginii$f(x)-\dfrac12{\cdot}x$
+
+\item En d\'eduire la position relative de la courbe $\mathscr{C}_f$ et de la droite $(d)$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\mathbb{R}_+$ par la relation :\newline
+\hglue\leftmargini$f(x)=-x+2\sqrt{x\mathstrut}$
+
+Dans le rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ ci-dessous, est donn\'ee la courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$.
+
+\leavevmode\hfil\hbox{\Image{5220_graph-1.pdf}{1}{93}{53}}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Montrer que la fonction $f$ admet pour d\'eriv\'ee, sur $\mathbb{R}^*_+$, la fonction $f'$ dont l'expression est donn\'ee par :\newline
+\hglue\leftmarginii$f'(x)=\dfrac{1-\sqrt{x\mathstrut}}{\sqrt{x\mathstrut}}$
+
+\item D\'eterminer la valeur des nombres d\'eriv\'ees de la fonction $f$ en $\dfrac14$ et en $4$.
+\end{enumerate}
+
+\item On note $(d)$ et $(\Delta)$ les tangentes \`a la courbe $\mathscr{C}_f$ aux points d'abscisse respectifs $\dfrac14$ et $4$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les \'equations r\'eduites des tangentes $(d)$ et $(\Delta)$.
+
+\item Montrer que les deux droites $(d)$ et $(\Delta)$ s'interceptent au point de coordonn\'ees $\coord{1}{\dfrac32}$.
+
+\item Tracer sur le graphique les droites $(d)$ et $(\Delta)$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Soit $f$ d\'efinie sur $\mathbb{R}$ par la relation :%
+\quad$\Se f(x)=4x^2-4x-3$
+
+\vskip\parskip
+\begin{enumerate}
+\item Calculer le nombre d\'eriv\'e de la fonction $f$ en 2.
+
+\item D\'eterminer l'\'equation de la tangente \`a la courbe $\mathscr{C}_f$ au point d'abscisse 2.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Donner l'\'equation r\'eduite de la tangente \`a la courbe de la fonction carr\'ee au point d'abscisse $-2$.
+
+\item Donner l'\'equation r\'eduite de la tangente \`a la  courbe repr\'esentative de la fonction inverse au point d'abscisse 3.
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+On souhaite d\'eterminer les expressions des d\'eriv\'ees des fonctions suivantes :\newline
+\hglue\leftmargini\vtop{\openup6pt
+\halign{$#$\hfill&&\quad\string;\quad$#$\hfill\cr
+f{:x}\longmapsto (3x^2+3x)(2x+2)&
+g{:x}\longmapsto (2x^2+1)\sqrt{x\mathstrut}\cr
+h{:x}\longmapsto \dfrac1x{\cdot}(3-x^2)&
+j{:x}\longmapsto \dfrac2x{\cdot}\sqrt{x\mathstrut}\cr}}
+
+\vskip\parskip
+\begin{enumerate}
+\item L'expression de chacune de ces fonctions est donn\'ee sous la forme d'un produit $u{\cdot}v$. Compl\'eter le tableau ci-dessous afin d'identifier les deux facteurs de ce produit et leur d\'eriv\'ee respective.
+
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height15pt depth8pt\hbox to1.5cm{\hfil$#$\hfil}\vrule&&\hbox to1.9cm{\hfill$#$\hfill}\vrule\cr
+\omit\hfil\vrule&\multispan4\hrulefill\cr
+\omit\hfil\vrule depth6pt height13pt&u(x)&v(x)&u'(x)&v'(x)\cr
+\noalign{\hrule}
+f(x)&&&&\cr
+\noalign{\hrule}
+g(x)&&&&\cr
+\noalign{\hrule}
+h(x)&&&&\cr
+\noalign{\hrule}
+j(x)&&&&\cr
+\noalign{\hrule}}}
+
+\item En utilisant la formule de d\'erivation d'un produit :\newline
+\hglue\leftmarginii$\big(u{\cdot}v\big)'=u'{\cdot}v+u{\cdot}v'$\newline
+Etablir que ces fonctions admettent pour d\'eriv\'ee les fonctions ci-dessous :\newline
+\hglue\leftmarginii\vtop{\openup6pt
+\halign{$#$\hfill&&\quad\string;\quad$#$\hfill\cr
+f'{:x}\longmapsto 18x^2+24x+6&
+g'{:x}\longmapsto \dfrac{10x^2+1}{2\sqrt{x\mathstrut}}\cr
+h'{:x}\longmapsto \dfrac{-x^2-3}{x^2}&
+j'{:x}\longmapsto -\dfrac1{x{\cdot}\sqrt{x\mathstrut}}\cr}}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\mathbb{R}_+$ par la relation :\newline
+\hglue\leftmargini$f(x)=(x-4)\sqrt{x\mathstrut}$
+
+La courbe $\mathscr{C}_f$ repr\'esentative de la fonction $f$ est donn\'ee dans le rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e :
+
+\leavevmode\hfil\hbox{\Image{5227_graph-1.pdf}{1}{91}{78}}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer l'expression de la fonction $f'$ d\'eriv\'ee de la fonction $f$.
+
+\item D\'eterminer l'image et le nombre d\'eriv\'e de la fonction $f$ en $4$.
+
+\item D\'eterminer l'\'equation r\'eduite de la tangente $(T_1)$ \`a la courbe $\mathscr{C}_f$ au point d'abscisse $4$.
+
+\item Tracer la tangente $(T_1)$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer l'\'equation r\'eduite de la tangente $(T_2)$ \`a la courbe $\mathscr{C}_f$ au point d'abscisse $1$.
+
+\item Tracer la tangente $(T_2)$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On souhaite d\'eterminer les expressions des d\'eriv\'ees des fonctions suivantes :\newline
+\hglue\leftmargini\vtop{\openup6pt
+\halign{$#$\hfill&&\quad\string;\quad$#$\hfill\cr
+f{:x}\longmapsto \dfrac{3-2x}{x+1}&
+g{:x}\longmapsto \dfrac{x^2+4x-1}{2x-1}\cr
+h{:x}\longmapsto \dfrac{3}{2-x}&
+j{:x}\longmapsto \dfrac{\sqrt{x\mathstrut}}{x+1}\cr}}
+
+\vskip\parskip
+\begin{enumerate}
+\item L'expression de chacune de ces fonctions est donn\'ee sous la forme d'un produit $\dfrac uv$. Compl\'eter le tableau ci-dessous afin d'identifier le num\'erateur et le d\'enominateur de ce quotient et leurs d\'eriv\'ees respectives.
+
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height15pt depth8pt\hbox to1.5cm{\hfil$#$\hfil}\vrule&&\hbox to1.9cm{\hfill$#$\hfill}\vrule\cr
+\omit\hfil\vrule&\multispan4\hrulefill\cr
+\omit\hfil\vrule depth6pt height13pt&u(x)&v(x)&u'(x)&v'(x)\cr
+\noalign{\hrule}
+f(x)&&&&\cr
+\noalign{\hrule}
+g(x)&&&&\cr
+\noalign{\hrule}
+h(x)&&&&\cr
+\noalign{\hrule}
+j(x)&&&&\cr
+\noalign{\hrule}}}
+
+\item En utilisant la formule de d\'erivation d'un produit :\newline
+\hglue\leftmarginii$\Big(\dfrac uv\Big)'=\dfrac{u'{\cdot}v-u{\cdot}v'}{v^2}$\newline
+Etablir que ces fonctions admettent pour d\'eriv\'ee les fonctions ci-dessous :\newline
+\hglue\leftmarginii\vtop{\openup6pt
+\halign{$#$\hfill&&\quad\string;\quad$#$\hfill\cr
+f'{:x}\longmapsto -\dfrac{5}{(x+1)^2}&
+g'{:x}\longmapsto \dfrac{2x^2-2x-2}{(2x-1)^2}\cr
+h'{:x}\longmapsto \dfrac{3}{(x-2)^2}&
+j'{:x}\longmapsto \dfrac{1-x}{2(x+1)^2{\cdot}\sqrt{x\mathstrut}}\cr}}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+D\'eterminer l'expression des fonctions d\'eriv\'ees de chacune des fonctions ci-dessous :
+ 
+\questioni[0.75cm]{a&f{:x}\longmapsto\dfrac{2-2x}{5x+1} &
+b&g{:x}\longmapsto (3x-2)(2x^2+1)\cr
+c&h{:x}\longmapsto\dfrac1{3x+1}&
+d&j{:x}\longmapsto(2x^2+3x)\cdot\sqrt{x\mathstrut}\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere les deux fonctions $f$ et $g$ d\'efinies par les relations :\newline
+\hglue\leftmargini$f(x)=\big(x^2-3x\big){\cdot}\sqrt{x}$%
+\quad\string;\quad%
+$g(x)=\dfrac{3-2x}{x^2-3x-1}$
+
+D\'eterminer les expressions des fonctions d\'eriv\'ees $f'$ et $g'$. {\it(On donnera l'expression de la fonction $f'$ sous la forme d'un quotient simplifi\'e)}.
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere les deux fonctions $f$ et $g$ par :\newline
+\hglue\leftmarginii$f(x)=(2x+1)(3x^2-x+1)$%
+\quad\string;\quad%
+$g(x)=\dfrac{2x+5}{1-4x}$
+
+D\'eterminer l'expression de la fonction d\'eriv\'ee de chacune de ces deux fonctions.
+
+\item On consid\`ere la fonction $h$ dont l'image de $x$ est d\'efini par la relation :
+
+\hglue\leftmarginii$h(x)=\dfrac{x^2-2x+1}{x^2-5x+6}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer l'ensemble de d\'efinition de la fonction $h$.
+
+\item Montrer que le nombre de d\'eriv\'ee de $h$ en $x$ s'exprime par :
+
+\hglue\leftmarginii$h'(x)=-\dfrac{3x^2-10x+7}{(x^2-5x+6)^2}$
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Le tableau ci-dessous vous pr\'esente, pour chaque ligne, l'expression de l'image de $x$ par une fonction et l'expression du nombre d\'eriv\'e en $x$ de cette fonction. V\'erifier l'exactitude de l'expression du nombre d\'eriv\'ee en $x$ :
+
+\leavevmode\hfil\vbox{\offinterlineskip
+\def\hh{\vrule width0pt height0pt}
+\def\bb{\vrule width0pt depth2pt}
+\def\h{\vrule width0pt height12pt}
+\def\b{\vrule width0pt depth6pt}
+\halign{\vrule\h\b\hfil\ $#$\ \hfil\vrule &&\quad\hfill$#$\quad\hfill\vrule\cr
+\noalign{\hrule}
+\text{Fonction}&\hfill\text{\centredeuxlignes{\hh Image de}{\bb $x$}}&\hfill\text{\centredeuxlignes{Nombre d\'eriv\'e\hh }{en $x$\bb}}\cr
+\noalign{\hrule}
+f&x^3-5x^2+x-3&3x^2-10x+1\cr
+\noalign{\hrule}
+g&\dfrac{2x-1}{x^2+x}&-\dfrac{2x^2-2x-1\h }{x^2{\cdot}(x+1)^2\b}\cr
+\noalign{\hrule}
+h&(x^2-3){\cdot}\sqrt{\mathstrut x}&\dfrac{5x^2-3\h }{2{\cdot}\sqrt{\mathstrut x}\b}\cr
+\noalign{\hrule}
+j&\dfrac{3x-2\h }{2-x\b }&\dfrac4{(x-2)^2}\cr
+\noalign{\hrule}}}
+
+\end{multicols*}
+
+\end{document}
