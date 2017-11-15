@@ -1,11 +1,16 @@
-1. Trouver les coordonnées d'un point dans un repère.
-1. Tester l'appartenance d'un point à une droite dont on a une équation.
-1. Tester la colinéarité de deux vecteurs à l'aide de leurs coordonnées dans un repère.
-1. Tester l'alignement de trois points.
-1. Trouver une équation cartésienne pour une droite passant par un point et dirigée par un vecteur.
-1. Trouver l'équation cartésienne d'une droite passant par un point et parallèle à une autre.
-1. Trouver une équation cartésienne d'une droite passant par deux points.
-1. Trouver l'équation réduite d'une droite dont on a une équation cartésienne.
-1. Trouver un vecteur directeur pour une droite dont une équation est donnée.
-1. Trouver l'ordonnée à l'origine d'une droite dont on dispose un équation.
-1. Exprimer le parallélisme de droite par la colinéarité de vecteurs directeurs de ces droites.
+- Tester la colinéarité de deux vecteurs à l'aide de leurs coordonnées dans un repère.
+- Tester l'alignement de trois points.
+- Tester le parallélisme de deux droites en utilisant le test de colinéarité pour des vecteurs directeurs de ces droites.
+- Montrer qu'un quadrilatère est un parallélogramme.
+- Justifier qu'un couple de vecteurs peut être choisi pour former un repère.
+- Calculer les coordonnées d'un point ou un vecteur dans un repère non nécessairement orthonormé.
+- Trouver un vecteur directeur d'une droite.
+- Tester l'appartenance d'un point à une droite.
+- Passer d'un équation cartésienne à la forme réduite.
+- Trouver l'ordonnée à l'origine d'une droite dont on dispose un équation.
+- Passer d'un équation réduite à la forme cartésienne.
+- Trouver l'équation d'une droite:
+  - Passant par deux points.
+  - Passant par un point et dirigé par un vecteur.
+  - Passant par un point et parallèle à une autre droite dont on a une équation.
+  - Avec un paramètre.
