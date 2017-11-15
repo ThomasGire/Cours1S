@@ -13,3 +13,11 @@
 * [Polycopié](https://github.com/ThomasGire/Cours1S/blob/master/Chapitres/2.%20Vecteurs/polycopie/vecteurs.pdf)
 
 * [Compétences](https://github.com/ThomasGire/Cours1S/tree/master/Chapitres/2.%20Vecteurs/Comp%C3%A9tences)
+
+## Chapitre 3: Dérivation:
+
+* [Présentation](https://github.com/ThomasGire/Cours1S/raw/master/Chapitres/3.%20Derivation/Pr%C3%A9sentation/Derivation.pdf)
+
+* [Polycopié](https://github.com/ThomasGire/Cours1S/blob/master/Chapitres/3.%20Derivation/Polycopie/Derivation.pdf)
+
+* [Compétences]()
