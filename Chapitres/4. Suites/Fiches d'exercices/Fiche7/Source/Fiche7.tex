@@ -1,0 +1,733 @@
+\documentclass{book}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Suites arithmétiques et suites géométriques}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+Compl\'eter les suites logiques de nombres pour obtenir les $8$ premiers termes de chacune d'elles :
+
+\def\x #1#2#3#4{$#1$ - $#2$ - $#3$ - $#4$ - \ldots}
+\vskip\parskip
+\begin{enumerate}
+\changelabel
+\def\x #1{\leavevmode\hbox to0.8cm{\hfill$#1$\hfill}}
+\def\y #1{- \x{$#1$}}
+\item \x{4}\y{7}\y{10}\y{13}\y{\ldots}
+
+\item \x{3}\y{6}\y{12}\y{24}\y{\ldots}
+
+\item \x{20}\y{19}\y{17}\y{14}\y{\ldots}
+
+\item \x{5}\y{7}\y{11}\y{17}\y{\ldots}
+
+\item \x{1}\y{4}\y{9}\y{16}\y{\ldots}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere les deux proc\'ed\'es d'obtention suivant de nombres :
+
+\leavevmode{\linewidth=0.48\hsize\boite{\leavevmode\hfil\hbox{\bf Proc\'edure A}\newline
+On multiplie le nombre donn\'e par $3$}}%
+\hfill%
+{\linewidth0.48\hsize\boite{\leavevmode\hfil\hbox{\bf Proc\'edure B}\newline
+Au nombre donn\'e, on lui soustrait $2$.}}
+
+Pour chaque question, donner les six premiers termes obtenus en r\'ep\'etant les consignes autant de fois que n\'ecessaire.
+
+\vskip\parskip
+\begin{enumerate}
+\item Le nombre de d\'epart est $3$ et on r\'ep\`ete la proc\'edure {\bf A} ;
+
+\item Le nombre de d\'epart est $11$ et on r\'ep\`ete la proc\'edure {\bf B}.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Trouver les coefficients multiplicatifs repr\'esentant chacune des \'evolutions suivantes :
+
+\questionii[0.5cm]{a&+10\,\%&
+b&+2,5\,\% &
+c&+115\,\%\cr
+d&-22\,\%&
+e&-10,7\,\%&
+f&-65\,\%\cr}
+
+\item Pour chaque coefficient multiplicateur, retrouver l'\'evolution associ\'ee et le pourcentage correspondant :
+
+\questionii{a&1,02&
+b&1,375& 
+c&2,1\cr
+d&0,15&
+e&0,85&
+f&0,912\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+%Liban - juin 2005 - 12 points
+Des scientifiques \'etudient une culture de bact\'eries contenant deux souches qu'on nommera $A$ et $B$.\newline
+Au d\'ebut de l'exp\'erience {\it(au temps ``0'')}, on d\'enombre $200$ de bact\'eries de souches $A$ et $300$ bact\'eries de souches $B$.\newline
+Les scientifiques rel\`event les \'evoluations suivantes : \`a chaque minute, la population des bact\'eries $A$ augmente de $10\,\%$, alors que celle de la souche $B$ diminue de $20$ bact\'eries.
+
+\vskip\parskip
+\begin{enumerate}
+\item  \begin{enumerate}
+\item Au temps ``{\sl 0 min}'', quel est le pourcentage repr\'esent\'e par les bact\'eries de la souche $A$ par rapport \`a l'ensemble des bact\'eries?
+
+\item Au temps ``{\sl 1 min}'', quel est le pourcentage repr\'esent\'e par les bact\'eries de la souche $A$ par rapport \`a l'ensemble des bact\'eries?
+
+\item Compl\'eter le tableau ci-dessous :
+
+\hglue-3\leftmarginii\hfil\hbox{\Image{2906_tableurExcel2-1.pdf}{1}{91}{61}}
+\end{enumerate}
+
+\item $n$ d\'esigne un nombre entier naturel {\it($\Se n\in\mathbb{R}$)}. 
+
+On note $a_n$ la population de bact\'eries de la souche $A$ au temps ``{\sl $n$ min}''; ainsi, $\Se a_0=200$. 
+
+On note $b_n$ la population de bact\'eries de la souche $B$ au temps ``{\sl $n$ min}'' ; ainsi $b_0=300$.
+
+Compl\'eter les pointill\'es ci-dessous :
+
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\def\x{\ \raise-4pt\hbox{\ldots\ldots\ldots\ldots}}
+\halign{\vrule width0pt height13pt depth9pt\hfill$a_#={}$&$a_#\x$\qquad\vrule\qquad&\hfill$b_#={}$&$b_#\x$\cr
+1&0&1&0\cr
+2&1&2&1\cr
+3&2&3&2\cr
+4&3&4&3\cr
+\multispan4\vrule width0pt height15pt depth8pt\hfill On g\'en\'eralise par :\hfill\cr
+{n+1}&n&{n+1}&n\cr}}
+
+
+
+
+ 
+\item Compl\'eter les deux diagrammes ci-dessous :
+
+\vskip\parskip
+\begin{enumerate}
+\item \hglue-3\leftmarginii\hfil\Baisse{1}{24}\hbox{\Image{2906_dessin-1.pdf}{1}{91}{24}}
+
+\item \hglue-3\leftmarginii\hfil\Baisse{1}{24}\hbox{\Image{2906_dessin-3.pdf}{1}{91}{24}}
+\end{enumerate}
+
+\item Compl\'eter les pointill\'ees :
+
+\hglue-3\leftmarginii\hfil\vbox{\offinterlineskip
+\def\x{\ \raise-4pt\hbox{\ldots\ldots\ldots\ldots}}
+\halign{\vrule width0pt height13pt depth9pt\hfill$a_#={}$&$a_#\x$\qquad\vrule\qquad&\hfill$b_#={}$&$b_#\x$\cr
+1&0&1&0\cr
+2&0&2&0\cr
+3&0&3&0\cr
+4&0&4&0\cr
+\multispan4\vrule width0pt height15pt depth8pt\hfill On g\'en\'eralise par :\hfill\cr
+n&0&n&0\cr}}
+
+
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite de nombres ci-dessous :
+
+\hglue\leftmarginii$2$%
+\quad\string;\quad%
+$3$%
+\quad\string;\quad%
+$5$%
+\quad\string;\quad%
+$8$%
+\quad\string;\quad%
+$12$%
+\quad\string;\quad%
+$17$%
+\quad\string;\quad%
+$23$%
+\quad\string;\quad%
+$30$%
+
+\vskip\parskip
+\begin{enumerate}
+\item Dans cette suite, quel est le terme qui succ\`ede \`a $12$?
+
+\item Dans cette suite, quel est le terme qui pr\'ec\`ede $8$?
+
+\item Dans cette suite quel est le rang du terme ayant $2$ pour valeur?
+
+\item Dans cette suite quel est le rang du terme ayant $17$ pour valeur?
+\end{enumerate}
+
+\item De mani\`ere g\'en\'erale, on indique les termes d'une suite en utilisant en index la position du terme dans la suite {\it(on commence l'ind\'exation \`a $0$)} :
+
+\hglue-\leftmarginii$u_0$%
+\hfill\string;\hfill%
+$u_1$%
+\hfill\string;\hfill%
+$u_2$%
+\hfill\string;\hfill%
+$u_3$%
+\hfill\string;\hfill%
+$\cdots$%
+\hfill\string;\hfill%
+$u_{n-1}$%
+\hfill\string;\hfill%
+$u_n$%
+\hfill\string;\hfill%
+$u_{n+1}$%
+
+\vskip\parskip
+\begin{enumerate}
+\item Quel est le terme succ\'esseur de $u_2$?
+
+\item Quel est le terme pr\'ed\'ecesseur de $u_4$?
+
+\item Quel est le terme succ\'esseur de $u_n$?
+
+\item Quel est le terme succ\'esseur de $u_{n+2}$?
+
+\item Quel est le terme pr\'ed\'ecesseur de $u_n$?
+
+\item Quel est le terme pr\'ed\'ecesseur de $u_{n+2}$?
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere les suites de nombres ci-dessous :
+
+
+\vskip\parskip
+\begin{enumerate}
+\changelabel
+\let\labeli=\labelii
+\def\z #1{\hbox to1cm{\hss$#1$\hss}}
+\def\x #1#2#3#4#5#6#7{\leavevmode\z{#1}%
+\string;%
+\z{#2}%
+\string;%
+\z{#3}%
+\string;%
+\z{#4}%
+\string;%
+\z{#5}%
+\string;%
+\z{#6}%
+\string;%
+\z{#7}\ldots}
+
+\item \x{4}{7}{10}{13}{16}{19}{22}
+
+\item \x{1}{-2}{4}{-8}{16}{-32}{64}
+
+\item \x{2}{2}{3}{5}{8}{12}{17}
+
+\item \x{0}{1}{4}{9}{16}{25}{36}
+
+\item \x{1}{1}{2}{3}{5}{8}{13}
+
+\item \x{1}{2}{1}{2}{1}{2}{1}
+\end{enumerate}
+
+Associer \`a chacune de cette suite une relation ci-dessous qui permet d'obtenir un terme en fonction de ses pr\'ed\'edecesseurs :
+
+\questioni{1&u_{n}+u_{n+1}=u_{n+2}&
+2&\dfrac{2}{u_n}=u_{n+1}\cr
+3&u_n+n=u_{n+1}&
+4&-2\times u_n=u_{n+1}\cr
+5&u_n+3=u_{n+1}&
+6&u_n=n^2\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere une suite $\big(u_n\big)$ dont on connait la valeur de ses cinq premiers termes :
+
+\def\x{\hskip10pt}
+\hglue\leftmargini$\Se u_0=0$%
+\x\string;\x%
+$\Se u_1=11$%
+\x\string;\x%
+$\Se u_2=20$%
+\x\string;\x%
+$\Se u_3=27$%
+\x\string;\x%
+$\Se u_4=32$%
+
+
+Parmi les expressions de suites ci-dessous, lesquelles permettent d'obtenir ces m\^emes cinq premiers termes?
+
+\vskip\parskip
+\begin{enumerate}
+\changelabel
+\item $\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&0\\
+u_{n+1}&=&u_n+n+11\quad \hbox{ pour tout $n{\in}\mathbb{N}$}\\
+\end{array}$}}\right.$
+
+\item $\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&0\\
+u_{n+1}&=&-u_n+3n+11\quad \hbox{ pour tout $n{\in}\mathbb{N}$}\\
+\end{array}$}}\right.$
+
+\item $\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&0\\
+u_{n+1}&=&u_n-2n+11\quad \hbox{ pour tout $n{\in}\mathbb{N}$}\\
+\end{array}$}}\right.$
+
+\item $u_n=13{\cdot}n-2{\cdot}n^2$%
+\qquad\labeli{e} $u_n=-n^2+12{\cdot}n$
+
+\setcounter{enumi}5
+\item $u_n=2{\cdot}n^2+9{\cdot}n$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ arithm\'etique de premier terme $2$ et de raison $-3$. D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item On consid\`ere la suite $\big(v_n\big)$ g\'eom\'etrique de premier terme $54$ et de raison $\dfrac13$. D\'eterminer les quatre premiers termes de la suite $\big(v_n\big)$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item D\'eterminer les cinq premiers termes de la suite $\big(u_n\big)$ arithm\'etique de premier terme $2$ et de raison $3$.
+
+\item D\'eterminer les cinq premiers termes de la suite $\big(v_n\big)$ arithm\'etique de premier terme $3$ et de raison $-\dfrac32$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere les deux suites de nombres ci-dessous dont on donne les sept premiers termes :
+
+\def\x #1#2#3#4#5#6#7{$#1$%
+\quad\string;\quad%
+$#2$%
+\quad\string;\quad%
+$#3$%
+\quad\string;\quad%
+$#4$%
+\quad\string;\quad%
+$#5$%
+\quad\string;\quad%
+$#6$%
+\quad\string;\quad%
+$#7$}
+\questioni{a&\x{3}{5}{7}{10}{12}{14}{16}\cr
+b&\x{6}{3,5}{1}{-1,5}{-4}{-6,5}{-9}\cr}
+
+Pour chacune des questions, peut-on conjecturer que la suite est une suite arithm\'etique?\newline
+Si oui, donner le premier terme et la raison. Si non, justifier votre rejet de cette affirmation.
+
+
+\leavevmode\exercice
+
+
+Soit $\big(u_n\big)$ une suite arithm\'etique de raison $r$. Compl\'eter les expressions suivantes :
+
+\questioni{a&u_{12}=u_5+\ldots&
+b&u_{57}=u_{38}+\ldots\cr
+c&u_3=u_8+\ldots&
+d&u_{23}=u_{38}+\ldots\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ arithm\'etique de premier terme $3$ et de raison $-2$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la valeur des termes $u_{12}$ et $u_{43}$.
+
+\item D\'eterminer la valeur du rang $n$ r\'ealisant les \'egalit\'es :
+
+\questionii{a&u_n=-21&
+b&u_n=-57\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmargini$u_0=1$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac{\big(n+2\big){\cdot}u_n+1}{n+1}$ pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item Conjecturer la nature de la suite $\big(u_n\big)$ en justifiant votre d\'emarche.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$ g\'eom\'etrique de premier terme $2$ et de raison $3$.
+
+\item D\'eterminer les quatre premiers termes de la suite $\big(v_n\big)$ g\'eom\'etrique de premier terme $3$ et de raison $-\dfrac32$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere les deux suites de nombres ci-dessous o\`u sont donn\'es les six premiers termes :
+
+\def\x #1#2#3#4#5#6{#1%
+\quad\string;\quad%
+#2%
+\quad\string;\quad%
+#3%
+\quad\string;\quad%
+#4%
+\quad\string;\quad%
+#5%
+\quad\string;\quad%
+#6}
+\questioni{a&\x{8}{4}{2}{1}{\dfrac12}{\dfrac14}\cr
+b&\x{1}{3}{9}{18}{54}{162}\cr}
+
+Pour chacune des questions, peut-on conjecturer que la suite est une suite g\'eom\'etrique?\newline
+Si oui, pr\'eciser le premier terme et la raison. Sinon, justifier votre rejet de la conjecture.
+
+\leavevmode\exercice
+
+
+Soit $\big(v_n\big)$ une suite g\'eom\'etrique de raison $q$. Compl\'eter les expressions suivantes :
+
+\questioni{a&u_{7}=u_3\times\ldots&
+b&u_{25}=u_{11}\times\ldots\cr
+c&u_3=u_8\times\ldots&
+d&u_{15}=u_{23}\times\ldots\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ g\'eom\'etrique de premier terme $\dfrac{2^4}{3}$ et de raison $\dfrac32$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la valeur des termes $u_{11}$ et $u_{28}$.
+
+\item Pour chaque question, d\'eterminer le rang $n$ r\'ealisant l'\'egalit\'e :
+
+\questionii{a&u_n=\dfrac{3^8}{2^5}&
+b&u_n=\dfrac{3^{19}}{2^{16}}\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ une suite g\'eom\'etrique de premier terme $\Se u_0=\dfrac38$ et de raison $2$. D\'eterminer les six premiers termes de cette suite.
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ une suite g\'eom\'etrique de raison $q$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Pour passer du terme $v_{11}$ au terme $v_{14}$, par combien de fois multiplie-t-on par la raison?
+
+\item A partir des valeurs des deux termes suivants :\newline
+\hglue\leftmarginii$v_{11}=\dfrac47$%
+\quad\string;\quad$v_{14}=\dfrac{27}{14}$\newline
+D\'eterminer la valeur du premier terme et de la raison de la suite $\big(v_n\big)$.
+\end{enumerate}
+
+
+\item Dans chacun des cas ci-dessous,  la suite $\big(w_n\big)_{n\in\mathbb{N}}$ est une suite g\'eom\'etrique, d\'eterminer son premier terme et sa raison :
+
+\questionii{a&w_0=5\ \string;\ w_3=40&
+b&w_3=\dfrac38\ \string;\ w_6=-\dfrac3{64}\cr
+c&\multispan3$w_{124}=2\times10^{-4}$\ \string;\ $w_{128}=\dfrac18$\hfil\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Soit $\big(u_n\big)_{n\in\mathbb{N}}$ une suite dont on connait la valeur des deux termes suivants :\newline
+\hglue\leftmargini$u_6=36$%
+\quad\string;\quad%
+$u_{10}=\dfrac94$
+
+Montrer qu'il existe au moins deux suites g\'eom\'etriques v\'erifiant ces conditions.
+
+\vspace{1cm}
+\leavevmode\exercice
+
+
+Ci-dessous sont repr\'esent\'es les six premiers ``{\bfseries\slshape flocons de Helge Von Koch}'' repr\'esentant un des fractales les plus simples :
+
+\def\y{\hskip0.35cm}
+\def\x #1{\hbox{\Image{2928_flocon-#1.pdf}{1}{27}{12}}}
+\leavevmode\hfil\x{0}\y\x{1}\y\x{2}
+
+\leavevmode\hfil\x{3}\y\x{4}\y\x{5}
+
+Pour passer d'une construction \`a la suivante, on r\'ealise la manipulation suivante sur chaque segment :
+
+\leavevmode\hfil\hbox{\Image{2928_dessin2-2.pdf}{1}{81}{23}}
+
+Chaque segment est partag\'e en trois parties \'egales {\it(\'etape 1)}. On construit un triangle \'equilat\'eral sur le segment du milieu {\it(\'etape 2)}. On efface le segment du milieu {\it(\'etape 3)}.
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Le passage de l'\'etape n$\null^o0$ \`a l'\'etape n$\null^o1$ fait apparaitre un triangle \'equilat\'eral. Surligner ce triangle en rouge.
+
+\item Combien de segment comprend la figure de l'\'etape n$\null^o1$? Combien de triangles \'equilat\'eral apparaitront \`a l'\'etape n$\null^o2$? Surligner ces triangles en rouge.
+\end{enumerate}
+
+\item On note $\big(u_n\big)$ la suite num\'erique dont le terme de rang $n$ est le nombre de segments composant la figure \`a l'\'etape n$\null^{\text{i\`eme}}$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Justifier par une phrase que la suite $\big(u_n\big)$ v\'erifie la relation :\newline
+\hglue\leftmarginii$u_{n+1}=4{\cdot}u_n$
+
+\item Exprimer le terme $u_n$ en fonction de son rang $n$.
+
+\item Combien de segments comprend la figure de l'\'etape n$\null^o5$?
+\end{enumerate}
+
+\item On suppose que le segment $[AB]$ initial a pour longueur $1$. On note $\big(v_n\big)$ la suite num\'erique dont le terme de rang $n$ est la longueur de la ligne polygone formant la figure \`a l'\'etape n$\null^{\text{i\`eme}}$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Justifier par une phrase que la suite $\big(v_n\big)$ v\'erifie la relation :\newline
+\hglue\leftmarginii$v_{n+1}=\dfrac43{\cdot} v_n$
+
+\item  Exprimer le terme $v_n$ en fonction de son rang $n$.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmargini$u_0=3$%
+\quad\string;\quad%
+$u_{n+1}=9\times2^n-u_n$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la valeur des quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item Conjecturer la nature de la suite $\big(u_n\big)$ en justifiant votre d\'emarche.
+\end{enumerate}
+
+\vspace{2cm}
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Justifier bri\`evement que les premiers termes de la suite $\big(u_n\big)$ pr\'esent\'es ci-dessous peuvent \^etre les termes d'une suite aritm\'etique dont on pr\'ecisera la raison :\newline
+\hglue\leftmarginii$u_0=2$%
+\quad\string;\quad%
+$u_1=\dfrac{9}{2}$%
+\quad\string;\quad%
+$u_2=7$%
+\quad\string;\quad%
+$u_3=\dfrac{19}2$%
+
+\item Justifier bri\`evement que les premiers termes de la suite $\big(v_n\big)$ pr\'esent\'es ci-dessous peuvent \^etre les termes d'une suite g\'eom\'etrique dont on pr\'ecisera la raison :\newline
+\hglue\leftmarginii$v_0=24$%
+\quad\string;\quad%
+$v_1=6$%
+\quad\string;\quad%
+$v_2=\dfrac{3}{2}$%
+\quad\string;\quad%
+$v_3=\dfrac{3}{8}$%
+
+\item Justifier bri\`evement que les premiers termes de la suite $\big(w_n\big)$ ne repr\'esentent ni les premiers termes d'une suite arithm\'etique, ni les premiers termes d'une suite g\'eom\'etrique \newline
+\hglue\leftmarginii$w_0=1$%
+\quad\string;\quad%
+$w_1=2$%
+\quad\string;\quad%
+$w_2=4$%
+\quad\string;\quad%
+$w_3=16$%
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ une suite arithm\'etique dont on connait deux termes :\newline
+\hglue\leftmarginii$u_4=12$%
+\quad\string;\quad%
+$u_{22}=-24$
+
+Donner, en justifiant votre d\'emarche, les \'el\'ements caract\'eristiques de cette suite.
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ une suite g\'eom\'etrique dont on connait deux termes :\newline
+\hglue\leftmarginii$v_4=8$%
+\quad\string;\quad%
+$v_{7}=\dfrac{64}{27}$
+
+Donner, en justifiant votre d\'emarche, les \'el\'ements caract\'eristiques de cette suite.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ arithm\'etique dont on connait les valeurs des deux termes suivants :\newline
+\hglue\leftmarginii$u_{10}=5$%
+\quad\string;\quad%
+$u_{16}=14$
+
+D\'eterminer le premier terme $u_0$ et la raison de cette suite.
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ g\'eom\'etrique dont on connait les valeurs des deux termes suivants :\newline
+\hglue\leftmarginii$v_4=96$ %
+\quad\string;\quad%
+$v_7=\dfrac32$
+
+D\'eterminer le premier terme $v_0$ et la raison de cette suite.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$u_n=n^2+n+2$%
+\quad pour tout entier $\Se n\in\mathbb{N}$
+
+Etablir que la suite $\big(u_n\big)$ n'est pas une suite g\'eom\'etrique.
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\dfrac{1}{n^2+2}$%
+\quad pour tout entier $\Se n\in\mathbb{N}$
+
+Etablir que la suite $\big(v_n\big)$ n'est pas une suite arithm\'etique.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par la relation :\newline
+\hglue\leftmarginii$u_0=8$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac12u_n-5$\quad pour tout entier naturel $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ la suite d\'efinie par :\newline
+\hglue\leftmarginii$v_n=u_n+10$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Montrer que la suite $\big(v_n\big)$ v\'erifie la relation suivante pour tout entier naturel $n$ :\newline
+\hglue\leftmarginii$v_{n+1}=\dfrac12{\cdot}v_n$
+
+\item Donner la nature de la suite $(v_n)$ ainsi que ses \'el\'ements caract\'eristiques.
+
+\item Donner la formule explicite donnant l'expression du terme $v_n$ en fonction de son rang $n$.
+\end{enumerate}
+
+\item D\'eduire des questions pr\'ec\'edentes, la formule explicite de la suite $\big(u_n\big)$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Soit $\big(u_n\big)$ d\'efinie par son premier terme $u_0$ et, pour tout entier naturel $n$, par la relation :\newline
+\hglue\leftmargini$u_{n+1}=a{\cdot}u_n+b$%
+\hfill{\it($a$ et $b$ r\'eels non nuls tels que $\Se a\neq 1$)}
+
+On pose, pour tout entier naturel $n$ :%
+\quad$\Se v_n=u_n-\dfrac{b}{1-a}$
+
+D\'emontrer que, la suite $\big(v_n\big)$ est g\'eom\'etrique de raison $a$.
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie :\newline
+\hglue\leftmargini$\Se u_0=4$%
+\quad\string;\quad%
+$\Se u_{n+1}=\dfrac{-u_n+6}{u_n-2}$\quad pour tout entier naturel $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les trois premiers termes de la suite $\big(u_n\big)$.
+
+\item Soit la suite $\big(v_n\big)_{n\in\mathbb{N}}$ d\'efinie par la relation :
+
+\hglue\leftmarginii$v_n=\dfrac{u_n+2}{u_n-3}$\quad pour tout entier naturel $n$.
+
+\begin{enumerate}
+\item D\'eterminer les trois premiers termes de cette suite.
+
+\item Montrer que :%
+\quad$\Se\dfrac{v_{n+1}}{v_n}=-\dfrac14$
+
+\item En d\'eduire la nature de la suite $\big(v_n\big)$ ainsi que la formule explicite d\'eterminant le terme de rang $n$ en fonction de $n$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer l'expression du terme $u_n$ en fonction du terme $v_n$.
+
+\item En d\'eduire la formule explicite d\'efinissant les termes de $\big(u_n\big)$ en fonction de $n$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere les constructions suivantes :
+
+\leavevmode\hfil\hbox{\Image{7244_dessin-1.pdf}{1}{68}{30}}
+
+
+On note $\big(u_n\big)$ la suite num\'erique d\'efinie sur $\mathbb{N}^*$ o\`u $u_n$ repr\'esente le nombre d'allumettes n\'ecessaire \`a la construction de la $n^{\text{i\`eme}}$ \'etape.
+
+Conjecturer une relation de r\'ecurrence entre un terme de la suite $\big(u_n\big)$ et de son pr\'ed\'ecesseur.
+
+
+\end{multicols*}
+
+\end{document}
