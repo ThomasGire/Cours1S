@@ -1,0 +1,914 @@
+%%### A voir si c'est utile
+%\AtBeginDocument{\mathcode`\;=\numexpr\mathcode`\;-\string"4000\relax}
+%http://tex.stackexchange.com/questions/226457/french-spacing-for-semicolon-in-math-mode
+
+%#### Info dur le pdf
+%%% \special{pdf: docinfo << /Author (Mark A. Wicks) >>}
+\def\pdfTitre #1{\special{pdf: docinfo << /Title (#1) >>}}
+\def\pdfSujet #1{\special{pdf: docinfo << /Subject (#1) >>}}
+
+%### A arranger \begin{enumerate}\item qsss \item[] aaaa \item wwww\end{enumerate}
+\def\@iitem[#1]{%
+  \if@noparitem
+    \@donoparitem
+  \else
+    \if@inlabel
+      \indent \par
+    \fi
+    \ifhmode
+      \unskip\unskip \par
+    \fi
+    \if@newlist
+      \if@nobreak
+        \@nbitem
+      \else
+        \addpenalty\@beginparpenalty
+        %\addvspace{4\leftmargini}
+        \addvspace\@topsep
+        \addvspace{-\parskip}%
+      \fi
+    \else
+      \addpenalty\@itempenalty
+      \addvspace\itemsep
+    \fi
+    \global\@inlabeltrue
+  \fi
+  \everypar{%
+    \@minipagefalse
+    \global\@newlistfalse
+    \if@inlabel
+      \global\@inlabelfalse
+      {\setbox\z@\lastbox
+       \ifvoid\z@
+         \kern-\itemindent
+       \fi}%
+      \box\@labels
+      \penalty\z@
+    \fi
+    \if@nobreak
+      \@nobreakfalse
+      \clubpenalty \@M
+    \else
+      \clubpenalty \@clubpenalty
+      \everypar{}%
+    \fi}%
+  \if@noitemarg
+    \@noitemargfalse
+    \if@nmbrlist
+      \refstepcounter\@listctr
+    \fi
+  \fi
+  \sbox\@tempboxa{\makelabel{#1}} %
+  \global\setbox\@labels\hbox{%
+    \unhbox\@labels
+    \hskip \itemindent
+    \hskip -\labelwidth
+    \hskip -\labelsep
+    \ifdim \wd\@tempboxa >\labelwidth
+      \box\@tempboxa
+    \else
+      \hbox to\labelwidth {\unhbox\@tempboxa}%
+    \fi%
+    \def\@aa{#1}%
+    \ifx \@empty\@aa\global\setbox\@labels\hbox{}\hglue-\leftmargini\hglue\leftmarginii\fi%
+    \hskip \labelsep%
+}%
+  \ignorespaces}
+
+
+
+
+%#####
+
+
+\setlength\leftmargini{2em}
+\setlength\leftmarginii{1em}
+\setlength\leftmarginiii{0.8em}
+
+%%%====== Gestion du bas de page
+
+%\def\creativeCommons{\baisse{1}{3}\hbox{\image{creativeCommons-80x15.png}{0.8}{80}{15}}}
+%%Pour footskip
+\def\nofootskip{f}
+\def\pageSizeDefault{t}
+
+%%%====== Package necessaire pour Chingatome
+%\setlength{\paperheight}{29.7cm}
+%\setlength{\paperwidth}{21cm}
+
+
+\pagestyle{empty}
+
+%% Gestion du pied de page
+\def\nomSite{}
+
+\renewcommand*{\@oddfoot}{\small\null\hfill}
+\let\@evenfoot\@oddfoot
+\@ifundefined{ajouteBasPage}{\def\ajouteBasPage{}}{}
+
+
+\newdimen\margeVerticale
+\newdimen\margeHorizontale
+
+\DeclareOption{metapost}{\typeout{Aucune modification de la taille de la page pour metapost}\def\pageOrigine{}
+\pagestyle{empty}}
+
+\DeclareOption{noPageSize}{\typeout{taille de la page personnelle}
+\def\pageSizeDefault{f}
+\def\pageOrigine{}}
+
+\DeclareOption{taillePersonnelle}{\typeout{Passage en mode paysage}
+\taillePersonnelle
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{paysage}{\typeout{Passage en mode paysage}
+\setlength{\paperheight}{21cm}
+\setlength{\paperwidth}{29.7cm}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{A3}{\typeout{Passage en A3}
+\setlength{\paperheight}{42.1cm}
+\setlength{\paperwidth}{29.8cm}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{apaysage}{\typeout{Passage en A3 paysage}
+\setlength{\paperheight}{29.8cm}
+\setlength{\paperwidth}{42.1cm}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{paysage}{\typeout{Passage en mode paysage}
+\setlength{\paperheight}{21cm}
+\setlength{\paperwidth}{29.7cm}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{mobile}{\typeout{Passage en mode mobile}
+\setlength{\paperheight}{59.4cm}
+\setlength{\paperwidth}{10.5cm}
+\def\pageSizeDefault{f}
+\def\tailleDefautPage{}
+\margeVerticale=0.5cm
+\margeHorizontale=0.15cm
+\setlength\leftmarginiii{0.8em}
+\setlength\leftmargini{1.6em}
+\setlength\leftmarginii{\leftmarginiii}
+}
+
+
+\DeclareOption{video4-3}{\typeout{Passage en mode paysage}
+\setlength{\paperwidth}{20cm}
+\setlength{\paperheight}{15cm}
+\margeVerticale=0.3cm
+\margeHorizontale=0.3cm
+\def\tailleDefautPage{}
+\def\pageSizeDefault{f}
+\def\nofootskip{t}
+}
+
+\DeclareOption{video16-9}{\typeout{Passage en mode paysage}
+\setlength{\paperwidth}{20cm}
+\setlength{\paperheight}{11.5cm}
+\margeVerticale=0.3cm
+\margeHorizontale=0.3cm
+\def\tailleDefautPage{}
+\def\pageSizeDefault{f}
+\def\nofootskip{t}
+}
+
+\DeclareOption{lettre}{\typeout{Pour ecrire une lettre}
+\setlength{\paperheight}{29.7cm}
+\setlength{\paperwidth}{21cm}
+\margeVerticale=2cm
+\margeHorizontale=3cm\def\pageSizeDefault{t}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{beamer}{\typeout{Passage en mode portrait}
+\setlength{\paperheight}{9.6cm}
+\setlength{\paperwidth}{12.8cm}
+\def\pageSizeDefault{f}
+\pagestyle{navigation}
+\def\beamer{}
+}
+
+\DeclareOption{portrait}{\typeout{Passage en mode portrait}
+\setlength{\paperheight}{29.7cm}
+\setlength{\paperwidth}{21cm}
+\def\pageSizeDefault{f}
+}
+
+\DeclareOption{nofootskip}{\typeout{Pied de page}
+\def\nofootskip{t}}
+
+\DeclareOption{nofootnote}{\typeout{Pas de pied de page}
+\renewcommand*{\@oddfoot}{} \let\@evenfoot\@oddfoot}
+
+\ProcessOptions
+
+
+\@ifundefined{pageOrigine}{
+  \RequirePackage{formatPage}
+}
+
+%%======== Package utilisée par défaut
+\RequirePackage[T1]{fontenc}
+\RequirePackage{amsmath,amssymb,array,color,mathrsfs,eurosym,multicol}
+\let\itemizeFB=\itemize %% ???
+
+
+%A RETABLIR
+\iftrue\RequirePackage[french]{babel}
+\frenchbsetup{StandardLists=true} %% Babel se permet de modifier le package enumerate juste avant begin{document}
+\fi
+
+%%===============================================================
+%%                       REDEFINITION
+%%===============================================================
+
+%==================Modification de la marge gauche des listes
+\def\@donoparitem{%
+  \@noparitemfalse
+  \global\setbox\@labels\hbox{\hskip -\leftmargin 
+                               \unhbox\@labels
+                                \hskip \leftmargin \hskip \leftmargin }%
+  \if@minipage\else
+    \@tempskipa\lastskip
+    \vskip -\lastskip
+    \advance\@tempskipa\@outerparskip
+    \advance\@tempskipa -\parskip
+    \vskip\@tempskipa
+  \fi}
+
+\def\rad{\hbox{rad}}
+
+%% Enlever le package de wideparent car il fait des merdes sur les enumerate
+\newbox\bboite
+\newbox\bbboite
+\arraycolsep=2pt
+%\newcommand{\@chemin}{D:/_data/myLocaltexmf/tex/}
+%\newcommand{\@chemin}{/home/_data/myLocaltexmf/tex/}
+\newcommand{\@chemin}{}
+
+
+%\newcommand\tableofcontentsss{ \@starttoc{toc}% \if@restonecol\twocolumn\fi }
+
+\def\pgcd #1#2{\text{pgcd}\coord{#1}{#2}}
+\def\ppcm #1#2{\text{ppcm}\coord{#1}{#2}}
+
+\def\dx{\,\text{d}x}
+\def\dt{\,\text{d}t}
+
+%Choisit le grand signe integral
+\mathchardef\int="135A
+\let\sumA=\sum
+\def\sum{\mathop{\displaystyle\sumA}}
+%%Pour redefinir le saut de ligne dans les array
+%%SERVER AVANT POUR \egalite
+%\def\@arraycr{%
+%  ${\ifnum0=`}\fi\@ifstar\@xarraycr\@xarraycr}
+%\def\@xarraycr{\@ifnextchar[\@argarraycr{\ifnum0=`{\fi}${}\cr\noalign{\vskip60pt}}}
+
+%%%Redefinition de l'environnement matrice
+\def\argPmatrix[#1]{#1}\renewenvironment{pmatrix}{%
+  \def\arraystretch{1.3}\arraycolsep=5pt\left(%
+  \matrix@check\pmatrix\@ifnextchar[{\env@pmatrix}{\env@pmatrix[]}}{\endmatrix\right)}
+%%% Modif permettant l'insertion de parametre dans le corps de la matrice
+\def\env@pmatrix[#1]{#1\hskip -\arraycolsep  \let\@ifnextchar\new@ifnextchar  \array{*\c@MaxMatrixCols r}}
+
+
+
+%%%%%%%%%%%%%% Definition d un nouveau environnement pour macro \egalite
+\def\arrayy{\col@sep\arraycolsep%
+  \def\d@llarbegin{$}\let\d@llarend\d@llarbegin\gdef\@halignto{}%$%
+  \@tabarrayy}
+\def\endarrayy{\crcr \egroup \egroup \gdef\@preamble{}}
+\def\@tabarrayy{\@ifnextchar[{\@arrayy}{\@arrayy[c]}}
+\def\@arrayy[#1]#2{%
+  \@tempdima \ht \strutbox%
+  \advance \@tempdima by\extrarowheight%
+  \setbox \@arstrutbox \hbox{\vrule%
+             \@height \arraystretch \@tempdima%
+             \@depth \arraystretch \dp \strutbox%
+             \@width \z@}%
+  \begingroup%
+  \@mkpream{#2}%
+  \xdef\@preamble{\noexpand \ialign \@halignto\bgroup\@arstrut \@preamble\tabskip \z@\cr}%
+  \endgroup %
+  \@arrayleft%
+  \vtop%\if #1t\vtop \else \if#1b\vbox \else \vcenter \fi \fi%
+  \bgroup%
+  \let \@sharp ##\let \protect \relax%
+  \lineskip 6pt%
+  \baselineskip \z@%
+  \m@th%
+  \let\\\@arraycr \let\tabularnewline\\\let\par\@empty%
+  %Ajout de ma part de la ligne suivant : cause leger decalage a gauche
+  \col@sep0pt\@preamble}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\egalite}[2][t]{{\arraycolsep0pt\def\arraystretch{0}%
+\leavevmode%
+\dimen0=\if t#1\leftmarginii\else#1\fi\hbox{\unskip$\begin{arrayy}[t]{>{\hbox{\hglue\dimen0}}r>{{}=}l}
+#2
+\end{arrayy}$}}}
+
+
+
+\newcommand{\Egalite}[2][t]{{\def\arraystretch{0}%
+\def\xXx{\cr\noalign{\vskip6pt}}%
+%\let\\=\xXx%
+\leavevmode%
+\dimen0=\if t#1\leftmarginii\else#1\fi%
+\hbox{\unskip$\begin{arrayy}[t]{>{\hbox{\hglue\dimen0}\hbox to\leftmarginii\bgroup $}r<{$\hss\egroup} >{\,=\,}{l}}
+#2
+\end{arrayy}$}}}
+
+\newcommand{\Inegalite}[2][t]{{\def\arraystretch{0}%
+\def\xXx{\cr\noalign{\vskip6pt}}%
+%\let\\=\xXx%
+\leavevmode%
+\dimen0=\if t#1\leftmarginii\else#1\fi %
+\hbox{\arraycolsep0pt\unskip$\begin{arrayy}[t]{>{\hbox{\hglue\dimen0}\hbox to\leftmarginii\bgroup $}r<{$\hss\egroup} >{{}}c<{{}}l}
+#2
+\end{arrayy}$}}}
+
+
+\newcommand{\inegalite}[2][t]{{\arraycolsep0pt\def\arraystretch{0}%
+\leavevmode%
+\dimen0=\if t#1\leftmarginii\else#1\fi \hbox{\unskip$\begin{arrayy}[t]{>{\hbox{\hglue\dimen0}}r>{{}}c<{{}}l}
+#2
+\end{arrayy}$}}}
+
+\newcommand{\encadrement}[2][t]{{\arraycolsep0pt\def\arraystretch{0}%
+\leavevmode%
+\dimen0=\if t#1\leftmarginii\else#1\fi \hbox{\unskip$\begin{arrayy}[t]{>{\hbox{\hglue\dimen0}}r>{{}}c<{{}}c>{{}}c<{{}}l}
+#2
+\end{arrayy}$}}}
+
+
+%\let\intop=\undefined
+%\DeclareMathSymbol{\intop}{\mathop}{largesymbolsA}{'003}
+%\def\int{\intop\nolimits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\sansespace{\thickmuskip0mu\thinmuskip\thickmuskip\medmuskip\thickmuskip}
+\def\se{\thickmuskip0mu\thinmuskip\thickmuskip\medmuskip\thickmuskip\def\,{\mskip5mu}}
+\def\Se{\thickmuskip1mu\thinmuskip\thickmuskip\medmuskip\thickmuskip}
+\def\Se{\thickmuskip2mu plus 0.5mu\thinmuskip0mu\medmuskip0mu\def\,{\mskip3mu}}
+
+
+
+%==============Rectifie le package multicols*
+%\def\remove@discardable@items{}%\vfill}
+
+\@namedef{endmulticols*}{\vfill\null%
+\end{multicols}}
+\def\columnbreakkkk{%
+ \ifnum\col@number<\tw@
+  \PackageError{multicol}%
+   {\noexpand\columnbreak outside multicols}%
+   {This command can only be used within
+    a multicols or multicols* environment.}%
+ \else
+  \ifvmode
+    \vfill\null\penalty -\@Mv\relax  
+  \else
+    \@bsphack
+    \vadjust{\penalty -\@Mv\relax}%
+    \@esphack
+  \fi
+ \fi}
+%%===========Trait mathematique
+\def\mathstrut{\vrule width0em height2ex depth0.4ex}
+%%============Trait vertical indiquant un d\'epassement horizontal
+\overfullrule=0mm
+%%============Liste ordinale
+%%besoin pour beamer
+\def\labelenumi{}
+\def\labelenumii{}
+\def\labelenumiii{}
+%%fin des besoins de beamer
+\def\espL@bel{0.75em}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\newcommand{\labeli}[1]{\colorbox[rgb]{0.8706,0.7216,0.5294}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumi}{\labeli{\theenumi}}
+
+\renewcommand{\theenumii}{\alph{enumii}}
+\newcommand{\labelii}[1]{\colorbox[rgb]{0.82627,0.8627,0.8627}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumii}{\labelii{\theenumii}}
+
+\renewcommand{\theenumiii}{\roman{enumiii}}
+\newcommand{\labeliii}[1]{\colorbox[rgb]{0.6,0.9,0.65}{\vtop{\hbox{\vrule width0pt height\espL@bel #1.}\hrule height0pt depth0pt width\espL@bel}}}
+\renewcommand{\labelenumiii}{\labeliii{\theenumiii}}
+
+\def\changelabel{\def\theenumi{\alph{enumi}}}
+
+
+
+\newcommand{\questioni}[2][t]{\leavevmode\vtop{\lineskiplimit6pt\lineskip6pt
+\halign{\hglue\leftmargini\labeli{##} &$##$\hfil&&\if t#1\hglue1cm\else\hglue#1\fi\labeli{##} &$##$\hfil\cr
+#2}}}
+
+\newcommand{\questionii}[2][t]{\leavevmode\vtop{\lineskiplimit6pt\lineskip6pt
+\halign{\hglue\leftmarginii\labelii{##} &$##$\hfil&&\if t#1\hglue1cm\else\hglue#1\fi\labelii{##} &$##$\hfil\cr
+#2}}} 
+
+
+%%============Liste non-ordinale
+\def\labelitemi{\regle[1]}
+\def\labelitemii{\regle[2]}
+\def\labelitemiii{\regle[3]}
+%Redefinition
+\let\Frlabelitemi\labelitemi
+\let\Frlabelitemii\labelitemii
+\let\Frlabelitemiii\labelitemiii
+%%============Pas de numero de page
+%\pagestyle{empty}
+%%============Pas de bas de page
+\renewcommand{\footnoterule}{}%
+%============ ??
+\parskip = 0.2 cm
+\parindent = 0 cm
+\@topsep=\z@\@topsepadd=\z@
+\def\@listI{\leftmargin\leftmargini\topsep0pt\parsep0.2cm\itemsep0pt\@topsep0pt\@topsepadd0pt\partopsep0pt}
+\let\@listi=\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    4\p@ 
+              \parsep    2\p@ 
+              \itemsep   \parsep}
+\def\@listiii {\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    4\p@ 
+              \parsep    2\p@ 
+              \itemsep   \parsep}
+%============ redefinition evitant espace haut et bas sur environnement
+\def\enumerate{%
+  \ifnum \@enumdepth >\thr@@\@toodeep\else
+    \advance\@enumdepth\@ne
+    \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
+      \expandafter
+      \list
+        \csname label\@enumctr\endcsname
+        {\usecounter\@enumctr\def\makelabel##1{\hss\llap{##1}}}%
+   %\@topsep=\z@\@topsepadd=\z@%
+\fi}
+
+\def\@endparenv{%
+  %\addpenalty\@endparpenalty\addvspace\@topsepadd\@endpetrue%
+}
+
+
+\def\itemize{%\parsep0pt%
+  \ifnum \@itemdepth >\thr@@\@toodeep\else
+    \advance\@itemdepth\@ne
+    \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
+    \expandafter
+    \list
+      \csname\@itemitem\endcsname
+      {\def\makelabel##1{\hss\llap{##1}}}%
+   %\hbox{\the\@topsep}
+   %\@topsep=\z@\@topsepadd=\z@%
+   %Parametre de itemize par babel a voir
+   %    \setlength{\leftmargin}{\labelwidth}%
+   %    \addtolength{\leftmargin}{\labelsep}%
+   %    \ifnum\@listdepth=0
+   %      \setlength{\itemindent}{\parindent}%
+   %    \else
+   %      \addtolength{\leftmargin}{\parindent}%
+   %    \fi
+   %\setlength{\itemsep}{\z@}%
+   \setlength{\parsep}{\z@}%
+   %\setlength{\topsep}{\z@}%
+   %\setlength{\partopsep}{\z@}%
+   %\@tempdima=\parskip
+   %\addtolength{\topsep}{-\@tempdima}%
+   %\addtolength{\partopsep}{\@tempdima}}%
+  \fi}
+
+
+
+\def\@trivlist{%
+  \if@noskipsec \leavevmode \fi
+  \@topsepadd \topsep
+  \ifvmode
+    \advance\@topsepadd \partopsep
+  \else
+    \unskip \par
+  \fi
+  \if@inlabel
+    \@noparitemtrue
+    \@noparlisttrue
+  \else
+    \if@newlist \@noitemerr \fi
+    \@noparlistfalse
+    \@topsep \@topsepadd
+  \fi
+  %\advance\@topsep \parskip
+  \leftskip \z@skip
+  \rightskip \@rightskip
+  \parfillskip \@flushglue
+  \par@deathcycles \z@
+  \@setpar{\if@newlist
+             \advance\par@deathcycles \@ne
+             \ifnum \par@deathcycles >\@m
+               \@noitemerr
+               {\@@par}%
+             \fi
+           \else
+             {\@@par}%
+           \fi}%
+  \global \@newlisttrue
+  \@outerparskip \parskip}
+
+%%===============================================================
+%%                       MATHEMATIQUE
+%%===============================================================
+
+%==========Fleche pour fonction
+\newcommand{\mapsTo}{\mathop{\lhook\joinrel\mathrel{\hbox to 12mm{\rightarrowfill}}}\limits}
+%========Redefinition pour suprrimer les blancs autour diviser et multiplier
+\mathchardef\times="0202
+\mathchardef\div="0204
+%========Redefinition ??
+\mathcode`\,="013B
+%=======Redefinition signe inferieur et superieur
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+%======Nombre complexe
+\newcommand{\im}{Im}
+\newcommand{\re}{Re}
+%======Redefinition du signe vectoriel
+\renewcommand{\Vec}[1]{\overrightarrow{#1\vphantom(}}
+%======presentation des couples de nombres -- coordonnée
+\newcommand{\coord}[2]{\setbox0\hbox{$#1$}%
+\setbox1\hbox{$#2$}%
+\ifnum\ht0<\ht1\dimen0=\ht1\else\dimen0=\ht0\fi%
+\ifnum\dp0<\dp1\dimen1=\dp1\else\dimen1=\dp0\fi%
+\advance\dimen0 2pt%
+\advance\dimen1 1pt%
+\left(\vrule width0pt height\dimen0 depth\dimen1 #1\,{\string;}\,#2\right)}
+\newcommand{\Coord}[3]{\setbox0\hbox{$#1$}%
+\setbox1\hbox{$#2$}%
+\setbox2\hbox{$#3$}%
+\ifnum\ht0<\ht1\dimen0=\ht1\else\dimen0=\ht0\fi%
+\ifnum\dimen0<\ht2\dimen0\ht2\fi%
+\ifnum\dp0<\dp1\dimen1=\dp1\else\dimen1=\dp0\fi%
+\ifnum\dimen1<\dp2\dimen1=\dp2\fi%
+\advance\dimen0 2pt%
+\advance\dimen1 1pt%
+\left(\vrule width0pt height\dimen0 depth\dimen1 #1\,{\string;}\,#2\,{\string;}\,#3\right)}
+\newcommand{\COORD}[3]{\left(\vcenter{\hbox{#1}\hbox{#2}\hbox{#3}}\right)}
+%%=========== ?
+\newcommand{\FracR}[2]{{{\strut\textstyle\ #1\ } \special{pdf: bcolor [1 0 0]}\over{\strut\textstyle\ #2\ }\special{pdf:ec} }}
+%============ Signe parallele (?possibilite utilise \sslash)
+\newcommand{\parall}{ /\hskip-.1cm/}
+%============Signe du complementaire
+\newcommand{\complem}{\leavevmode \raise -1pt \hbox{$\complement$}}
+%===========Double barre pour borne d'intervalle d'entier.
+\newcommand{\interr}{[\hskip -1,5pt [}
+\newcommand{\interl}{]\hskip -1,5pt ]}
+%========== Defini le modulo
+\let\MoDmod=\mod
+\def\mod #1{\mskip15mu minus 8mu(\hbox{mod\string.}\mskip2mu minus2mu #1)}
+
+
+
+
+
+
+%%Barrer un element
+\newcommand{\Barre}[2]{\setbox0\hbox{#1}%
+\setbox1\hbox{#2}%
+\dimen0\wd0%
+\advance\dimen0\wd1%
+\divide\dimen0 by 2%
+\hbox{#1\hskip-\dimen0#2}}
+\newcommand{\barre}[1]{\Barre{#1}{\text{$\backslash$}}}
+\newcommand{\barreR}[1]{\Barre{#1}{\text{\rougef{$\backslash$}}}}
+\newcommand{\barreB}[1]{\Barre{#1}{\text{\bleuf{$\backslash$}}}}
+\newcommand{\barreV}[1]{\Barre{#1}{\text{\vertf{$\backslash$}}}}
+\newcommand{\barreSur}[2]{\mathop{\barre{#1}}^{\null\quad #2}\limits}
+\newcommand{\barreSous}[2]{\mathop{\barre{#1}}_{\null\quad #2}\limits}
+\newcommand{\barreSurB}[2]{\mathop{\barreB{#1}}^{\null\quad \bleu{#2}}\limits}
+\newcommand{\barreSousB}[2]{\mathop{\barreB{#1}}_{\null\quad \bleu{#2}}\limits}
+\newcommand{\barreSurR}[2]{\mathop{\barreR{#1}}^{\null\quad \rouge{#2}}\limits}
+\newcommand{\barreSousR}[2]{\mathop{\barreR{#1}}_{\null\quad \rouge{#2}}\limits}
+\newcommand{\barreSurV}[2]{\mathop{\barreV{#1}}^{\null\quad \vertf{#2}}\limits}
+\newcommand{\barreSousV}[2]{\mathop{\barreV{#1}}_{\null\quad \vertf{#2}}\limits}
+
+%%===========Pour exposant et indice ecrit comme ne mode mathematique ...
+%%===========Certainement plus facile a faire
+\edef\prod{\prod\limits}
+\edef\longmapsto{\mathop{\longmapsto}\limits}
+%A effacer%\edef\int{{\displaystyle\int}}
+\edef\cap{\mathop{\mathchar"225C}\limits}
+\edef\cup{\mathop{\mathchar"225B}\limits}
+\edef\bigcup{\mathop{\mathchar"1353}\limits}
+\edef\inf{\inf\limits}
+\edef\sup{\sup\limits}
+\edef\lim{\lim\limits}
+\edef\liminf{\liminf\limits}
+\edef\limsup{\limsup\limits}
+\edef\sum{\sum\limits}
+\edef\min{\min\limits}
+\edef\oplus{\mathop{\mathchar 8712}\limits}
+\edef\sim{\mathop{\mathchar 12824}\limits}
+\def\operp{\mathop{\leavevmode\hbox{$\bigcirc$}\hskip -8,9pt\hbox{$\perp$}}\limits}
+\def\quotient#1#2{{}^{#1}\hskip -3pt / \hskip -2pt{}_{#2}}
+\def\un{\mathop{'\hskip -2,5pt\vert\hskip -2pt\vert}}
+
+
+
+%%===============================================================
+%%                       MISE EN PAGE
+%%===============================================================
+
+%====================Pour afficher les titres
+\newcommand{\titre}[2][50]{{\centre{\fontsize{#1}{50pt}\fontfamily{pzc}\selectfont\bleuf{#2}}}}
+%%====================Encadrement
+\newcommand{\boite}[2][]{%
+\def\@tmp@a{#1}%
+\dimen0\hsize\advance\dimen0-2\fboxsep\advance\dimen0-2\fboxrule%
+\ifx \@tmp@a\@empty\setbox0\vbox{\linewidth\dimen0\hsize\dimen0 #2}\else\setbox0\vtop{\linewidth\dimen0\hsize\dimen0 #2}\fi%
+\fcolorbox{black}{jaune}{\box0}}%
+%=====================Boite en couleur avec bordure
+\newcommand{\boiteCouleur}[3]{\setbox0\hbox{#3}%
+\rlap{{\dimen1\wd0\advance\dimen1 9pt%
+\dimen2\ht0\advance\dimen2 4pt%
+\dimen3\dp0\advance\dimen3 3pt%
+\color[rgb]{#1}\vrule width\dimen1 height\dimen2 depth\dimen3}}%
+\hglue1pt
+\rlap{{\dimen1\wd0\advance\dimen1 7pt%
+\dimen2\ht0\advance\dimen2 3pt%
+\dimen3\dp0\advance\dimen3 2pt%
+\color[rgb]{#2}\vrule width\dimen1 height\dimen2 depth\dimen3}}%
+\hglue3pt{\copy0}%
+\dimen1\ht0\advance\dimen1 5pt%
+\dimen2\dp0\advance\dimen2 6pt\vrule width0pt height \dimen1 depth \dimen2%
+\hglue5pt}
+%==================Affichage numero des exercices
+\newcount\numExo
+\numExo1
+\newcount\numCorrec
+\numCorrec1
+\newcommand{\exercice}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice}}
+\newcommand{\exerciceO}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice obligatoire}}
+\newcommand{\exerciceF}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Exercice facultatif}}
+\newcommand{\exerciceR}[1][]{\afficheExo{#1}{1,0.8784,0.6902}{Exercice}}
+\newcommand{\correction}[1][]{\afficheExo{#1}{0.6902,0.8784,1}{Correction}}
+\newcommand{\Exercice}[1][]{\afficheExo{#1}{0.933,0.467,0.467}{Exercice}}
+\newcommand{\afficheExo}[3]{\def\xXxExo{#3}\def\yYyExo{Exercice}{\leavevmode\null\hskip-0,2cm%
+\usefont{T1}{phv}{b}{it}%
+%\colorbox[rgb]{0.6902,0.8784,0.902}
+\boiteCouleur{0.745,0.745,0.745}{#2}{#3\ifx \yYyExo\xXxExo%
+%Affichage pour les exercices
+\ifnum -1 = \numExo \else~\the\numExo\fi\global\advance\numExo1%
+%Affichage pour les corrections
+\else\ifnum -1 = \numCorrec \else~\the\numCorrec\fi\global\advance\numCorrec1%
+\fi\expandafter\ifx #1* #1\fi}%
+%Gestion du commentaire
+\expandafter\ifx #1\@empty\else \expandafter\ifx #1*\else{\it\quad(#1)}\fi\fi}}
+%==================Puces pour liste
+\newcommand{\regle}[1][1]{%
+\if 1#1\baisse{0.35}{0}\hbox{\image{\@chemin point.png}{0.35}{29}{29}}\fi%
+\if 2#1\baisse{0.35}{6}\hbox{\image{\@chemin point2.png}{0.35}{38}{32}}\fi%
+\if 3#1\baisse{0.5}{6}\hbox{\image{\@chemin point3.png}{0.5}{38}{32}}\fi
+\if 4#1\baisse{0.5}{6}\hbox{\image{\@chemin point.png}{0.5}{29}{29}}\fi}
+%=================Sens de rotation 
+\def\rotationH #1{\Baisse{1}{1}\hbox{\Image{\@chemin sensRotation-1.pdf}{1}{4}{4}}}
+\def\rotationAH #1{\Baisse{1}{1}\hbox{\Image{\@chemin sensRotation-2.pdf}{1}{4}{4}}}
+%================Centre un element sur une ligne
+\newbox\dboite%
+\newbox\gboite%
+\newcommand{\centre}[1]{\leavevmode\hbox to\linewidth{\null\hfill #1\hfill\null}}
+%Centre deux lignes
+\newcommand{\centredeuxlignes}[3][t]{\if t#1\normalbaselineskip=0pt\normallineskip=2pt\normallineskiplimit=10pt\else\normalbaselineskip=0pt\normallineskip=#1pt\normallineskiplimit=10pt\fi%
+\setbox\gboite\hbox{#2}%
+\setbox\dboite\hbox{#3}%
+\ifdim\wd\gboite<\wd\dboite%
+$\vcenter{\normalbaselines\hbox to\wd\dboite{\null\hfill#2\hfill\null}\hbox{\null\hfill#3\hfill\null}}$%
+\else%
+\hbox{$\vcenter{\normalbaselines\hbox{\null\hfill#2\hfill\null}\hbox to \wd\gboite{\null\hfill#3\hfill\null}}$}%
+\fi}
+
+
+\newdimen\glarg%
+\long\def\gpouss#1#2{{%
+\setbox\gboite\hbox{#1}%
+\glarg\linewidth%
+\advance\glarg-\leftskip%
+\advance\glarg-\wd\gboite%
+%
+\leavevmode\hbox{#1}%
+\vtop{\hsize\glarg\linewidth\glarg#2}%
+}}
+
+%
+% Idem que ci-dessus mais met la boite a droite
+\long\def\dpouss#1#2{{%
+\setbox\dboite\hbox{#2}%
+\newdimen\larg%
+\larg\linewidth%
+\advance\larg-\leftskip%
+\advance\larg-\wd\dboite%
+%
+\leavevmode\vtop{\hsize\larg\linewidth\larg#1}\hbox{#2}%
+}}
+
+
+%%===============================================================
+%%                       INSERTION IMAGE
+%%===============================================================
+\newcommand{\image}[4]{%
+\dimen0 #2pt%
+\multiply\dimen0 by #3%
+\divide\dimen0 by 100%
+\multiply\dimen0 by 72%
+\dimen1 #2pt%
+\multiply\dimen1 by #4%
+\divide\dimen1 by 100%
+\multiply\dimen1 by 72%
+\@ifundefined{pdfoutput}{\def\pdfoutput{0}}{}%
+\@ifundefined{psoutput}{\def\psoutput{0}}{}%
+%%Compilation avec pdflatex
+\ifnum\psoutput =0
+\ifnum\pdfoutput =0%
+\special{pdf: image width \the\dimen0 (#1)}\hbox to \dimen0{\vbox to \dimen1{}}%
+%Compilation avec pdflatex
+\else%
+\hbox{\pdfximage width \the\dimen0 {#1}\pdfrefximage\pdflastximage}%
+\fi
+\else%compilation avec dvips
+\includegraphics{#1}
+\fi}
+
+\newcommand{\imageAncien}[4]{%
+\dimen0 #2pt%
+\multiply\dimen0 by 72%
+\divide\dimen0 by 100%
+\multiply\dimen0 by #3%
+\dimen1 #2pt%
+\multiply\dimen1 by 72%
+\divide\dimen1 by 100%
+\multiply\dimen1 by #4%
+\@ifundefined{pdfoutput}{\def\pdfoutput{0}}{}%
+\@ifundefined{psoutput}{\def\psoutput{0}}{}%
+%%Compilation avec pdflatex
+\ifnum\psoutput =0
+\ifnum\pdfoutput =0%
+\special{pdf: image width \the\dimen0 (#1)}\hbox to \dimen0{\vbox to \dimen1{}}%
+%Compilation avec pdflatex
+\else%
+\hbox{\pdfximage width \the\dimen0 {#1}\pdfrefximage\pdflastximage}%
+\fi
+\else%compilation avec dvips
+\includegraphics{#1}
+\fi}
+
+
+\newcommand{\Image}[4]{\leavevmode%
+\dimen0 #2mm%
+\multiply\dimen0 by #3%
+\dimen1 #2mm%
+\multiply\dimen1 by #4%
+\@ifundefined{pdfoutput}{\def\pdfoutput{0}}{}%
+\@ifundefined{psoutput}{\def\psoutput{0}}{}%
+\ifnum\psoutput =0
+\ifnum\pdfoutput =0%
+%Compilation avec dvipdfm
+\special{pdf: image width \the\dimen0(#1)}\hbox to \dimen0{\vbox to \dimen1{}}%
+\else%
+%compilation avec pdflatex
+\hbox{\pdfximage width \the\dimen0 {#1}\pdfrefximage\pdflastximage}%
+\fi%
+\else%
+%compilation avec pslatex
+\xxxxxxxxxxxxxx%chingatome
+\fi}
+
+\newcommand{\baisse}[2]{%
+\dimen0=#1pt%
+\multiply \dimen0 by 72%
+\divide \dimen0 by 100%
+\multiply\dimen0 by #2%
+\leavevmode\raise-\dimen0}
+
+\newcommand{\dimImage}[2]{%
+\dimen0=#1pt%
+\multiply \dimen0 by 72%
+\divide \dimen0 by 100%
+\multiply\dimen0 by #2}
+
+\newcommand{\Baisse}[2]{%
+\dimen0 #1mm%
+\multiply \dimen0 by #2%
+\leavevmode\raise-\dimen0}
+
+
+
+
+%%=======================================================
+%%                LES OPERATIONS POSEES                 
+%%======================================================
+
+\edef\divbas{\vrule width0pt depth5pt}\edef\divHaut{\vrule width0pt height15pt}
+\edef\kk{\char44 }%
+\def\vv{\hphantom{\kk}}%
+%\def\vv{\expandafter{\ifx\globe aa\else b\hphantom{\k}\fi}\let\globe}%
+\edef\divZero{0}\edef\divUn{1}\edef\divDeux{2}\edef\divTrois{3}\edef\divQuatre{4}\edef\divCinq{5}\edef\divSix{6}\edef\divSept{7}\edef\divHuit{8}\edef\divNeuf{9}\edef\divDix{10}\edef\divOnze{11}\edef\divDouze{12}\edef\divTreize{13}\edef\divQuatorze{14}\edef\divQuinze{15}\edef\divVirgule{,}\edef\divMoins{-}\edef\divPoint{.}\edef\divPlus{+}\edef\divProduit{$\times$}%
+\edef\divPointChiffre{\setbox0\hbox{0}\hbox to\wd0{\hfil.\hfil\vrule width0pt height2ex}}
+%
+{%
+\catcode`\0=\active\catcode`\1=\active\catcode`\2=\active\catcode`\3=\active\catcode`\4=\active\catcode`\5=\active\catcode`\6=\active\catcode`\7=\active\catcode`\8=\active\catcode`\9=\active\catcode`\,=\active\catcode`\.=\active\catcode`\-=\active\catcode`\+=\active\catcode`\X=\active\catcode`\_=\active%
+\catcode`\|=\active%
+\catcode`\ =\active%
+\gdef\defcatcod{%
+\catcode`\0=\active\catcode`\1=\active\catcode`\2=\active\catcode`\3=\active\catcode`\4=\active\catcode`\5=\active\catcode`\6=\active\catcode`\7=\active\catcode`\8=\active\catcode`\9=\active\catcode`\,=\active\catcode`\.=\active\catcode`\-=\active\catcode`\+=\active\catcode`\X=\active\catcode`\_=\active\catcode`\|=\active%
+\catcode`\ =\active%
+\def0{&\divZero\vv}\def1{&\divUn\vv}\def2{&\divDeux\vv}\def3{&\divTrois\vv}\def4{&\divQuatre\vv}\def5{&\divCinq\vv}\def6{&\divSix\vv}\def7{&\divSept\vv}\def8{&\divHuit\vv}\def9{&\divNeuf\vv}\def,{\llap{\divVirgule}}\def.{&\divPoint\vv}\def-{&\divMoins\vv}\def+{&\divPlus\vv}\defX{&\divProduit\vv}\def|{&\divPointChiffre\vv}%
+\def_{}\def {&\null}}}
+
+
+\def\trait#1{&\multispan#1\hrulefill\divbas}
+\def\Division#1#2 {\vrule\vtop{\hbox{\ #1\quad\divbas}\hrule\hbox{\ \divHaut #2\quad}}}
+\def\division{\setbox0\hbox{$\null$}\bgroup\defcatcod%
+\offinterlineskip\halign\bgroup&\divbas##\cr}
+
+
+
+
+
+%%===============================================================
+%%                       COULEURS
+%%===============================================================
+
+\definecolor{grisc}{rgb}{0.95,.95,.95}
+\definecolor{gris}{rgb}{0.9,.9,.9}
+\definecolor{grisf}{rgb}{.8,.8,.8}
+\definecolor{grisff}{rgb}{.5,.5,.5}
+\definecolor{grisfff}{rgb}{.3,.3,.3}
+\definecolor{bleuf}{rgb}{.15,0,.44}
+\definecolor{bleuff}{rgb}{.1,0,.3}
+\definecolor{bleu}{rgb}{.18,0,.55}
+\definecolor{bleuc}{rgb}{.2,0,.6}
+\definecolor{bleucc}{rgb}{.25,0,.65}
+\definecolor{bleuccc}{rgb}{.28,0,.7}
+\definecolor{vertc}{rgb}{.97,1,.97}
+\definecolor{vert}{rgb}{.1,.4,0}
+\definecolor{vertf}{rgb}{0,.2,0}
+\definecolor{rouge}{rgb}{.7,.3,0.3}
+\definecolor{rougef}{rgb}{.4,.2,0.2}
+\definecolor{rougec}{rgb}{.6,.3,0.1}
+\definecolor{jaune}{rgb}{0.9651,0.9729,0.859}
+\definecolor{jaunef}{rgb}{0.89,0.90,0.7}
+\definecolor{marron}{rgb}{0.5,0.5,0}
+\definecolor{blanc}{rgb}{1,1,1}
+\definecolor{noir}{rgb}{0,0,0}
+
+\definecolor{bordchap}{rgb}{0.5,0.5,0.5}
+\definecolor{textechap}{rgb}{0,0.2,0}
+\definecolor{chap}{rgb}{0.9651,0.9729,0.859}
+
+\definecolor{bordschap}{rgb}{0.15,0,0.44}
+\definecolor{texteschap}{rgb}{0.15,0,0.44}
+\definecolor{schap}{rgb}{0.89,0.96,0.98}
+
+\definecolor{bordsschap}{rgb}{0.6980,0.4882,0.0510}
+\definecolor{textesschap}{rgb}{0.1,0.0,0.0}
+\definecolor{sschap}{rgb}{0.95,0.97,0.883}
+
+
+\long\def\rouge#1{{\color{rouge}#1}}
+\long\def\rougef#1{{\color{rougef}#1}}
+\def\rougec#1{{\color{rougec}#1}}
+\newcommand{\bleuc}[1]{{\color{bleuc}#1}}
+\newcommand{\bleu}[1]{{\color{bleu}#1}}
+\newcommand{\bleuf}[1]{{\color{bleuf}#1}}
+\newcommand{\bleuff}[1]{{\color{bleuff}#1}}
+%les noms de macro vert est deja pris et green aussi
+\newcommand{\vertf}[1]{{\color{vertf}#1}}
+\newcommand{\grisc}[1]{{\color{grisc}#1}}
+\newcommand{\gris}[1]{{\color{gris}#1}}
+\newcommand{\grisf}[1]{{\color{grisf}#1}}
+\newcommand{\grisff}[1]{{\color{grisff}#1}}
+\newcommand{\grisfff}[1]{{\color{grisfff}#1}}
+\newcommand{\blanc}[1]{{\color{blanc}#1}}
+\newcommand{\noir}[1]{{\color{noir}#1}}
+\newcommand{\marron}[1]{{color{marron}#1}}
+
+
+%%%%============= Lien pdf

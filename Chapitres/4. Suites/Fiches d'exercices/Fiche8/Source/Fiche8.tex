@@ -1,0 +1,335 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Sommes de termes de suites arithmétiques et suites géométriques}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+Soit $\big(u_n\big)_{n\in\mathbb{N}}$ une suite num\'erique. Pour chacune des sommes suivantes, pr\'eciser son nombre de termes :
+
+\hglue-\leftmargini\questioni[0.5cm]{a&u_0+u_1+\cdots+u_{32}&
+b&u_{5}+u_6+\cdots+u_{15}\cr
+c&u_0+u_1+\cdot+u_n&
+d&u_5+u_6+\cdots+u_{n}\cr
+e&u_{k}+u_{k+1}+\cdots+u_{100}&
+f&u_k+u_{k+1}+\cdots+u_n\cr
+g&u_{0}+u_2+\cdots+u_{88}&
+h&u_{3k}+u_{3k+3}+\cdots+u_{99}\cr
+i&\sum_{k=0}^{64} u_k&
+j&\sum_{k=5}^{16} u_{2k}\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere une suite $\big(u_n\big)_{n\in\mathbb{N}}$. D\'eterminer le nombre de termes de chacune des sommes ci-dessous :
+
+\questioni{a&u_0+u_1+u_2+u_3+u_4+u_5+u_6+u_7+u_8\cr
+b&u_5+u_6+u_7+u_8+u_9+u_{10}+u_{11}+u_{12}\cr
+c&u_{11}+u_{12}+u_{13}+\ldots+u_{25}+u_{26}\cr
+d&u_8+u_9+u_{10}+\cdots+u_{31}+u_{32}\cr}
+
+\leavevmode\exercice
+
+
+Ci-dessous sont pr\'esent\'es des suites ``{\sl logiques}'' de nombres. D\'eterminer le nombre de termes de chacune de ces sommes :
+
+\hglue-\leftmargini\questioni{a&1+4+9+16+\ldots+144+169\cr
+b&3+7+11+15+\ldots+79+83\cr
+c&\dfrac14+\dfrac12+1+2+\ldots+256+512\cr
+d&\sqrt{5\mathstrut}+\sqrt{7\mathstrut}+3+\sqrt{11\mathstrut}+\ldots+\sqrt{31\mathstrut}+\sqrt{33\mathstrut}\cr}
+
+\leavevmode\exercice
+
+
+On consid\`ere une suite $\big(u_n\big)$ arithm\'etique de premier terme $u_0$ et de raison $r$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Exprimer $u_1$, $u_2$ et $u_3$ en fonction de $u_0$ et de $r$.
+
+\item Exprimer les termes $u_n$, $u_{n-1}$ et $u_{n-2}$ en fonction de $n$, de $u_0$ et de $r$.
+
+\item Justifier l'\'egalit\'e suivante :\newline
+\hglue\leftmarginii$u_2+u_{n-2}=u_1+u_{n-1}=u_0+u_n$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ une suite arithm\'etique de premier terme 2 et de raison $\dfrac 12$
+
+\begin{enumerate}
+\item Calculer la somme des 13 premiers termes de $\big(u_n\big)$:
+
+\hglue\leftmarginii$S=u_0+u_1+\cdots+u_{11}+u_{12}$
+
+\item Calculer la somme des termes de $\big(u_n\big)$ allant de $u_5$ \`a $u_{20}$ :\quad $S'=u_5+u_6+\cdots+u_{19}+u_{20}$
+\end{enumerate}
+
+\item On consid\`ere les deux sommes suivantes :
+
+\hglue\leftmarginii$S_1=1+\dfrac52+4+\dfrac{11}2+\cdots+100$
+
+\hglue\leftmarginii$S_2=\dfrac{\sqrt{3\mathstrut}}3+\dfrac{2\sqrt{3\mathstrut}}3+\sqrt{3\mathstrut}+\cdots+\dfrac{16\sqrt{3\mathstrut}}3$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les caract\'eristiques des suites arithm\'etiques $\big(v_n\big)$ et $\big(w_n\big)$ d\'efinissant respectivement les termes des sommes $S_1$ et $S_2$.
+
+\item En d\'eduire la valeur des sommes $S_1$ et $S_2$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ la suite arithm\'etique de premier terme 2 et de raison $\dfrac14$. D\'eterminer la somme $S$ d\'efinie par :\newline
+\hglue\leftmarginii$S=u_{11}+u_{12}+\cdots+u_{25}$
+
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ la suite arithm\'etique de premier terme 12 et de raison $-\sqrt{3\mathstrut}$. D\'eterminer la somme $S'$ d\'efinie par :\newline\hglue\leftmarginii$S'=v_{5}+v_{6}+\cdots+v_{13}$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\dimen0=4.3cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Le prince demande \`a Sissou de commencer par d\'eposer un grain de riz sur la premi\`ere case, puis trois grains sur la deuxi\`eme case, puis cinq grains sur la troisi\`eme case et ainsi de suite pour remplir l'\'echiquier repr\'esent\'e ci-contre.
+
+\vskip0.2cm
+D\'eterminer le nombre de grains de riz dont aura besoin Sissou pour compl\'eter l'\'echiquier.
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{37}\hbox{\Image{6548_dessin-1.pdf}{1}{41}{41}}
+\end{minipage}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ la suite g\'eom\'etrique de premier terme 2 et de raison $\dfrac12.$
+
+\begin{enumerate}
+\item D\'eterminer la somme de ses 10 premiers termes :
+
+\hglue\leftmarginii$S=u_0+u_1+\cdots+u_8+u_9$
+
+\item D\'eterminer la somme des termes de la suite $\big(u_n\big)$ allant de $u_4$ \`a $u_{22}$ :
+
+\hglue\leftmarginii$S'=u_4+u_5+\cdots+u_{21}+u_{22}$
+\end{enumerate}
+
+
+\item On consid\`ere la somme num\'erique suivantes :
+
+\hglue\leftmarginii$S_n=1+\dfrac12+\dfrac14+\dfrac18+\cdots+\dfrac1{2^n}$
+
+D\'eterminer la valeur de $S_n$ en fonction de $n$.
+
+
+\item Soit $S_3$ la somme num\'erique suivante :
+
+\hglue\leftmarginii$S_3=1+\sqrt{2\mathstrut}+2+2\sqrt{2\mathstrut}+\cdots +8\sqrt{2\mathstrut}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner les caract\'eristiques de la suite g\'eom\'etrique $\big(v_n\big)_{n\in\mathbb{N}}$ dont la somme des premiers termes est $S_3$.
+
+\item En d\'eduire la valeur de $S_3$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ g\'eom\'etrique de premier terme 1 et de raison 2.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la somme de ses 8 premiers termes :\newline
+\hglue\leftmarginii$S=u_0+u_1+\cdots +u_7$
+
+\item D\'eterminer la somme des termes suivants :\newline
+\hglue\leftmarginii$S'=u_3+u_4+u_5+u_6$
+\end{enumerate}
+
+\item Les termes de chaque somme sont les termes d'une suite g\'eom\'etrique. D\'eterminer la valeur de ces deux sommes :
+
+\vskip\parskip
+\begin{enumerate}
+\item $S_1=1+\dfrac12+\dfrac14+\dfrac18+\cdots+\dfrac1{1024}$
+
+\item $S_2=2+\sqrt{3\mathstrut}+\dfrac32+\dfrac{3\sqrt{3\mathstrut}}4+\dfrac98$
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ la suite g\'eom\'etrique de premier terme $5$ et de raison $\dfrac23$. D\'eterminer la valeur de la somme :\newline
+\hglue\leftmarginii$S=u_{10}+u_{11}+\cdots+u_{21}$
+
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ la suite g\'eom\'etrique de premier terme $12$ et de raison $-\dfrac12$. D\'eterminer la valeur de la somme :\newline
+\hglue\leftmarginii$S'=v_{7}+v_{8}+\cdots+v_{12}$
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+Soit $x$ un nombre r\'eel diff\'erent de $1$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Exprimer la somme suivante en fonction de $x$ :\newline
+\hglue\leftmarginii$S=1+x+x^2+x^3+\ldots+x^n$
+
+\item En d\'eduire une factorisation du polyn\^ome $\Se 1-x^{n+1}$.
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+\begin{enumerate}
+\item Soit $\big(u_n)_{n\in\mathbb{N}}$ une suite arithm\'etique de premier terme 2 et de raison $\dfrac{3}5$, d\'eterminer la valeur de la somme suivante :\newline
+\hglue\leftmarginii$S=u_5+u_6+\cdots+u_{21}$
+
+\item On consid\`ere la somme suivante dont les termes sont ceux d'une suite g\'eom\'etrique :\newline
+\hglue\leftmarginii$S'=16+24+36+\cdots+\dfrac{3^{10}}{2^6}$
+
+D\'eterminer la valeur de la somme $S'$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$u_0=0$%
+\quad\string;\quad%
+$u_{n+1}=-\dfrac12{\cdot}u_n+1$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les cinq premiers termes de la suite $\big(u_n\big)$.
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_n=u_n-\dfrac23$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les quatre premiers termes de la suite $\big(v_n\big)$.
+
+\item Etablir que pour tout entier naturel $n$, on a :\newline
+\hglue\leftmarginii$v_{n+1}=-\dfrac12{\cdot}v_n$
+
+\item Donner la nature et les valeurs des \'el\'ements caract\'eristiques de la suite $\big(v_n\big)$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer la valeur de la somme $S'$ d\'efinie par :\newline
+\hglue\leftmarginii$S'=v_0+v_1+\cdots+v_{14}$
+
+\item D\'eterminer la valeur de la somme $S$ d\'efinie par :\newline
+\hglue\leftmarginii$S=u_0+u_1+\cdots+u_{14}$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Donner l'expression du terme $v_n$ en fonction de son rang $n$.
+
+\item Donner l'expression du terme $u_n$ en fonction de son rang $n$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ arithm\'etique de premier terme $-3$ et de raison $4$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression du terme $u_n$ en fonction de son rang $n$.
+
+\item Quel est le rang du terme de la suite $\big(u_n\big)$ ayant pour valeur $605$
+
+\item D\'eterminer la valeur de la somme $S$ d\'efinie par :\newline
+\hglue\leftmarginii$S=u_0+u_1+\cdot+u_{100}$
+\end{enumerate}
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ g\'eom\'etrique de premier terme $12$ et de raison $\dfrac14$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression du terme $v_n$ en fonction de son rang $n$.
+
+\item Quel est le rang du terme de la suite $\big(v_n\big)$ ayant pour valeur $\dfrac3{64}$
+
+\item D\'eterminer une expression simplifi\'ee de la somme $S$ d\'efinie par :\newline
+\hglue\leftmarginii$S=v_0+v_1+\cdots+v_{30}$
+\end{enumerate}
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ arithm\'etique de premier terme $5$ et de raison $3$.\newline
+D\'eterminer la valeur de la somme $S$ des $100$ premiers termes de cette suite.
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ g\'eom\'etrique de premier terme $3$ et de raison $\dfrac14$.\newline
+D\'eterminer la valeur de la somme $S'$ des $100$ permiers termes de cette suite.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On souhaite d\'eterminer la valeur de la somme $S$ suivante :\newline
+\hglue\leftmargini$S=9+15+27+\cdots+3075$
+
+On remarquera que cette somme peut s'\'ecrire par :
+
+\hglue\leftmargini$\Se S=\big(3\times2^1{+}3\big)
++\big(3\times2^2{+}3\big)
++\big(3\times2^3{+}3\big)
++\cdots+
+\big(3\times2^{10}{+}3\big)$
+
+D\'eterminer la valeur de $S$
+
+{\sl\bfseries Toutes traces de recherche, m\^eme incompl\`etes, seront prises en compte dans l'\'evaluation}.
+
+\end{multicols*}
+
+\end{document}
