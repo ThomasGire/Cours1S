@@ -1,0 +1,338 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Suites explicites et récurrentes}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+On consid\`ere l'algorithme suivant :
+
+\leavevmode\hfil\begin{myAlgo}[14]
+Pour $i$ allant de $0$ \`a 5
+    $a$ $\leftarrow$ $\Se i\times (i-1)$
+Fin Pour
+\end{myAlgo}
+
+\vskip\parskip
+\begin{enumerate}
+\item Lors de l'ex\'ecution pas \`a pas de cet algorithme, donner les valeurs prises par la variable {\tt a}.
+
+\item Donner l'expression d'une suite $\big(u_n\big)$ dont les six premiers termes sont les valeurs affich\'ees par l'algorithme.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\mathbb{R}_+$ dont la courbe repr\'esentative $\mathscr{C}_f$ est donn\'ee dans le rep\`ere orthonormal $\Se\big(O\,;\,I\,;\,J\big)$ ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{5089_graph-1.pdf}{1}{90}{43}}
+
+On d\'efinie la suite $\big(u_n\big)$ par la relation :\newline
+\hglue\leftmargini$u_n=f(n)$\quad pour tout entier $\Se n\in\mathbb{N}$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Justifier que le terme $u_4$ a pour valeur $\dfrac32$.
+
+\item D\'eterminer la valeur des termes :\newline
+\hglue\leftmarginii$u_0$%
+\quad\string;\quad%
+$u_1$%
+\quad\string;\quad%
+$u_2$%
+\quad\string;\quad%
+$u_3$%
+\quad\string;\quad%
+$u_4$%
+\quad\string;\quad%
+$u_5$%
+\quad\string;\quad%
+$u_6$%
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+D\'eterminer les 5 premiers termes des suites suivantes :
+
+\questioni[0.75cm]{a&u_n=2{\cdot}n^2-n+1&
+b&v_n=\dfrac{2{\cdot} n+1}{2-3{\cdot}n}\cr
+c&w_n=\sqrt{3n+25\mathstrut\,}&
+d&x_n=3{\cdot}\big[1+(-1)^n\big]+2\cr}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par la formule explicite :\newline
+\hglue\leftmarginii$u_n=5+2\times n$\quad pour tout entier naturel $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Exprimer la valeur $u_{n-3}$ en fonction de $n$.
+
+\item Donner la forme simplifi\'ee de $u_{n-3}{+}u_3$.
+
+\item Donner la forme simplifi\'ee de $u_{n-5}{+}u_5$.
+
+\item Soit $k$ et $n$ deux entiers tels que $\Se k\leq n$. Montrer que $u_k{+}u_{n-k}$ a sa valeur ind\'ependante de $k$.
+\end{enumerate}
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ d\'efinie par la formule explicite :\newline
+\hglue\leftmarginii$v_n=2n^2-3n+2$\quad pour tout entier naturel $n$.
+
+On souhaite \'etudier la diff\'erence entre deux termes cons\'ecutifs de la suite $(v_n)$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression du terme $v_{n+1}$ en fonction de $n$.
+
+\item Etudier la valeur de $v_{n+1}{-}v_n$ en fonction de $n$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans le plan muni d'un rep\`ere orthonorm\'e $\Se\big(O\,;\,I\,;\,J\big)$, on consid\`ere la repr\'esentation $\mathscr{C}_f$ d'une fonction $f$ d\'efinie sur l'intervalle $[-4\,;\,4]$ :
+
+\leavevmode\hfil\hbox{\Image{2978_graph-1.pdf}{1}{91}{80}}
+
+On consid\`ere les suites $(u_n)_{n\in\mathbb{N}}$ et $(v_n)_{n\in\mathbb{N}}$ v\'erifiant les relations :\newline
+\hglue\leftmargini$u_{n+1}=f\big(u_n\big)$%
+\quad\string;\quad%
+$v_{n+1}=f\big(v_n\big)$\quad pour tout $\Se n\in\mathbb{N}$\newline
+v\'erifiant les conditions initiales suivantes :\newline
+\hglue\leftmargini$u_0=-1$%
+\quad\string;\quad%
+$v_0=-4$
+
+D\'eterminer les $100$ premiers termes de chacune de ces deux suites.
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On d\'efinie la suite par r\'ecurrence $\big(u_n\big)_{n\in\mathbb{N}}$ par la relation :\newline
+\hglue\leftmarginii\Se $u_0=5$%
+\quad\string;\quad%
+$u_{n+1}=2{\cdot}u_n-1$\quad pour tout $\Se n\in\mathbb{N}$
+
+D\'eterminer les cinq premiers termes de la suite $(u_n)$.
+
+\item On d\'efinie la suite par r\'ecurrence $\big(v_n\big)_{n\in\mathbb{N}^*}$ par la relation :\newline
+\hglue\leftmarginii$\Se v_1=-2$%
+\quad\string;\quad%
+$v_{n+1}=\dfrac{1-v_n}n$\quad pour tout $\Se n\in\mathbb{N}^*$
+
+D\'eterminer les cinq premiers termes de la suite $(v_n)$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la construction d'un ch\^ateau de cartes :
+
+\leavevmode\hfil\hbox{\Image{2986_dessin-1.pdf}{1}{86}{45}}
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'esignant le nombre de cartes utilis\'ees dans la construction du ch\^ateau \`a l'\'etape $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item Pour tout entier naturel $n$, d\'eterminer une expression du terme $u_{n+1}$ en fonction du terme pr\'ec\'edent $u_n$ et du rang $n$.
+
+\item A quel \'etape de construction peut-on arriver avec deux jeux de 72 cartes?
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Justifier que, dans chaque question, les informations ci-dessous ne d\'efinissent pas de suites :
+
+\vskip\parskip
+\begin{enumerate}
+\changelabel
+\item $u_0=5$%
+\quad\string;\quad%
+$u_{n+1}=2{\cdot}u_n-3$\quad pour tout $\Se n\in\mathbb{N}^*$
+
+\item $u_0=1$%
+\quad\string;\quad%
+$u_1=4$%
+\quad\string;\quad%
+$u_{n+1}=u_n-3$\quad pour tout $\Se n\in\mathbb{N}$
+
+\item $u_0=3$%
+\quad\string;\quad%
+$u_n=2{\cdot}u_{n-1}-2$\quad pour tout $\Se n\in\mathbb{N}$
+
+\item $u_0=-1$%
+\quad\string;\quad%
+$u_n=\dfrac{u_{n-1}-2}{u_{n-1}+1}$\quad pour tout $\Se n\in\mathbb{N}^*$
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere l'algorithme suivant :
+
+\leavevmode\hfil\begin{myAlgo}[15]
+$a$ $\leftarrow$ $2$
+Pour $i$ allant de $0$ \`a $5$
+    $a$ $\leftarrow$ $a\times2$
+Fin Pour
+\end{myAlgo}
+
+\vskip\parskip
+\begin{enumerate}
+\item Lors de son ex\'ecution pas \`a pas, indiquer les diff\'erentes valeurs prises par la variable {\tt a}
+
+\item Parmi les exrpressions choisies qu'elle{\it(s)} peuvent \^etre l'expression d'une suite $\big(u_n\big)$ afin que ses six premiers termes soient les valeurs prises par la variable {\tt a} lors de l'ex\'ecution de l'algorithme pr\'ec\'edent :
+
+\hglue-3\leftmarginii\questionii[0.65cm]{a&u_n=2{\cdot}n,\quad\forall n{\in}\mathbb{N}&
+b&u_n=2^n,\quad\hbox{$\Se \forall n\in\mathbb{N}$}\cr
+c&u_n=2^{n+1},\quad\forall n{\in}\mathbb{N}&
+d&\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&2\\[4pt]
+u_{n+1}&=&2{\cdot}u_n,\ \hbox{$\Se \forall n\in\mathbb{N}$}\\
+\end{array}$}}\right.\cr
+e&\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&2\\[4pt]
+u_n&=&2{\cdot}u_{n+1},\ \hbox{$\Se \forall n\in\mathbb{N}$}\\
+\end{array}$}}\right.&
+f&\left\{\ \vcenter{\hbox{$\begin{array}{rcl}
+u_0&=&2\\[4pt]
+u_{n}&=&2{\cdot}u_{n-1},\ \hbox{$\Se \forall n\in\mathbb{N}^*$}\\
+\end{array}$}}\right.\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere l'algorithme suivant :
+
+\leavevmode\hfil\begin{myAlgo}[14]
+$a$ $\leftarrow$ $-1$
+Pour $i$ allant de $0$ \`a 4
+    $a$ $\leftarrow$ $\se a\times2-i+1$
+Fin Pour
+\end{myAlgo}
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner les diff\'erentes valeurs prises par la variable {\tt a} lors d'une ex\'ecution pas \`a pas de cet algorithme.
+
+\item Donner l'expression d'une suite dont les cinq premiers termes soient les diff\'erentes valeurs prises par la variable {\tt a} prises lors de l'ex\'ecution de cet algorithme.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans chaque cas, d\'eterminer les quatre premiers termes de la suite $\big(u_n\big)_{n\in\mathbb{N}}$ :
+
+\hglue-\leftmargini\questioni[0pt]{a&u_n=\dfrac{2n^2+n+5}{n+1}\hbox{\quad pour tout $\Se n\in\mathbb{N}$}\cr
+b&u_0=2\quad\string;\quad u_{n+1}=\dfrac12{\cdot}u_n+3\text{\quad pour tout $\Se n\in\mathbb{N}$}\cr
+c&u_0=-1\quad\string;\quad u_{n+1}=u_n+n-2\text{\quad pour tout $\Se n\in\mathbb{N}$}\cr
+d&u_0=2\ \string;\ u_1=3\ \string;\ u_{n+1}=u_n+2{\cdot}u_{n-1}\hbox{\ pour tout $\Se n\in\mathbb{N}^*$}\cr}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$\left\{\ \vcenter{\openup4pt\hbox{$u_0=3$\vrule width0pt height8pt%
+\quad\string;\quad%
+$u_1=1$}
+\hbox{$u_{n+2}=2{\cdot}u_{n+1}+u_n$\quad pour tout $\Se n\in\mathbb{N}$}}\right.$
+
+Donner les cinq premiers termes de la suite $\big(u_n\big)$.
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_0=-3$%
+\quad\string;\quad%
+$v_{n+1}=n-2{\cdot}v_{n}$\quad pour tout $\Se n\in\mathbb{N}$
+
+Donner les quatre premiers termes de la suite $\big(v_n\big)$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On construit successivement un objet comme le repr\'esente le sch\'ema ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{5858_dessin-1.pdf}{1}{84}{37}}
+
+Pour tout entier naturel $n$ non-nul, on note $u_n$ le nombre de planches n\'ecessaires pour construire la figure \`a l'\'etape $n$.
+
+Donner une relation de r\'ecurrence caract\'erisant la suite $\big(u_n\big)$.
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmargini$u_0=1$%
+\quad\string;\quad%
+$u_{n+1}=2{\cdot}u_n+3^n$\quad pour tout $\Se n\in\mathbb{N}$.
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer les cinq premiers termes de $\big(u_n\big)$.
+
+\item Quelle conjecture peut-on faire sur la nature de $\big(u_n\big)$
+\end{enumerate}
+
+\item Montrer que la suite g\'eom\'etrique $\big(v_n\big)$ de premier terme $v_0$ et de raison $3$ v\'erifie la relation :\newline
+\hglue\leftmarginii$v_{n+1}=2{\cdot}v_n+3^n$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par la relation de r\'ecurrence suivante :\newline
+\hglue\leftmargini$u_0=3$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac{1-u_n}{1+u_n}$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les cinq premiers termes de la suite $\big(u_n\big)$.
+
+\item Montrer qu'on a la relation suivante :\newline
+\hglue\leftmarginii$u_{n+2}=u_n$\quad pour tout $\Se n\in\mathbb{N}$
+
+\item Que peut-on dire des termes de cette suite?
+
+\item D\'eterminer la valeur des r\'eels $a$ et $b$ v\'erifiant la relation suivante :\newline
+\hglue\leftmargini$u_n=a{\cdot}\big[1-(-1)^n\big]+b$\quad pour tout $\Se n\in\mathbb{N}$
+\end{enumerate}
+
+\end{multicols*}
+
+\end{document}

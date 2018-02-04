@@ -1,0 +1,648 @@
+\documentclass{book}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par la relation de r\'ecurrence :\newline
+\hglue\leftmarginii$u_0=2$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac13 u_n+1$\quad pour tout $\Se n\in\mathbb{N}$
+
+Calculer les 4 premiers termes de la suite $\big(u_n\big)$
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ dont le terme de rang $n$ est d\'efinie par la relation :\newline
+\hglue\leftmarginii$v_n=\dfrac12{\cdot}\Big(\dfrac13\Big)^n+\dfrac32$
+
+Calculer les 4 premiers termes de la suite $\big(v_n\big)$.
+
+\item Faire une conjecture quant \`a l'\'egalit\'e des suites $\big(u_n\big)$ et $\big( v_n\big)$.
+
+\item \begin{enumerate}
+\item Donner en fonction de $n$, la valeur de :\newline
+\hglue\leftmarginii$v_{n+1}-\dfrac13v_n$
+
+\item En d\'eduire l'\'egalit\'e des suites $\big(u_n\big)$ et $\big( v_n\big)$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par :\newline
+\hglue\leftmarginii$u_0=5$%
+\quad\string;\quad%
+$u_n=\Big(1+\dfrac2n\Big){\cdot}u_{n{-}1}+\dfrac6n$\quad pour $\Se n\in\mathbb{N}^*$
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Compl\'eter le tableau suivant :\newline
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to0.95cm{\hfil$#$\hfil}\vrule\cr
+\noalign{\hrule}
+n&0&1&2&3&4&5&6\cr
+\noalign{\hrule}
+u_n&&&&&&&\cr
+\noalign{\hrule}}}
+
+\item Faire une conjecture sur la nature de la suite $\big(d_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$d_n=u_{n+1}-u_n$
+\end{enumerate}
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_n=4n^2+12n+5$\quad pour tout $\Se n\in\mathbb{N}^*$
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression simplifi\'ee de l'expression $v_{n+1}$ en fonction de $n$.
+
+\item Simplifier l'expression de :%
+\quad$\Se\Big(1+\dfrac2{n+1}\Big){\cdot}v_{n}+\dfrac6{n+1}$.\newline
+{\it(On utilisera la factorisation :\newline
+\hglue\leftmarginii$4x^3+24x^2+41x+21=(x+1)(4x^2+20x+21)$)}
+
+\item Que peut-on dire des suites $\big(u_n\big)$ et $\big(v_n\big)$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ d\'efinie par la relation :\newline
+\hglue\leftmarginii$u_0=0$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac{1}{2-u_n}$%
+\quad pour tout $\Se n\in\mathbb{N}$
+
+D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par la relation :\newline
+\hglue\leftmarginii$v_n=\dfrac{n}{n+1}$%
+\quad pour tout $\Se n\in\mathbb{N}$.
+
+D\'eterminer les quatre premiers termes de la suite $\big(v_n\big)$.
+
+\item Quelle conjecture peut-on faire \`a propos des suites $\big(u_n\big)$ et $\big(v_n\big)$?
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Simplifier l'expression suivante :%
+\quad$\Se v_{n+1}{\cdot}\big(2-v_n\big)$
+
+\item Justifier que les deux suites $\big(u_n\big)$ et $\big(v_n\big)$ sont \'egales.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ dont le terme de rang $n$ est donn\'e par la formule :\newline
+\hglue\leftmargini$u_n=n^2-7n+1$
+
+\vskip\parskip
+\begin{enumerate}
+\item A l'aide de la calculatrice, compl\'eter le tableau ci-dessous :
+
+\hglue-\leftmargini\hfil\vbox{\halign{\vrule\vrule width0pt height14pt depth5pt\ $#$\ \hfil\vrule&&\hbox to0.8cm{\hfil$#$\hfil}\vrule\cr
+\noalign{\hrule}
+n&0&1&2&3&4&5&6&7&8&9&10\cr
+\noalign{\hrule}
+u_n&&&&&&&&&&&\cr
+\noalign{\hrule}}}
+
+\item Apr\`es avoir donner le tableau de variation de la fonction $f$ dont l'image de $x$ est d\'efini par :\newline
+\hglue\leftmarginii$f(x)=x^2-7x+1$\newline
+Etablir que la suite $\big(u_n\big)$ est croissante \`a partir du rang 4.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item La suite $\big(u_n\big)_{n\in\mathbb{N}}$ est d\'efinie par :\newline
+\hglue\leftmarginii$u_n=-2n^2-3n+2$\quad pour tout $\Se n\in\mathbb{N}$
+
+Etudier la monotonie de chacune des suites ci-dessous, en \'etudiant la fonction $f$ v\'erifiant la relation :\newline
+\hglue\leftmarginii$u_n=f(n)$\quad pour tout $\Se n\in\mathbb{N}$
+
+\item La suite $\big(v_n\big)_{n\in\mathbb{N}}$ est d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\dfrac{2n^2+1}{2n+5}$\quad pour tout $\Se n\in\mathbb{N}$
+
+On consid\`ere la fonction $f$ d\'efinie par la relation :\newline
+\hglue\leftmarginii$f(x)=\dfrac{2x^2+1}{2x+5}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'ensemble de d\'efinition $\mathcal{D}_f$ de la fonction $f$.
+
+\item Etablir que la fonction $f'$ d\'eriv\'ee de la fonction $f$ admet pour expression sur $\mathcal{D}_f$ :\newline
+\hglue\leftmarginii$f'(x)=\dfrac{4x^2+20x-2}{(2x+5)^2}$
+
+\item Dresser le tableau de variation de la fonction $f$.
+
+\item Justifier que la suite $\big(u_n\big)$ est croissante \`a partir du rang $1$.
+
+\item Peut-on dire que la suite $\big(v_n\big)$ est croissante sur $\mathbb{N}$?
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+D\'eterminer la monotonie de la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par la formule explicite suivante :
+
+\hglue\leftmargini$u_n=\dfrac{n^2-1}{\sqrt{n}}$\quad pour tout $\Se n\in\mathbb{N}$.
+
+\leavevmode\exercice
+
+
+Soit $\big(u_n\big)_{n\in\mathbb{N}}$ la suite d\'efinie par :\newline
+\hglue\leftmargini$u_0=1$%
+\quad\string;\quad%
+$u_{n+1}=u_n-{u_n}^2-1$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item A l'aide de la calculatrice, compl\'eter le tableau ci-dessous :
+
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height14pt depth5pt\ $#$\ \hfil\vrule&&\hbox to1.5cm{\hfil$#$\hfil}\vrule\cr
+\noalign{\hrule}
+n&0&1&2&3&4\cr
+\noalign{\hrule}
+u_n&&&&&\cr
+\noalign{\hrule}}}
+
+\item En \'etudiant la diff\'erence de deux termes cons\'ecutifs, montrer que la suite $\big(u_n\big)$ est d\'ecroissante.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+Dans cet exercice, on utilisera la m\'ethode de la diff\'erence pour prouver la monotonie des suites :
+
+\vskip\parskip
+\begin{enumerate}
+\item Soit $\big(u_n\big)_{n\in\mathbb{N}}$ la suite dont le terme de rang $n$ est d\'efinie par :\newline
+\hglue\leftmarginii$u_n=-32n+102$\quad pour tout $\Se n\in\mathbb{N}$
+
+Montrer que cette suite est d\'ecroissante.
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}^*}$ la suite dont le terme de rang $n$ est d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\sqrt{\mathstrut 2n-1}$\quad pour tout $\Se n\in\mathbb{N}^*$
+
+Montrer que cette suite est croissante.
+
+\item Soit $\big(w_n\big)_{n\in\mathbb{N}^*}$ la suite dont le terme de rang $n$ est d\'efinie par :\newline
+\hglue\leftmarginii$w_n=2n-\dfrac{25}n$\quad pour tout $\Se n\in\mathbb{N}^*$
+
+Montrer que la suite $\big(w_n\big)$ est croissante.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans cet exercice, on mettra en \'evidence la monotonie des suites par la m\'ethode des quotients.
+
+\vskip\parskip
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par :\newline
+\hglue\leftmarginii$u_n=\dfrac{3^n}4$\quad pour tout $\Se n\in\mathbb{N}$.
+
+Montrer que $\big(u_n\big)$ est strictement croissante.
+
+\item La suite $\big(v_n\big)_{n\in\mathbb{N}}$ est d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\dfrac n{2^{n+1}}$\quad pour tout $\Se n\in\mathbb{N}$
+
+Montrer que $\big(v_n\big)$ est strictement d\'ecroissante \`a partir du rang $2$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par :\newline
+\hglue\leftmarginii$u_n=\dfrac{3^n}{2n+1}$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Simplifier l'expression :\quad$\dfrac{u_{n+1}}{u_n}{-}1$.
+
+\item En d\'eduire les variations de la suite $\big(u_n\big)$ sur $\mathbb{N}$.
+\end{enumerate}
+
+\item On consid\`ere la suite $\big(v_n\big)_{n\in\mathbb{N}}$ d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\dfrac{1-n}{1+n}$\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer une expression simplifi\'ee de $v_{n+1}{-}v_n$.
+
+\item En d\'eduire les variations de la suite $\big(v_n\big)$ sur $\mathbb{N}$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Montrer que la suite $\big(u_n\big)_{n\in\mathbb{N}}$ d\'efinie par :\newline
+\hglue\leftmarginii$u_n=\dfrac{5^n}{n+2}$%
+\quad pour tout $\Se n\in\mathbb{N}$\newline
+est une suite croissante sur $\mathbb{N}$.
+
+\item Soit $\big(v_n\big)_{n\in\mathbb{N}}$ d\'efinie par la relation explicite :
+
+\hglue\leftmarginii$v_n=n^3-2n^2-3n$
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner l'expression r\'eduite de :%
+\quad$\Se v_{n+1}-v_n$.
+
+\item En d\'eduire que la suite $(v_n)$ est croissante pour $n$ sup\'erieur \`a 2.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$u_n=\dfrac{n^2+10}{2n}$%
+\quad pour tout $\Se n\in\mathbb{N}^*$
+
+Justifier que $\big(u_n\big)$ est croissante \`a partir du rang $3$.
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_n=\dfrac{n}{2^{n+1}}$%
+\quad pour tout $\Se n\in\mathbb{N}^*$
+
+Montrer que $\big(v_n\big)$ est d\'ecroissante \`a partir du rang $2$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite g\'eom\'etrique $\big(v_n\big)$ de premier terme $24$ et de raison $\dfrac12$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner les quatre premiers termes de la suite $\big(v_n\big)$.
+
+\item Exprimer la valeur du terme $v_n$ en fonction de son rang $n$.
+
+\item D\'emontrer que la suite $\big(v_n\big)$ est d\'ecroissante.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite arithm\'etique $\big(u_n\big)$ de premier terme $5$ et de raison $2$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner les quatre premiers termes de la suite $\big(u_n\big)$.
+
+\item Exprimer la valeur du terme $u_n$ en fonction de son rang $n$.
+
+\item D\'emontrer que la suite $\big(u_n\big)$ est croissante.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans chaque cas, pr\'eciser, si possible, le sens de variation des suites :
+
+\vskip\parskip
+\begin{enumerate}
+\item $\big(u_n\big)$ est une suite arithm\'etique dont le premier terme est positif et la raison n\'egative.
+
+\item $\big(v_n\big)$ est une suite g\'eom\'etrique dont le premier terme est n\'egatif et la raison est strictement sup\'erieure \`a 1.
+
+\item $\big(w_n\big)$ est une suite g\'eom\'etrique dont le premier terme est positif et la raison est n\'egative.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$u_0=3$%
+\quad\string;\quad%
+$u_{n+1}=\dfrac34{\cdot}u_n+\dfrac12$\qquad pour tout entier $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par la relation suivante pour tout entier naturel $n$ :\newline
+\hglue\leftmarginii$v_n=\dfrac12{\cdot}u_n-1$
+
+\vskip\parskip
+\begin{enumerate}
+\item Etablir l'\'egalit\'e ci-dessous pour tout entier naturel $n$ :\newline
+\hglue\leftmarginii$v_{n+1}=\dfrac34{\cdot}v_n$
+
+\item Donner le sens de variation de la suite $\big(v_n\big)$.
+\end{enumerate}
+
+\item En d\'eduire le sens de variation de la suite $\big(u_n\big)$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la suite $\big(u_n\big)$ g\'eom\'etrique de premier terme $5$ et de raison $\dfrac{2}{3}$.
+
+On note $S_n$ la somme des $(n{+}1)$ premiers termes de la suite $\big(u_n\big)$ :%
+\qquad$S_n=u_0+u_1+\cdots+u_{n-1}+u_n$
+
+\vskip\parskip
+\begin{enumerate}
+\item Justifier que la suite $\big(S_n\big)$ est croissante.
+
+\item Donner l'expression du terme $S_n$ en fonction de $n$.
+
+\item \begin{enumerate}
+\item A l'aide de la calculatrice, compl\'eter le tableau ci-dessous en arrondissant les valeurs au milli\`eme pr\`es :
+
+\hglue-3\leftmarginii\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to1.4cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+n&0&1&2&10&20&24\cr
+\noalign{\hrule}
+S_n&&&&&&\cr
+\noalign{\hrule}}}
+
+\item Quelle conjecture peut-on faire sur la valeur des termes de la suite $\big(S_n\big)$ lorsque la valeur de $n$ devient tr\`es grand?
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Un coureur se lance un d\'efi : il souhaite faire le tour de l'Europe.\newline
+Le premier jour, il parcourt $50\,km$. Par la fatigue, de jour en jour, sa distance parcourue quotidiennement se r\'eduit de $1\,\%$.
+
+On note $u_n$ la longueur parcourue par le coureur le $n$-i\`eme jour. En supposant ue le coureur poursuit ind\'efiniment sa course, on obtient une suite $\big(u_n\big)$ d\'efinie pour tout entier naturel non-nul.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la valeur des quatre permiers termes de la suite $\big(u_n\big)$.
+
+\item \begin{enumerate}
+\item Quelle est la nature de la suite $\big(u_n\big)$? Donner les \'el\`ements caract\'eristiques de la suite $\big(u_n\big)$.
+
+\item Exprimer le terme $u_n$ en fonction du rang $n$.
+
+\item Quelle distance sera parcourue par le coureur le $100^e$ jour? On arrondira la valeur au dixi\`eme de kilom\`etre.
+\end{enumerate}
+
+\item On note $S$ la somme des $n$ premiers termes de la suite $\big(u_n\big)$ :%
+\quad$S_n=u_1+u_2+\cdots+u_n$
+
+\vskip\parskip
+\begin{enumerate}
+\item Exprimer la somme $S_n$ en fonction du rang $n$.
+
+\item Compl\'eter le tableau suivant en arrondissant les valeurs au dixi\`eme de kilom\`etres :
+
+\hglue-3\leftmarginii\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to1.4cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+n&10&100&500&750&1000\cr
+\noalign{\hrule}
+u_n&&&&&\cr
+\noalign{\hrule}}}
+
+\item Quelle conjecture peut-on faire sur la limite de la somme $S_n$ quand la valeur de $n$ devient de plus en plus grand?
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On construit le flocon de Heige Von Koch de la mani\`ere suivante :
+\begin{itemize}
+\item On part d'un segment $[AB]$ de longueur $9\,cm$.
+
+\item Pour passer d'une \'etape \`a la suivante, en d\'ecoupant chaque segment pr\'esent sur la figure en trois parties \'egales, puis en enlevant le segment ``{\sl central}'' et en y construisant un triangle isoc\`ele rectangle.
+\end{itemize}
+
+Voici la repr\'esentation des $6$ premi\`eres \'etapes de cette construction :
+
+\leavevmode\hfil\hbox{\Image{6014_flocon-1.pdf}{1}{91}{36}}
+
+A chaque \'etape $n$, on note $u_n$ la longueur de la ``{\sl ligne bris\'ee}'' ainsi obtenue. On construit ainsi une suite de nombres $\big(u_n\big)$ d\'efinie pour tout entier naturel $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la mesure des trois premiers termes de la suite $\big(u_n\big)$.
+
+\item \begin{enumerate}
+\item A l'\'etape $n$, exprimer le nombre de segments $s_n$ formant la ``{\sl ligne bris\'ee}'' en fonction de $n$.
+
+\item A l'\'etape $n$, exprimer la longueur $\ell_n$ de chacun des segments formant la ``{\sl ligne bris\'ee}'' en fonction de $n$.
+\end{enumerate}
+
+\item On note $L_n$ la longueur de la ``{\sl ligne bris\'ee}'' \`a l'\'etape $n$. On obtient ainsi une suite $\big(L_n\big)$ de termes num\'eriques d\'efinie pour tout entier naturel $n$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Exprimer chaque terme de la suite $\big(L_n\big)$ en fonction de son rang $n$.
+
+\item Compl\'eter le tableau suivant en arrondissant les valeurs au centi\`eme de centim\`etre pr\`es :
+
+\hglue-3\leftmarginii\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to1.4cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+n&0&1&10&20&30\cr
+\noalign{\hrule}
+L_n&&&&&\cr
+\noalign{\hrule}}}
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere la fonction $f$ d\'efinie sur $\Se\big[0\,;\,1\big]$ par la relation :\newline
+\hglue\leftmargini$f(x)=\dfrac54-\dfrac1{x+1}$
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Etablir les valeurs suivantes :\newline
+\hglue\leftmarginii$f\Big(\dfrac14\Big)=\dfrac9{20}$%
+\quad\string;\quad%
+$\big(f\circ f\big)\Big(\dfrac{1}{4}\Big)=\dfrac{65}{116}$
+
+\item D\'eterminer la valeur de :%
+\quad$\big(f\circ f\circ f\big)\Big(\dfrac{1}{4}\Big)$
+\end{enumerate}
+\end{enumerate}
+
+Ci-dessous est donn\'ee la courbe repr\'esentative $\mathscr{C}_f$ de la fonction $f$ dans le rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$  orthonorm\'e :
+
+\leavevmode\hfil\hbox{\Image{6635_graph-1.pdf}{1}{93}{89}}
+
+\vskip\parskip
+\begin{enumerate}
+\setcounter{enumi}1
+\item \begin{enumerate}
+\item Donner les valeurs approch\'ees au milli\`eme pr\`es des nombres suivants :
+
+\vskip\parskip
+\hglue\leftmarginii\vbox{\openup6pt
+\halign{\regle{} $#$\hfill&&\qquad\regle{} $#$\hfill\cr
+u_0=\dfrac14=\ldots\ldots&u_1=\dfrac9{20}\simeq\ldots\ldots\cr
+u_2=\dfrac{65}{116}\simeq\ldots\ldots&u_3=\dfrac{441}{724}\simeq\ldots\ldots\cr}}
+
+\item Placer les valeurs $u_2$ et $u_3$ sur l'axe des abscisses.
+
+\item Placer les valeurs $f(u_1)$, $f(u_2)$ et $f(u_3)$ sur l'axe des ordonn\'ees.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Tracer le segment reliant les deux points $A_1\coord{u_1}{0}$ et $B_1\coord{0}{f(u_0)}$.\newline
+Quelle est la nature du triangle $OA_1B_1$.
+
+\item Pour $i$ allant de $1$ \`a $3$, on d\'efinit les points :\newline
+\hglue\leftmarginii$A_i\coord{u_i}{0}$ et $B_i\coord{0}{f\big(u_{i-1}\big)}$\newline
+De quelles natures sont les triangles $OA_iB_i$?
+
+\item Placer les nombres $u_4$ et $u_5$ sur l'axe des abscisses d\'efinis par les relations :\newline
+\hglue\leftmarginii$f(u_3)=u_4$%
+\quad\string;\quad%
+$f(u_4)=u_5$
+\end{enumerate}
+
+\item {\sl G\'en\'eration des termes de la suite :}
+
+\vskip\parskip
+\begin{enumerate}
+\item Saisir et ex\'ecuter ce programme dans le langage de programmation de votre choix.
+
+\hglue-3\leftmarginii\hfil\begin{myAlgo}[15]
+$x$ $\leftarrow$ $0,25$
+Pour $i$ allant de $0$ \`a $100$
+\vskip3pt    $x$ $\leftarrow$ $\dfrac54-\dfrac{1}{x+1}$
+Fin Pour
+\end{myAlgo}
+
+En fin d'ex\'ecution, quelle est la valeur de la variable {\tt x}?
+
+\item Quelle conjecture peut-on faire sur les termes de cette suite?
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere trois suites $\big(u_n\big)$, $\big(v_n\big)$ et $\big(t_n\big)$ dont les premiers termes ont \'et\'e donn\'es dans la feuille de calcul ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{6645_tableurExcel2-1.pdf}{1}{91}{46}}
+
+\vskip\parskip
+\begin{enumerate}
+\item V\'erifier que les formules ci-dessous sont v\'erifi\'ees par les valeurs du tableau :\newline
+\hglue-\leftmarginii\regle{} $\Se B5=2*B4+1$%
+\hfill%
+\regle{} $\Se C3=C2-A2+3$%
+\hfill%
+\regle{} $\Se D6=D5-2*D4$
+
+\item Utiliser ces formules pour en d\'eduire la formule de r\'ecurrence d\'efinissant chacun des termes de ces suites.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On consid\`ere la suite $\big(u_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$u_0=2$%
+\quad\string;\quad%
+$u_{n+1}=3{\cdot}u_n+1$%
+\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les quatre premiers termes de la suite $\big(u_n\big)$.
+\end{enumerate}
+
+On d\'efinit la suite $\big(a_n\big)$ d\'efinie par la relation :\newline
+\hglue\leftmarginii$a_n=u_n+\dfrac12$
+
+\vskip\parskip
+\begin{enumerate}
+\setcounter{enumii}1
+\item D\'emontrer que pour tout $\Se n\in\mathbb{N}$ :%
+\quad$a_{n+1}=3{\cdot}a_n$
+
+\item Quelle est la nature de la suite $\big(a_n\big)$? Donner les valeurs de ses \'el\'ements caract\'eristiques.
+
+\item En remarquant l'\'egalit\'e $\Se u_{n+1}-u_n=a_{n+1}-a_n$ pour tout $\Se n\in\mathbb{N}$, en d\'eduire le sens de variation de la suite $\big(u_n\big)$.
+\end{enumerate}
+
+\item On consid\`ere la suite $\big(v_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$v_0=1$%
+\quad\string;\quad%
+$v_{n+1}=v_n+2{\cdot}n+3$%
+\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les cinq premiers termes de la suite $\big(v_n\big)$.
+
+\item Quelle conjecture peut-on \'emettre sur les termes de la suite $\big(v_n\big)$?
+\end{enumerate}
+
+On d\'efinit la suite $\big(w_n\big)$ d\'efinie par :\newline
+\hglue\leftmarginii$w_{n}=v_{n+1}-v_n$%
+\quad pour tout $\Se n\in\mathbb{N}$
+
+\vskip\parskip
+\begin{enumerate}
+\setcounter{enumii}2
+\item Justifier que la suite $\big(w_n\big)$ est une suite arithm\'etique. On pr\'ecisera les \'el\`ements caract\'eristiques de cette suite.
+
+\item D\'eterminer l'expression de la somme $S$ des $n$ premiers termes de la suite $\big(w_n\big)$.
+
+\item En remarquant l'\'egalit\'e $\se \Big(\sum_{k=0}^{n-1} w_k\Big)+v_0=v_n$, en d\'eduire l'expression du terme $v_n$ en fonction de $n$.
+
+\item Confirmer la conjecture faite \`a la question {\fboxsep1.5pt\labeli{b}}.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
