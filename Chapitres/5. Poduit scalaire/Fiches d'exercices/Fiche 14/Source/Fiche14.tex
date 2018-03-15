@@ -1,0 +1,355 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Produit scalaire: projections et coordonnées.}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+Dans le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e.
+
+\leavevmode\hfil\hbox{\Image{6647_graph-1.pdf}{1}{91}{71}}
+
+On consid\`ere les points $A$, $B$ et $C$ d\'efinis par :\newline
+\hglue\leftmargini$A\coord{-3}{1}$%
+\quad\string;\quad%
+$\Se B\coord{4}{-1}$%
+\quad\string;\quad%
+$C\coord{1}{3}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees du point $I$ milieu du segment $[BC]$.
+
+\item Soit $J$ l'image du point $A$ par la sym\'etrie centrale de centre $C$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner une relation vectorielle v\'erifi\'ee par les points $A$, $C$ et $J$
+
+\item D\'eterminer les coordonn\'ees du point $J$.
+\end{enumerate}
+
+\item D\'eterminer la norme du vecteur $\Vec{AB}$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e.
+
+\leavevmode\hfil\hbox{\Image{6646_graph-1.pdf}{1}{93}{67}}
+
+\vskip\parskip
+\begin{enumerate}
+\item On rappelle la formule de la distance entre deux points :\newline
+\hglue\leftmarginii$PQ=\sqrt{\big(x_Q-x_P\big)^2+\big(y_Q-y_P\big)^2\ \mathstrut}$
+
+On consid\`ere les trois points du plan $A$, $B$ et $C$ de coordonn\'ees :\newline
+\hglue\leftmargini$A\coord{-3}{2}$%
+\quad\string;\quad%
+$\Se B\coord{-2}{-2}$%
+\quad\string;\quad%
+$\Se C\coord{2}{-1}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les distances $AB$, $AC$ et $BC$.
+
+\item Etablir que le triangle $ABC$ est un triangle rectangle.
+\end{enumerate}
+
+\item Soit $\Vec{u}\coord{x}{y}$ un vecteur, on d\'efinit la norme du vecteur $\Vec{u}$ comme le nombre $\big\|\Vec{u}\big\|$ d\'efini par :\newline
+\hglue\leftmarginii$\big\|\Vec{u}\big\|=\sqrt{x^2+y^2\mathstrut\ }$
+
+On consid\`ere les deux points $E$ et $F$ de coordonn\'ees :\newline
+\hglue\leftmarginii$E\coord{-1}{2}$%
+\quad\string;\quad%
+$G\coord{4}{3}$\newline
+et les deux vecteurs $\Vec{u}$ et $\Vec{v}$ de coordonn\'ees :\newline
+\hglue\leftmarginii$\Se\Vec{u}\coord{4}{-1}$%
+\quad\string;\quad%
+$\Vec{v}\coord{1}{2}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les normes des vecteurs $\Vec{u}$ et $\Vec{v}$.
+
+\item D\'eterminer les coordonn\'ees des points $F$ et $H$ v\'erifiant les deux \'egalit\'es vectorielles :\newline
+\hglue\leftmarginii$\Vec{EF}=\Vec{u}$%
+\quad\string;\quad%
+$\Vec{HG}=\Vec{v}$
+
+\item Exprimer le vecteur $\Se\Vec{u}+\Vec{v}$ \`a l'aide des points $E$, $F$ et $G$?
+
+\item Le triangle $EFG$ est-il rectangle?
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\dimen0=4cm\dimen1\hsize\advance\dimen1-\dimen0%
+\begin{minipage}[t]{\dimen1}
+On consid\`ere le plan muni du rep\`ere orthonorm\'e $(O\,;\,I\,;\,J)$ et trois points $A$, $B$, $C$ du plan.
+
+On ne connait pas les coordonn\'ees des points $A$ et $B$ mais on note :\newline
+\hglue\leftmarginii$\Vec{AB}\coord{x}{y}$%
+\quad\string;\quad%
+$\Vec{BC}\coord{x'}{y'}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees du vecteur $\Vec{AC}$.
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\hfill\Baisse{1}{37}\hbox{\Image{2572_dessin-1.pdf}{1}{38}{37}}
+\end{minipage}
+
+\begin{enumerate}
+\setcounter{enumi}1
+\item Exprimer la longueur de chacun des vecteurs $\Vec{AB}$, $\Vec{BC}$, $\Vec{AC}$ en fonction de $x$, $x'$, $y$, $y'$. Elles se notent respectivement ${\parallel} \Vec{AB}{\parallel}$, ${\parallel} \Vec{BC}{\parallel}$, ${\parallel} \Vec{AC}{\parallel}$.
+
+\item Donner une condition n\'ecessaire et suffisante pour que les droites $(AB)$ et $(BC)$ soient perpendiculaires.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e, on consid\`ere les quatre points suivants :
+
+\hglue\leftmargini$A\coord{-3}{2}$%
+\hfill\string;\hfill%
+$\Se B\coord{-2}{-2}$%
+\hfill\string;\hfill%
+$\Se C\coord{2}{-1}$%
+\hfill\string;\hfill%
+$D\coord{1}{3}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la valeur de $\Vec{AB}\cdot \Vec{AD}$
+
+\item D\'emontrer que le quadrilat\`ere $ABCD$ est un rectangle.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\dimen0=4.2cm\dimen1\hsize\advance\dimen1-\dimen0%
+\begin{minipage}[t]{\dimen1}
+On consid\`ere la figure ci-dessous o\`u :%
+\quad$\Se AE=4\,cm$ et $\Se AC=2\,cm$
+
+\vskip0.2cm
+
+\begin{enumerate}
+\item On consid\`ere le rep\`ere orthonorm\'e, orient\'e dans le sens direct, dont l'unit\'e mesure $1\,cm$, et dont l'axe des abscisses est la droite $(AD)$.
+
+
+\vskip0.2cm
+\begin{enumerate}
+\item Montrer que $E\coord{2\sqrt{3}}{2}$
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\Baisse{1}{37}\hbox{\Image{2574_dessin-1.pdf}{1}{40}{41}}
+\end{minipage}
+
+\begin{enumerate}
+\setcounter{enumi}1
+\item[] 
+
+\begin{enumerate}
+\setcounter{enumii}1
+\item[]
+
+\item D\'eterminer les coordonn\'ees des autres points de cette figure.
+\end{enumerate}
+
+\item D\'eterminer la valeur des produits scalaires ci-dessous :
+
+\questionii{a&\Vec{AB}\cdot\Vec{AD}&
+b&\Vec{AB}\cdot\Vec{AE}&
+c&\Vec{AC}\cdot\Vec{AD}\cr}
+
+\item Comment s'appelle le point $D$ relativement au point $E$?\newline
+Comment s'appelle le point $B$ relativement au point $C$?
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere le rep\`ere orthonormal $\Se (O\,;\,I\,;\,J)$ ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{2573_dessin-1.pdf}{1}{91}{52}}
+
+Deux demi-cercles sont trac\'es :%
+\quad$\Se OA=2\,cm$ et $\Se OB=3\,cm$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees des points figurants sur cette figure.
+
+\item D\'eterminer la valeur des produits scalaires suivants :
+
+\questionii{a&\Vec{OA}\cdot\Vec{OC}&
+b&\Vec{OB}\cdot\Vec{OD}\cr
+c&\Vec{OB}\cdot\Vec{OE}&
+d&\Vec{OD}\cdot\Vec{OG}\cr}
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+\dimen0=51mm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+\parskip0.2cm
+Soit $a$ un nombre r\'eel positif. On consid\`ere le rectangle $ABCD$ tel que :\newline
+\hglue\leftmarginii$\Se AB=a$%
+\hfill\string;\hfill%
+$\Se AD=\dfrac{\sqrt{2\mathstrut}}2a$%
+\quad\null
+
+
+On note $I$ le milieu de $[CD]$. Une repr\'esentation est donn\'ee ci-dessous :
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfil\Baisse{1}{42}\hbox{\Image{3013_dessin-1.pdf}{1}{49}{45}}
+\end{minipage}
+
+On consid\`ere le plan munit d'un rep\`ere orthonorm\'e  $\Se\big(D\,;\,\Vec{i}\,;\,\Vec{j})$ dans le sens direct o\`u $\Se\Vec{i}=\Vec{DC}$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees des diff\'erents points de cette figure.
+
+\item En d\'eduire que les droites $(AC)$ et $(IB)$ sont perpendiculaires.
+\end{enumerate}
+
+{\sl Question subsidiaire :} reprendre la question {\fboxsep1.5pt\labeli{2}} sans utiliser les coordonn\'ees des points.
+
+\leavevmode\exercice[*]
+
+
+On consid\`ere le plan muni d'un rep\`ere orthonorm\'e $\Se (O\,;\,I\,;\,J)$ et les trois points suivants ainsi que leurs coordonn\'ees dans ce rep\`ere :
+
+\hglue\leftmargini$A\coord{3}{2}$%
+\quad\string;\quad%
+$\Se B\coord{5}{-1}$%
+\quad\string;\quad%
+$C\coord{-2}{3}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner les coordonn\'ees des vecteurs $\Vec{AB}$, $\Vec{AC}$ et $\Vec{BC}$.
+
+\item Donner les valeurs des produits scalaires suivants :
+
+\hglue\leftmarginii$\Vec{AB}\cdot\Vec{AC}$%
+\quad\string;\quad%
+$\Vec{AB}\cdot\Vec{BC}$%
+\quad\string;\quad%
+$\Vec{BC}\cdot\Vec{AC}$
+
+\item Calculer les distances $AB$, $AC$ et $BC$.
+
+\item D\'eterminer la mesure des 3 angles $ABC$.
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+On consid\`ere le plan muni d'un rep\`ere orthonorm\'e $\Se(O\,;\,I\,;\,J)$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item Soit $A$, $B$, $C$ trois points du plan de coordonn\'ees respective $\coord{-2}{3}$, $\Se\coord{1}{-4}$ et $\Se\coord{0}{-2}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les valeurs de $\Vec{BA}\cdot\Vec{BC}$, $\|\Vec{BA}\|$ et $\|\Vec{BC}\|$.
+
+\item En d\'eduire la mesure de l'angle g\'eom\'etrique $\widehat{ABC}$ au centi\`eme pr\`es de degr\'es.
+
+\item A l'aide d'un dessin \`a main lev\'e, donner une mesure de l'angle orient\'e $\coord{\Vec{BA}}{\Vec{BC}}$.
+\end{enumerate}
+
+\item D\'eterminer une mesure de l'angle orient\'e $\coord{\Vec{DE}}{\Vec{DF}}$ o\`u $D\coord{3}{5}$, $E\coord{-1}{0}$, $F\coord{2}{4}$ au centi\`eme de degr\'e pr\`es.
+\end{enumerate} 
+
+\leavevmode\exercice
+
+
+Le sch\'ema ci-dessous repr\'esente un syst\`eme de poulis \`a l'\'equilibre. Chacun des poids exercice sur le noeud proportionnellement \`a son poids.
+
+\leavevmode\hfil\hbox{\Image{3034_dessin-1.pdf}{1}{48}{37}}
+
+On donne les informations suivantes :
+
+\hglue\leftmargini$\Big\|\Vec{F_1}\Big\|=8\,N$%
+\quad\string;\quad%
+$\Big\|\Vec{F_2}\Big\|=6\,N$%
+\quad\string;\quad%
+$\Big\|\Vec{F}\Big\|=12\,N$
+
+On note $R$ la r\'esultante de toutes ces forces :
+
+\hglue\leftmargini$R=\Vec{F}+\Vec{F_1}+\Vec{F_2}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer en fonction de $alpha$, $\beta$ et $\gamma$ les trois produits scalaires suivants :
+
+\hglue\leftmarginii$\Vec{R}\cdot\Vec{F_1}$%
+\quad\string;\quad%
+$\Vec{R}\cdot\Vec{F_2}$%
+\quad\string;\quad%
+$\Vec{R}\cdot\Vec{F}$%
+
+\item On suppose maintenant que ce syst\`eme est en position d'\'equilibre, ainsi on a $\Vec{R}{=}\Vec{0}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Montrer que les mesures des angles v\'erifient le syst\`eme suivant :
+
+\hglue\leftmarginii$\left\{\vcenter{\arraycolsep=3pt\def\arraystretch{1.25}
+\hbox{$\begin{array}{ccccccccccc}
+4{\cdot}\cos\alpha&+&3{\cdot}\cos\beta&&&+&6&=&0\\
+6{\cdot}\cos\alpha&&&+&3{\cdot}\cos\gamma&+&4&=&0\\
+&&6{\cdot}\cos\beta&+&4{\cdot}\cos\gamma&+&3&=&0\\
+\end{array}$}}\right.$
+
+\item En d\'eduire les valeurs de $\alpha$, $\beta$, $\gamma$ pour la position d'\'equilibre.
+\end{enumerate}
+\end{enumerate}
+
+\end{multicols*}
+
+
+\end{document}
