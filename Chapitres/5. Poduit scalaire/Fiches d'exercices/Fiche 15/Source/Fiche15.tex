@@ -1,0 +1,324 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Utilisation du produit scalaire}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Pour tout vecteur $\Vec{u}$ et $\Vec{v}$, \'etablir l'\'egalit\'e suivante :
+
+\hglue\leftmarginii$\|\Vec{u}+\Vec{v}\|^2-\|\Vec{u}-\Vec{v}\|^2=4\Vec{u}\cdot\Vec{v}$
+
+\item On consid\`ere le parall\'elogramme $ABCD$ dans le plan. On note :\quad
+$\Se\Vec{u}=\Vec{AB}$%
+\quad\string;\quad%
+$\Se\Vec{v}=\Vec{BC}$
+
+\vskip\parskip
+\begin{enumerate}
+\item Que repr\'esentent les vecteurs $\Vec{u}{+}\Vec{v}$ et $\Vec{u}{-}\Vec{v}$ pour le parall\'elogramme $ABCD$?
+
+\item A l'aide des questions pr\'ec\'edentes, \'etablir la proposition suivante :
+
+{\leftskip=0.2cm\sl ``Si un parall\'elogramme a ses diagonales de m\^eme longueur alors ce parall\'elogramme est un rectangle.''\par}
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$ orthonorm\'e et les trois points suivants :
+
+\hglue\leftmargini$A\coord{2}{3}$%
+\quad\string;\quad%
+$B\coord{6}{5}$%
+\quad\string;\quad%
+$C\coord{0}{6}$
+
+On note :%
+\quad$\Se \Vec{u}=\Vec{AB}$%
+\quad\string;\quad%
+$\Se \Vec{v}=\Vec{AC}$
+
+\vskip\parskip\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer les normes $\Big\|\Vec{u}\Big\|$ et $\Big\|\Vec{v}\Big\|$.
+
+\item D\'eterminer la valeur de $\Vec{u}\cdot\Vec{v}$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'evelopper l'expression :%
+\quad$\Big(3{\cdot}\Vec{u}-2{\cdot}\Vec{v}\Big)^2$.
+
+\item En d\'eduire la norme :%
+\quad$\Big\|3{\cdot}\Vec{u}{-}2{\cdot}\Vec{v}\Big\|$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere le triangle $ABC$ \'equilat\'eral dont les c\^ot\'es mesurent $6\,cm$ ; on note $I$, $J$, $K$ les milieux respectifs des milieux $[BC]$, $[AC]$, $[AB]$ ; $M$ est le centre de gravit\'e du triangle $ABC$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la longueur du segment $[BJ]$ et $[BM]$.
+
+\item D\'eterminer la valeur des diff\'erents produits scalaires suivants :
+
+\questionii{a&\Vec{AC}\cdot\Vec{AB}&
+b&\Vec{AC}\cdot\Vec{IC}\cr
+c&\Vec{MC}\cdot\Vec{MA}&
+d&\Vec{CM}\cdot\Vec{MI}\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Soit $ABC$ un triangle quelconque.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'emontrer que pour tout point $M$ du plan, on a la relation :
+
+\hglue\leftmarginii$\Vec{AM}\cdot\Vec{BC}+\Vec{BM}\cdot\Vec{CA}+\Vec{CM}\cdot\Vec{AB}=0$
+
+\item En d\'eduire que les hauteurs du triangle $ABC$ sont concourantes en un point $H$.
+\end{enumerate}
+
+%\vspace{4cm}
+
+\leavevmode\exercice[*]
+
+
+Dans le plan, on consid\`ere le parall\'elogramme $ABCD$ ayant pour les mesures suivantes :
+
+\hglue\leftmargini$AB=5\,cm$%
+\quad\string;\quad%
+$AC=4\,cm$%
+\quad\string;\quad%
+$AD=3\,cm$
+
+\leavevmode\hfil\hbox{\Image{3015_dessin-1.pdf}{1}{76}{31}}
+
+
+\vskip\parskip
+\begin{enumerate}
+\item On rappelle la formule du parall\'elograme :
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'evelopper l'expression :%
+\quad$\big(\Vec{u}{+}\Vec{v}\big)^2$.
+
+\item En d\'eduire la valeur de $\Vec{AB}\cdot\Vec{AD}$ en fonction de normes de vecteurs.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item D\'evelopper l'expression :%
+\quad$\big(\Vec{AB}{-}\Vec{AD}\big)^2$.
+
+\item En d\'eduire la mesure de la diagonale $[BD]$.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere le carr\'e $ABCD$ ci-dessous. $M$ est un point appartenant \`a la diagonale $[BD]$.\newline
+On note $I$ le projet\'e orthogonal de $M$ sur $(DC)$ et $J$ le projet\'e orthogonal de $M$ sur $[BC]$.
+
+\leavevmode\hfil\hbox{\Image{2673_dessin-1.pdf}{1}{48}{48}}
+
+\vskip\parskip
+\begin{enumerate}
+\item Etablir la relation suivante :%
+\quad$\Vec{DI}\cdot\Vec{DC}=\Vec{BC}\cdot\Vec{JC}$
+
+\item En d\'eduire que les droites $(AI)$ et $(DJ)$ sont orthogonales.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans le plan, on consid\`ere un demi-cercle $\mathscr{C}$ de diam\`etre $[AB]$ ; soit $M$ et $N$ deux poins de $\mathscr{C}$ tels que les demi-droites $[AM)$ et $[BN)$ s'interceptent au point $P$ :
+
+\leavevmode\hfil\hbox{\Image{3037_dessin-1.pdf}{1}{57}{46}}
+
+\begin{enumerate}
+\item D\'eterminer la valeur de $\Vec{AM}\cdot\Vec{BM}$.
+
+\item Etablir l'\'egalit\'e suivante :
+
+\hglue\leftmarginii$AB^2=AP\times AM+PB\times NB$
+\end{enumerate}
+
+\vspace{3cm}
+
+\leavevmode\exercice[*]
+
+
+On consid\`ere, dans le plan, le rectangle $ABCD$ de longueur $a$ et de largeur $b$ ; on note $J$ et $I$ les projet\'es orthogonaux sur la droite $(AC)$ respectivement des points $D$ et $B$ :
+
+\leavevmode\hfil\hbox{\Image{3081_dessin-1.pdf}{1}{70}{38}}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Justifier l'\'egalit\'e suivante :%
+\quad$\Se\Vec{AC}\cdot\Vec{BD}=-AC\times IJ$
+
+\item Justifier l'\'egalit\'e suivante :%
+\quad$\Se\Vec{AC}\cdot\Vec{BD}=b^2-a^2$
+\end{enumerate}
+
+\item En d\'eduire l'expression de la longueur $IJ$ en fonction de $a$ et de $b$.
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+Dans le plan, on consid\`ere le rectangle $ABCD$ tel que :\newline
+\hglue\leftmargini$AB=5\,cm$%
+\quad\string;\quad%
+$BC=\dfrac23\cdot AB$\newline
+$I$ est le milieu du segment $[AB]$ ; les droites $(AC)$ et $(ID)$ s'interceptent au point $M$.
+
+\leavevmode\hfil\hbox{\Image{3014_dessin-1.pdf}{1}{68}{48}}
+
+\vskip\parskip
+\begin{enumerate}
+\item En exprimant les vecteurs \`a l'aide de $\Vec{AD}$ et $\Vec{AB}$, d\'eterminer la valeur du produit scalaire $\Vec{ID}\cdot\Vec{AC}$
+
+\item \begin{enumerate}
+\item D\'eterminer les longueurs des segments $[DI]$ et $[AC]$.
+
+\item En d\'eduire la mesure de l'angle $\widehat{IMC}$ au dixi\`eme de degr\'e pr\`es.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere le triangle $ABC$ dont les mesures sont :\newline
+\hglue\leftmargini$AB=5,3\,cm$%
+\quad\string;\quad%
+$AC=3,7\,cm$%
+\quad\string;\quad%
+$BC=7\,cm$
+
+Les formules d'Al-Kashi appliqu\'ees \`a ce triangle donne :
+
+\vskip\parskip
+\begin{itemize}
+\item $AB^2=AC^2+BC^2-2\times AC\times BC\times \cos\widehat{ACB}$
+
+\item $AC^2=AB^2+BC^2-2\times AB\times BC\times\cos\widehat{ABC}$
+
+\item $BC^2=AB^2+AC^2-2\times AB\times AC\times\cos\widehat{BAC}$
+\end{itemize}
+
+D\'eterminer la mesure, au dixi\`eme de degr\`es pr\`es, des angles du triangle $ABC$.
+
+\vspace{3cm}
+
+\leavevmode\exercice
+
+
+On consid\`ere le quadrilat\`ere $ABCD$ repr\'esent\'e ci-dessous :
+
+\leavevmode\hfil\hbox{\Image{2674_dessin-1.pdf}{1}{67}{48}}
+
+\vskip\parskip
+\begin{enumerate}
+\item Les formules d'AL-Kashi donne la formule :\newline
+\hglue\leftmarginii$DC^2
+=BD^2+BC^2-2\times BD\times BC\times \cos\widehat{DBC}$
+
+En d\'eduire la mesure de la longueur $DC$ arrondie au millim\`etre pr\`es.
+
+\item La formule des sinus exprim\'es dans le triangle $ABD$ s'exprime par :\newline
+\hglue\leftmarginii$\dfrac{\sin\widehat{DBA}}{AD}
+=\dfrac{\sin\widehat{ADB}}{AB}
+=\dfrac{\sin\widehat{DAB}}{DB}$
+
+En d\'eduire les mesures des longueurs $AB$ et $AD$ arrondie au millim\`etre pr\`es.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Un bateau $B$ rejoint le port $P$ en ligne droite ; sur le bord de la rive, Marc et Cl\'ea regarde le bateau rentr\'e au port.
+
+\leavevmode\hfil\hbox{\Image{2664_dessin-1.pdf}{1}{81}{37}}
+
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer les mesures des angles du triangle $BCM$.
+
+\item La formule des sinus s'exprime dans le triangle $MBC$ par :\newline
+\hglue\leftmarginii$\dfrac{\sin\widehat{BCM}}{BM}
+=\dfrac{\sin\widehat{CMB}}{CB}
+=\dfrac{\sin\widehat{MBC}}{MC}$\newline
+En d\'eduire la longueur $BC$ arrondie \`a l'hectom\`etre pr\`es.
+\end{enumerate}
+
+\item Dans le triangle $CBP$, les formules d'Al-Kashi s'exprime par :
+\vskip\parskip
+\begin{itemize}
+\item $PC^2=PB^2+BC^2-2\times PB\times BC\times \cos\widehat{PBC}$
+
+\item $PB^2=PC^2+BC^2-2\times PC\times BC\times\cos\widehat{PCB}$
+
+\item $CB^2=CP^2+PB^2-2\times CP\times PB\times\cos\widehat{CPB}$
+\end{itemize}
+
+En d\'eduire la distance s\'eparant le bateau du port arrondie \`a l'hectom\`etre pr\`es.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+D\'eterminer la mesure, au dixi\`eme de degr\`es pr\`es, des angles du triangle $ABC$ ayant les mesures suivantes :
+
+\hglue\leftmargini$AB=6,4\,cm$%
+\quad\string;\quad%
+$AC=4,8\,cm$%
+\quad\string;\quad%
+$BC=8\,cm$
+
+
+\end{multicols*}
+
+
+\end{document}
