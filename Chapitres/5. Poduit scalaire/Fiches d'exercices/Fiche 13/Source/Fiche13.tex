@@ -1,0 +1,332 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Angles associés et trigonométrie.}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice[*]
+
+
+\dimen0=45mm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Soit $ABC$ un triangle \'equilat\'eral dont la mesure des c\^ot\'es vaut $1\,cm$.\newline
+On note $I$ le milieu du segment $[BC]$.
+
+\vskip0.2cm
+\begin{enumerate}
+\item Que repr\'esente la droite $(AI)$ dans le triangle $ABC$?
+
+\item Compl\'eter le tableau ci-dessous :
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\hfill\Baisse{1}{37}\hbox{\Image{2180_equilateral-1.pdf}{1}{43}{40}}
+\end{minipage}
+
+
+\leavevmode\hfil\vbox{\offinterlineskip
+\def\x{\vrule width0pt height14pt depth5pt}
+\halign{\vrule\ #\quad\hfil\vrule&&\x\hbox to1.5cm{\hfil$#$\hfil}\vrule\cr
+\omit\hfil\vrule&\multispan4\hrulefill\cr
+\omit\hfil\vrule&\widehat{CIA}&\widehat{CAB}&\widehat{CAI}&\widehat{IAC}\cr
+\noalign{\hrule}
+Mesure en radian\vrule width0pt height18pt depth10pt&&&&\cr
+\noalign{\hrule}}}
+
+\vskip\parskip
+\begin{enumerate}
+\setcounter{enumi}2
+\item \begin{enumerate}
+\item A l'aide du th\'eor\`eme de Pythagore, d\'emontrer que :\newline
+\hglue\leftmarginii$AI=\dfrac{\sqrt{3\mathstrut}}2\,cm$.
+
+\item Dans le triangle $AIC$, d\'eterminer le sinus, le cosinus et la tangente des angles $\widehat{IAC}$ et $\widehat{ICA}$. Puis, compl\'eter le tableau suivant :
+
+\hglue-3\leftmarginii\hfil\vbox{\halign{\vrule\vrule width0pt height18pt depth10pt\ $#$\ \hfill\vrule&&\hbox to 2cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+\alpha&\dfrac{\pi}6\ \rad&\dfrac{\pi}3\ \rad\cr
+\noalign{\hrule}
+\cos \alpha\quad&&\cr
+\noalign{\hrule}
+\sin \alpha&&\cr
+\noalign{\hrule}
+\tan \alpha&&\cr
+\noalign{\hrule}}}
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\dimen0=3.1cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+On consid\`ere le triangle rectangle-isoc\`ele en $C$ tel que $BC{=}1\,cm$
+
+\vskip0.2cm
+\begin{enumerate}
+\item Compl\'eter le tableau suivant :
+
+\hglue-\leftmargini\hfil\vbox{\offinterlineskip
+\def\x{\vrule width0pt height14pt depth5pt}
+\halign{\vrule\ #\quad\hfil\vrule&&\x\hbox to1.5cm{\hfil$#$\hfil}\vrule\cr
+\omit\hfil\vrule&\multispan2\hrulefill\cr
+\omit\hfil\vrule&\widehat{ACB}&\widehat{CAB}\cr
+\noalign{\hrule}
+\centredeuxlignes{Mesure en}{radian\vrule width0pt depth3pt}&&\cr
+\noalign{\hrule}}}
+
+\item \begin{enumerate}
+\item A l'aide du th\'eor\`eme de Pythagore, d\'eterminer la mesure du c\^ot\'e $[AB]$.
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{42}\hbox{\Image{2181_isocele-1.pdf}{1}{30}{46}}
+\end{minipage}
+
+\begin{enumerate}
+\setcounter{enumi}1
+\item[] \begin{enumerate}
+\item[]
+
+\setcounter{enumii}1
+\item  A l'aide du th\'eor\`eme de Pythagore, montrer que :\newline
+\hglue\leftmarginii$AB=\sqrt{2}\,cm$.
+
+\item Dans le triangle rectangle $ABC$, d\'eterminer le sinus, le cosinus et la tangente de l'angle $\widehat{CAB}$, puis compl\'eter le tableau suivant :
+
+\hglue-3\leftmarginii\hfil\vbox{\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to 2cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+\alpha&\cos \alpha&\sin\alpha&\tan\alpha\cr
+\noalign{\hrule}
+\dfrac{\pi}{4}\ \rad\vrule width0pt height18pt depth10pt&&&\cr
+\noalign{\hrule}}}
+\end{enumerate}
+\end{enumerate}
+
+\vspace{3cm}
+
+\leavevmode\exercice
+
+
+On consid\`ere le cercle trigonom\'etrique $\mathscr{C}$ dans le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$
+
+\dimen0=4.7cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer les coordonn\'ees cart\'esienne du point $M$.
+
+\item Placer le point $M'$ sym\'etrique du point $M$ par la sym\'etrie d'axe $(OJ)$. Donner les coordonn\'ees cart\'esiennes du point $M'$. Puis, donner l'angle rep\'erant le point $M'$ dans le cercle $\mathscr{C}$.
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{44}\hbox{\Image{2179_dessin-1.pdf}{1}{45}{46}}
+\end{minipage}
+
+\vskip\parskip
+\begin{enumerate}
+\item[] \begin{enumerate}
+\setcounter{enumii}2
+\item Placer le point $M''$ sym\'etrique du point $M$ par la sym\'etrie d'axe $(OI)$. Donner les coordonn\'ees cart\'esiennes du point $M''$. Puis, donner l'angle rep\'erant le point $M''$ dans le cercle $\mathscr{C}$.
+
+\end{enumerate}
+
+
+\setcounter{enumi}1
+\item \begin{enumerate}
+\item  D\'eterminer les coordonn\'ees cart\'esienne du point $N$.
+
+\item Placer le point $N'$ sym\'etrique du point $N$ par la sym\'etrie d'axe $(OJ)$. Donner les coordonn\'ees cart\'esiennes du point $N'$. Puis, donner l'angle rep\'erant le point $N'$ dans le cercle $\mathscr{C}$.
+
+\item Placer le point $N''$ sym\'etrique du point $N$ par la sym\'etrie d'axe $(OI)$. Donner les coordonn\'ees cart\'esiennes du point $N''$. Puis, donner l'angle rep\'erant le point $N''$ dans le cercle $\mathscr{C}$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Tracer un cercle trigonom\'etrique et placer les points suivants dont le rep\'erage par leur mesure principale :
+
+\questionii{a&A\Big(\dfrac{2\pi}{3}\Big)&
+b&B\Big({-}\dfrac{3\pi}{4}\Big)&
+c&C\Big(\dfrac{5\pi}{6}\Big)\cr
+d&D\Big(\dfrac{\pi}{4}\Big)&
+e&E\Big({-}\dfrac{\pi}{4}\Big)&
+f&F\Big({-}\dfrac{\pi}{6}\Big)\cr}
+
+\item Pr\'eciser les  valeurs du cosinus et du sinus associ\'ees \`a chacun des angles rep\'erant les points pr\'ec\'edents.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Simplifier chacune des expressions suivantes :
+
+\questionii{a&\cos\big(x{-}\pi\big)&
+b&\sin\Big(x{-}\dfrac{\pi}2\Big)\cr
+c&\sin\Big(x{+}\dfrac{\pi}2\Big)&
+d&\cos\Big(x{+}\dfrac{\pi}2\Big)\cr}
+
+\item A l'aide de la relation :%
+\quad$\Se\tan x=\dfrac{\sin x}{\cos x}$%
+\quad o\`u $\Se x\neq\dfrac{\pi}2{+}k{\cdot}\pi$\newline
+simplifier les expressions suivantes :
+
+\questionii{a&\tan\big(x{+}\pi\big)&
+b&\tan\Big(\dfrac{\pi}2{-}x\Big)\cr}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Etablir l'\'egalit\'e :\quad$\cos\dfrac{\pi}6+\cos\dfrac{5\pi}6=0$
+
+\item D\'eterminer la valeur des coefficients $\alpha$ et $\beta$ r\'ealisant l'\'egalit\'e suivante :\newline
+\hglue-\leftmargini$\sansespace 2{\cdot}\cos\Big({-}\dfrac{\pi}7\Big)+3{\cdot}\cos\dfrac{8\pi}7-2{\cdot}\sin\dfrac{6\pi}7+\sin\Big({-}\dfrac{\pi}7\Big)=\alpha{\cdot}\cos\dfrac{\pi}7+\beta{\cdot}\sin\dfrac{\pi}7$
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+Simplifier l'\'ecriture de chacune des expressions ci-dessous :
+
+\questioni{a&\sin\big(3\pi{+}x\big)&
+b&\cos\Big(\dfrac{5\pi}2{-}x\Big)\cr
+c&\cos\Big(x{-}\dfrac{\pi}2\Big)&
+d&\cos\Big(\dfrac{\pi}2{+}x\Big)\cr
+e&\multispan3$\sin \big(\pi{-}x\big)+\cos\Big(\dfrac{\pi}2{-}x\Big)$\hfil\cr
+f&\multispan3$3{\cdot}\sin\big(\pi{+}x\big)-2{\cdot}\sin\big(\pi{-}x\big)+4{\cdot}\sin\big(x{-}\pi\big)$\hfill\cr}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item D\'eterminer les valeurs exactes des expressions ci-dessous :
+
+\questionii[0.75cm]{a&\sin\Big(\dfrac{7\pi}3\Big)&
+b&\cos\Big({-}\dfrac{5\pi}4\Big)&
+c&\cos\Big(\dfrac{5\pi}6\Big)\cr}
+
+\item Exprimer l'expression suivante \`a l'aide des rapports trigonom\'etriques de $\dfrac{\pi}5$ :
+
+\hglue\leftmargini$A=2{\cdot}\cos\dfrac{4\pi}5+3{\cdot}\sin\dfrac{6\pi}5-4{\cdot}\sin\dfrac{3\pi}{10}$
+\end{enumerate}
+
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item On donne la valeur exacte ci-dessous :\newline
+\hglue\leftmarginii$\cos\dfrac{\pi}8=\dfrac{\sqrt{2+\sqrt{2\mathstrut}\ }}2$.
+
+\vskip\parskip
+\begin{enumerate}
+\item En utilisant la formule $\big(\cos x\big){+}\big(\sin x\big)^2{=}1$, d\'eterminer la valeur exacte de $\sin\dfrac{\pi}8$.
+
+\item En d\'eduire la valeur exacte de $\cos\dfrac{5\pi}8$ en justifiant votre d\'emarche.
+
+\item Etablir l'\'egalit\'e :\quad$\tan\dfrac{\pi}8=\sqrt{3-2\sqrt{2\mathstrut}\ }$.
+\end{enumerate}
+
+\item On consid\`ere l'expression suivante :\newline
+\hglue\leftmarginii$A=\cos\dfrac{9\pi}8-3{\cdot}\sin\dfrac{5\pi}8+2{\cdot}\cos\dfrac{7\pi}8$
+
+
+D\'eterminer une \'ecriture de l'expression de $A$ en fonction des rapports trigonom\'etriques de l'angle $\dfrac{\pi}8$.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\dimen0=46mm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Dans le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$, on consid\`ere le cercle trigonom\'etrique repr\'esent\'e ci-dessous :
+
+\vskip0.2cm
+\begin{enumerate}
+\item \begin{enumerate}
+\item Sur le cercle trigonom\'etrique, placer les deux points $M$ et $M'$ ayant pour abscisse $-\dfrac{\sqrt{2\mathstrut}}2$.
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{40}\hbox{\Image{5482_dessin-1.pdf}{1}{44}{44}}
+\end{minipage}
+
+\begin{enumerate}
+\item[] \begin{enumerate}
+\setcounter{enumii}1
+
+\setcounter{enumi}1
+\item Dans l'intervalle des mesures principales, r\'esoudre l'\'equation :\newline
+\hglue\leftmarginii$\cos x=-\dfrac{\sqrt{2\mathstrut}}2$
+\end{enumerate}
+
+\item Dans l'intervalle des mesures principales, r\'esoudre les \'equations suivantes :
+
+\questionii[0.75cm]{a&\sin x=\dfrac12&
+b&\cos x=\dfrac12&
+c&\sin x=-\dfrac{\sqrt{3\mathstrut}}2\cr}
+
+\item R\'esoudre dans $\mathbb{R}$, l'\'equation suivante :\newline
+\hglue\leftmarginii$\cos x=\dfrac{\sqrt{3\mathstrut}}2$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+R\'esoudre dans $\mathbb{R}$ les \'equations suivantes :
+
+\questioni{a&\sin x =\dfrac{\sqrt{3\mathstrut}}2&
+b&\cos x =\dfrac{\sqrt{2\mathstrut}}2\cr}
+
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item R\'esoudre dans l'ensemble $\Se\big]-\pi\,;\,\pi\big]$ des mesures principales, les \'equations suivantes :
+
+\questionii{a&\cos x=\dfrac{\sqrt{2\mathstrut}}2&
+b&\sin x=-\dfrac12\cr
+c&\sin x=\dfrac{\sqrt{3\mathstrut}}2&
+d&\cos x=-\dfrac12\cr}
+
+\item R\'esoudre dans $\mathbb{R}$ les \'equations suivantes :
+
+\questionii{a&\cos x=\dfrac{\sqrt{3\mathstrut}}2&
+b&\sin x =-\dfrac{\sqrt{2\mathstrut}}2\cr}
+\end{enumerate}
+
+\end{multicols*}
+
+\end{document}
