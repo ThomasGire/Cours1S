@@ -1,0 +1,366 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Lieux géométriques et formules trigonométriques}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+On rappelle la formule de la m\'ediane :
+
+\boite{Soient $A$ et $B$ deux points du plan et $I$ le milieu du segment $[AB]$. Pour tout point $M$ du plan, on a la relation :
+
+\hglue\leftmargini$AM^2+BM^2=\dfrac12{\cdot}AB^2+2{\cdot}MI^2$}
+
+On consid\`ere le plan muni d'un rep\`ere orthonormal $\Se\big(O\,;\,I\,;\,J\big)$ et les trois points $A$, $B$ et $C$ de coordonn\'ees respectives :\newline
+\hglue\leftmargini$\Se A\coord{-2}{-3}$%
+\quad\string;\quad%
+$\Se B\coord{-1}{2}$%
+\quad\string;\quad%
+$\Se C\coord{3}{1}$
+
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les mesures $AB$, $AC$ et $BC$.
+
+\item \begin{enumerate}
+\item On note $I$ le milieu du segment $[AB]$. D\'eterminer la mesure de la m\'ediane dans le triangle $ABC$ issue du sommet $C$.
+
+\item On note $J$ le milieu du segment $[AC]$. D\'eterminer la mesure de la m\'ediane dans le triangle $ABC$ issue du sommet $B$.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere un triangle $ABC$ rectangle en $A$ ayant les mesures suivantes :
+
+\hglue\leftmargini$AB=6$%
+\quad\string;\quad%
+$AC=3$
+
+On note $I$ le milieu du segment $[AB]$ et $J$ le milieu de $[IC]$.
+
+On s'int\'eresse \`a l'ensemble $\mathcal{E}$ des points $M$ v\'erifiant la relation :
+
+\hglue\leftmargini$MA^2+MB^2+2{\cdot}MC^2=72$
+
+{\bf $1^{\text{er}}$ m\'ethode :}
+
+\vskip\parskip
+\begin{enumerate}
+\item Montrer que tous points $M$ v\'erifient la relation :
+
+\hglue\leftmarginii$MA^2+MB^2+2{\cdot}MC^2=4{\cdot}MJ^2+JA^2+JB^2+2{\cdot}JC^2$
+
+\item En utilisant par deux fois le th\'eor\`eme de la m\'ediane, d\'emontrer la relation suivante :
+
+\hglue\leftmarginii$\Se M\in\mathcal{E}
+\quad\Longleftrightarrow\quad
+4{\cdot}MJ^2+\dfrac{AB^2}2+IC^2=72$
+
+\item En d\'eduire la nature de l'ensemble $\mathcal{E}$.
+\end{enumerate}
+
+\vskip\parskip
+{\bf $2^{\text{\`eme}}$ m\'ethode :}
+
+On munit le plan du rep\`ere $\Se\Big(A\,;\,\dfrac16{\cdot}\Vec{AB}\,;\,\dfrac13{\cdot}\Vec{AC}\Big)$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees des points $A$, $B$, $C$ dans ce rep\`ere.
+
+\item En notant $\coord{x}{y}$ les coordonn\'ees du point $M$, d\'eterminer une \'equation de $\mathcal{E}$ dans ce rep\`ere.
+
+\item En d\'eduire la nature de l'ensemble $\mathcal{E}$.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+On consid\`ere le plan muni d'un rep\`ere $\Se(O\,;\,I\,;\,J)$ orthonorm\'e et les deux points du plan suivants :\newline
+\hglue\leftmargini$A\coord{-3}{2}$%
+\quad\string;\quad%
+$B\coord{3}{{-}6}$
+
+\vskip\parskip
+\begin{enumerate}
+\item On d\'esignera par $M$ le point de coordonn\'ees $\Se\coord xy$ :
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les coordonn\'ees du point $I$ milieu de $[AB]$.
+
+\item D\'eterminer les coordonn\'ees des vecteurs $\Vec{IM}$ et $\Vec{AB}$.
+
+\item D\'eterminer la longueur $AB$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer l'\'equation cart\'esienne de l'ensemble des points v\'erifiants la relation :
+
+\hglue\leftmarginii$MA^2-MB^2=40$
+
+\item Donner la nature et les \'el\'ements caract\'eristiques des points $M$ v\'erifiant cette relation.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer l'\'equation de l'ensemble des points v\'erifiants la relation :
+
+\hglue\leftmarginii$\Vec{MA}\cdot\Vec{MB}=34$
+
+\item Donner la nature et les \'el\'ements caract\'eristiques des points $M$ v\'erifiant cette relation.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer l'\'equation de l'ensemble des points v\'erifiants la relation :
+
+\hglue\leftmarginii$MA^2+MB^2=150$
+
+
+\item Donner la nature et les \'el\'ements caract\'eristiques des points $M$ v\'erifiant cette relation.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\leavevmode\exercice
+
+
+\dimen0=38mm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Dans le plan muni d'un rep\`ere orthonorm\'e $\Se\big(O\,;\,I\,;\,J\big)$, on consid\`ere les points $M$ et $N$ tel que :
+
+\vskip0.2cm
+\hglue\leftmarginii$\big\|\Vec{OM}\big\|=a$%
+\quad\string;\quad%
+$\big\|\Vec{ON}\big\|=b$%
+
+
+\vskip0.2cm
+$\Se \coord{\Vec{OI}}{\Vec{OM}}=\alpha$%
+\quad\string;\quad%
+$\Se \coord{\Vec{OI}}{\Vec{ON}}=\beta$%
+
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{36}\hbox{\Image{6808_dessin-1.pdf}{1}{38}{38}}
+\end{minipage}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item D\'eterminer les coordonn\'ees des points $M$ et $N$.
+
+\item Donner une expression du produit scalaire $\Vec{OM}{\cdot}\Vec{ON}$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Donner la mesure de l'angle orient\'e :%
+\quad$\coord{\Vec{OM}}{\Vec{ON}}$
+
+\item Donner une autre expression de  $\Vec{OM}{\cdot}\Vec{ON}$.
+\end{enumerate}
+
+\item En d\'eduire l'\'egalit\'e :\newline
+\hglue\leftmarginii$\cos\big(\beta{-}\alpha\big)
+=\cos\beta{\cdot}\cos\alpha-\sin\beta{\cdot}\sin\alpha$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+D\'eterminer une simplification des expressions suivantes :
+
+\vskip\parskip
+\begin{enumerate}
+\item $\cos 2x\cdot\cos x-\sin2x\cdot \sin x$
+
+\item $\sin 3x\cdot \cos 2x-\sin 2x\cdot \cos 3x$
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item En remarquant l'\'egalit\'e $\Se \dfrac{\pi}{12}=\dfrac{\pi}3-\dfrac{\pi}4$, d\'eterminer les valeurs de $\cos\dfrac{\pi}{12}$ et $\sin\dfrac{\pi}{12}$.
+
+\item D\'eterminer les valeurs de : %
+\quad$\cos\dfrac{7\pi}{12}$%
+\quad\string;\quad%
+$\sin\dfrac{7\pi}{12}$
+\end{enumerate}
+
+\leavevmode\exercice[*]
+
+
+Montrer la relation suivante :
+
+\hglue\leftmargini$\sin(a{+}b){\cdot}\cos(a{-}b)
+=\sin a{\cdot}\cos a+\cos b{\cdot}\sin b$
+
+\vspace{3cm}
+
+\leavevmode\exercice[*]
+
+
+\begin{enumerate}
+\item Simplifier l'expression suivante :\newline
+\hglue\leftmarginii$\cos\Big(x{+}\dfrac{\pi}4\Big)-\cos\Big(x{-}\dfrac{\pi}4\Big)$
+
+\item Etablir l'\'egalit\'e suivante  :\newline
+\hglue\leftmarginii$\dfrac{\sin 5x}{\sin2x}+\dfrac{\sin 2x}{\sin x}
+=\dfrac{\big(\sin 3x\big)^2}{\sin(2x){\cdot}\sin(x)}$
+
+\item R\'esoudre l'\'equation suivante :\newline
+\hglue\leftmarginii$\dfrac{\sqrt{3\mathstrut}}2{\cdot}\cos(2x)+\dfrac12{\cdot}\sin(2x)=\cos\dfrac{\pi}7$
+\end{enumerate}
+
+\vspace{-0.1cm}
+\leavevmode\exercice
+
+
+\begin{enumerate}
+\item Etablir la relation suivante :%
+\quad$\Big(\cos\dfrac{\pi}8\Big)^2=\dfrac14{\cdot}\big(\sqrt{2\mathstrut}+2\big)$
+
+\item En d\'eduire la valeur de $\cos\dfrac{\pi}8$.
+
+\item Etablir la relation :%
+\quad$\sin\dfrac{\pi}8=\dfrac12\sqrt{2-\sqrt{2\mathstrut}\ }$
+\end{enumerate}
+
+\vspace{-0.2cm}
+\leavevmode\exercice
+
+\vspace{-0.1cm}
+
+On consid\`ere le plan munit d'un rep\`ere $\Se(O\,;\,I\,;\,J)$ orthonorm\'e.
+
+\vskip\parskip
+\begin{enumerate}
+\item Dans chaque cas, d\'eterminer une \'equation cart\'esienne de la droite perpendiculaire au vecteur $\Vec{u}$  et passant par le point $A$ :
+
+\questionii{a&\Vec{u}=\coord{2}{3}\hbox{\quad et\quad}A\coord{1}{0}\cr
+b&\Vec{u}=\coord{-1}{1}\hbox{\quad et\quad}A\coord{-2}{1}\cr}
+
+\item Tracer la repr\'esentation de chacune de ces droites dans le rep\`ere ci-dessous ainsi qu'un repr\'esentant de chaque vecteur $\Vec{u}$ au point $A$ correspondant :
+
+\hglue-\leftmargini\hfil\hbox{\Image{2591_graph-1.pdf}{1}{91}{55}}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans le plan $\big(O\,;\,I\,;\,J\big)$, on consid\`ere les points $A$, $B$, $C$, $D$ de coordonn\'ees :
+
+\hglue\leftmarginii\vtop{\openup6pt
+\halign{$#$\hfil&&\quad\string;\quad$#$\hfil\cr
+\Se A\coord{-1}{-1}&
+\Se B\coord{2}{-4}&
+C\coord{\dfrac{22}{5}}{\dfrac45}&
+D\coord{\dfrac15}{\dfrac75}\cr}}
+
+\vskip\parskip
+\begin{enumerate}
+\item \begin{enumerate}
+\item Soit $K$ le milieu du segment $[AB]$. On consid\`ere l'ensemble des points $M\coord{x}{y}$ du plan qui v\'erifie la relation :\newline
+\hglue\leftmarginii$\Vec{AB}\cdot \Vec{KM}=0$\newline
+D\'eterminer une \'equation v\'erifi\'ee par les coordonn\'ees $\Se\coord{x}{y}$ du point $M$.
+
+\item En d\'eduire une \'equation cart\'esienne de la m\'ediatrice $(d)$ du segment $[AB]$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item D\'eterminer les coordonn\'ees d'un vecteur orthogonal \`a la droite $(CD)$.
+
+\item En d\'eduire l'\'equation de la droite $(CD)$.
+\end{enumerate}
+
+\item D\'eterminer les coordonn\'ees du point d'intersection des droites $(d)$ et $(d')$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+\vspace{-0.1cm}
+
+On consid\`ere les trois \'equations cart\'esiennes suivantes :
+
+\questionii{a&x^2+y^2+6x-4y+9=0\cr
+b&x^2+y^2-2x+6y+10=0\cr
+c&x^2+y^2+4x-4y+9=0\cr}
+
+\vskip\parskip
+\begin{enumerate}
+\item Ecrire chacune des \'equations ci-dessus sous la forme :\newline
+\hglue\leftmarginii$\big(x-a\big)^2+\big(y-b\big)^2=c$\newline
+o\`u $a$, $b$, $c$ sont des nombres r\'eels \`a d\'eterminer.
+
+\item Pour chaque \'equation, en d\'eduire la nature de l'ensemble des points d\'efini par cette \'equation et en pr\'eciser les \'el\`ements caract\'eristiques
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+Le plan est muni d'un rep\`ere orthonorm\'e $\Se(O\,;\,I\,;\,J)$ dont l'unit\'e est le centim\`etre.
+
+\vskip\parskip
+\begin{enumerate}
+\item On consid\`ere le cercle $\mathscr{C}$ de centre $I$ et de rayon $r$. Dans chaque cas pr\'esent\'e ci-dessous, d\'eterminer l'\'equation du cercle :
+
+\questionii{a&I\coord{1}{2}\hbox{\quad et\quad}r{=}3\,cm\cr
+b&I\coord{-3}{1}\hbox{\quad et\quad}r{=}5\,cm\cr}
+
+\item On consid\`ere le cercle $\mathscr{C}'$ dont les points $A$ et $B$ sont diam\'etralement oppos\'es. D\'eterminer l'\'equation du cercle dans chacun des cas suivants :
+
+\questionii{a&A\coord{-2}{0}\hbox{\quad et\quad}B\coord{4}{0}\cr
+b&A\coord{2}{{-}3}\hbox{\quad et\quad}B\coord{-1}{2}\cr}
+\end{enumerate}
+
+
+
+\leavevmode\exercice[*]
+
+
+Dans le plan muni d'un rep\`ere $\Se\big(O\,;\,I\,;\,J\big)$, on consid\`ere les points $A\coord{-\dfrac{11}5}{\dfrac{12}5}$, $B\coord{\dfrac{21}5}{{-}\dfrac{12}5}$, $C\coord{-3}{2}$ ; les points $A$ et $B$ sont diam\'etralement oppos\'es dans le cercle $\mathscr{C}$ ; le cercle $\mathscr{C}'$ a pour centre $C$ et a pour rayon $2$. On note $M$ et $N$ les deux points d'intersection des cercles $\mathscr{C}$ et $\mathscr{C}'$.
+
+\leavevmode\hfil\hbox{\Image{3088_graph-1.pdf}{1}{93}{63}}
+
+\begin{enumerate}
+\item D\'eterminer les \'equations des cercles $\mathscr{C}$ et $\mathscr{C}'$.
+
+\item D\'eterminer les coordonn\'ees des points $M$ et $N$.
+
+\item En d\'eduire l'\'equation cart\'esienne de la droite $(d)$.
+\end{enumerate}
+
+
+\end{multicols*}
+
+\end{document}
