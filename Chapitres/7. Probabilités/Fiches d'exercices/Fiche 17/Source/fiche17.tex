@@ -1,0 +1,372 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{array,color,multirow,slashbox,multicol}
+\usepackage{mathrsfs}
+\usepackage{eurosym}
+\usepackage{stmaryrd} %Pour le symbole parallele \\sslash
+\usepackage{yhmath}   %pour dessiner les arcs \wideparen
+%\usepackage{multicol}
+\usepackage[portrait,nofootskip]{chingatome}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\titre[18pt]{Lois de probabilités}
+\fontsize{10}{12}\fontfamily{cmr}\selectfont\begin{multicols*}{2}
+
+
+%%%%%%%%%%%%%%%%%
+\leavevmode\exercice
+
+
+Un tournoi d'\'echec affronte deux \'equipes contenant chacune un homme et une femme. Une partie oppose une personne de chaque \'equipe.
+On choisi au hasard une personne de chaque \'equipe pour s'affronter au cours d'une partie. On consid\`ere les trois \'ev\`enements qui ``{\sl omposent}'' l'univers des possibilit\'es :
+
+\vskip\parskip
+\begin{itemize}
+\item $A$ : ``{\sl Deux hommes s'affrontent dans cette partie}''
+
+\item $B$ : ``{\sl Deux femmes s'affrontent dans cette partie}''
+
+\item $C$ : ``{\sl Un homme et une femme s'affrontent dans cette partie}''
+\end{itemize}
+
+\vskip\parskip
+\begin{enumerate}
+\item Conjecturer la probabilit\'e de chacun de ces \'ev\`enements.
+
+\item On utilise la notation suivante pour d\'esigner la composition de chaque groupe :\newline
+\hglue\leftmarginii$\mathcal{G}_1=\big\{H_1\,;\,F_1\big\}$%
+\quad\string;\quad%
+$\mathcal{G}_2=\big\{H_2\,;\,F_2\big\}$
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'ecrire toutes les parties organisables lors de ce tournoi.
+
+\item Donner la probabilit\'e des \'ev\`enements $A$, $B$ et $C$.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+Apr\`es \'etude d'un d\'es truqu\'e dont les faces sont num\'erot\'ees de 1 \`a 6, on obtient la loi de probabilit\'e suivante :
+
+\leavevmode\hfil\vbox{\halign{\vrule\vrule width0pt depth5pt height12pt\ $#$\ \hfil\vrule&&\hbox to1cm{\hfil$#$\hfil}\vrule\cr
+\noalign{\hrule}
+x_i&1&2&3&4&5&6\cr
+\noalign{\hrule}
+p_i&0,2&0,15&0,12&0,17&0,08&0,28\cr
+\noalign{\hrule}}}
+
+D\'eterminer les probabilit\'es de chacun des \'el\'ements suivants :
+
+\vskip\parskip
+\begin{enumerate}
+\item A : ``{\slshape Le r\'esultat est sup\'erieur ou \'egal \`a 4''}.
+
+\item B : ``{\slshape Le r\'esultat est un nombre impair}''.
+
+\item C : ``{\slshape Le r\'esultat est un nombre pair}''.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On lance deux d\'es \'equilibr\'es. D\'eterminer la probabilit\'e de chacun des \'ev\'enements ci-dessous :
+
+\vskip\parskip
+\begin{enumerate}
+\item Ev\'enement A : ``{\sl on obtient un 6 et un 2}'' ;
+\item Ev\'enement B : ``{\sl la somme obtenu est strictement sup\'erieure \`a 8}'' ;
+\item Ev\'enement C : ``{\sl les deux nombres obtenus sont pairs}''.
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\dimen0=5.3cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Une exp\'erience al\'eatoire consiste \`a lancer deux d\'es, rouge et bleu, \`a six faces sumultan\'ement et \`a consid\'erer la somme obtenue par ces deux d\'es. On suppose les d\'es parfaitement \'equilibr\'es.
+
+\vskip0.2cm
+\begin{enumerate}
+\item D\'ecrire l'univers des issues possibles.
+
+\item \begin{enumerate}
+\item Compl\'eter le tableau ci-dessous :
+
+\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{50}\hbox{\Image{5187_dessin-1.pdf}{1}{52}{52}}
+\end{minipage}
+
+\vskip\parskip
+\begin{enumerate}
+\item[] \begin{enumerate}
+\item D\'eterminer la loi de probabilit\'e associ\'ee \`a cette exp\'erience al\'eatoire.
+\end{enumerate}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+On consid\`ere une urne contenant $11$ boules. Certaines sont rondes, d'autres carr\'es. Certaines sont blanches, d'autres sont ray\'es. Elles sont repr\'esent\'es ci-dessous :
+
+On suppose qu'en appuyant sur un bouton, les boules sortent au hasard de l'urne. On vient de constituer une exp\'erience al\'eatoire suivant la loi d'\'equiprobabilit\'e.
+
+On associe un gain \`a chacune des boules de la mani\`ere suivante :
+\vskip\parskip
+\begin{itemize}
+\item Une boule rapporte $1\,$\euro{} alors qu'un carr\'e rapporte $2\,$\euro{}.
+
+\item De plus, si l'\'el\'ement est ray\'e, le gain est augment\'e de $1\,$\euro{}.
+\end{itemize}
+
+Cette association d'une valeur \`a chaque \'ev\`enement \'el\'ementaire constitue une variable al\'eatoire. Notons la $\mathcal{X}$.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la loi de probabilit\'e de la variable $\mathcal{X}$ lorsque le contenu de l'urne est repr\'esent\'e ci-dessous :
+
+\hglue-\leftmargini\hfil\hbox{\Image{7663_dessin-1.pdf}{1}{78}{8}}
+
+\item D\'eterminer la loi de probabilit\'e de la variable $\mathcal{X}$ lorsque le contenu de l'urne est repr\'esent\'e ci-dessous :
+
+\hglue-\leftmargini\hfil\hbox{\Image{7663_dessin-2.pdf}{1}{78}{8}}
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Une urne contient quatre boules bleues num\'erot\'ees de $1$ \`a $4$, trois boules rouges num\'erot\'ees de $1$ \`a $3$ et deux boules vertes num\'erot\'ees de $1$ \`a $2$.
+
+\vskip\parskip
+\begin{enumerate}
+\item On note $\mathcal{X}$ la variable al\'eatoire qui associe \`a chacune des boules le num\'ero inscrit sur celui-ci.\newline
+D\'eterminer la loi de probabilit\'e de la variable al\'eatoire $\mathcal{X}$.
+
+\item Au tirage d'une boule dans cette urne, on associe les r\`egles de jeu suivantes :
+\vskip\parskip
+\begin{itemize}
+\item Si la boule tir\'ee est bleu et porte un entier pair, le joueur gagne $2\,$\euro.
+
+\item Si la boule tir\'ee n'est pas bleu et porte un entier pair, le joueur gagne $3\,$\euro.
+
+\item Sinon le joueur ne gagne rien.
+\end{itemize}
+
+On note $\mathcal{Y}$ la variable al\'eatoire qui associe au tirage d'une boule le gain obtenu.
+
+D\'eterminer la loi de probabilit\'e de la variable al\'eatoire $\mathcal{Y}$.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Dans une jeu bas\'ee sur une exp\'erience al\'eatoire, la variable al\'eatoire $\mathcal{X}$ mesure le gain r\'ealis\'e par le participant. Le tableau suivant pr\'esente la loi de probabilit\'e de la variable $\mathcal{X}$ :
+
+\leavevmode\hfil\vbox{\offinterlineskip
+\halign{\vrule\vrule width0pt height12pt depth5pt\ $#$\ \hfill\vrule&&\hbox to1.2cm{\hfill$#$\hfill}\vrule\cr
+\noalign{\hrule}
+x&0&1&2&3&6\cr
+\noalign{\hrule}
+\mathcal{P}(\mathcal{X}{=}x)&0,34&0,3&0,19&0,15&0,02\cr
+\noalign{\hrule}}}
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer les probabilit\'es suivantes :\newline
+\hglue\leftmarginii$\mathcal{P}(\mathcal{X}{<}3)$%
+\quad\string;\quad%
+$\mathcal{P}(\mathcal{X}{\geq}3)$%
+\quad\string;\quad%
+$\mathcal{P}(2{\leq}\mathcal{X}{<}5)$
+
+\item D\'eterminer l'esp\'erance de cette variable al\'eatoire.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+\dimen0=35mm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Un QCM {\it(questionnaire \`a choix multiples)} est propos\'e \`a des \'el\`eves : il comporte trois questions et pour chacune de ces questions, quatre r\'eponses sont propos\'ees dont une seule est juste.
+
+On souhaite \'etudier le pourcentage de r\'eussite \`a ce QCM si les \'el\`eves y r\'epondent compl\'etement de r\'eponse al\'eatoire ; on suppose alors que les r\'eponses donn\'ees \`a chacune des questions sont ind\'ependantes entre elles.
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill\Baisse{1}{44}\hbox{\Image{5190_arbreProbabilite2-1.pdf}{1}{33}{48}}
+\end{minipage}
+
+On note :
+\vskip\parskip
+\begin{itemize}
+\item $F_i$ : ``{\sl La r\'eponse fournit \`a la question $i$ est fausse}'' ;
+\item $V_i$ : ``{\sl La r\'eponse fournit \`a la question $i$ est vraie}'' ;
+\end{itemize}
+
+\vskip\parskip
+\begin{enumerate}
+\item Compl\'eter l'arbre pond\'er\'e pr\'esent\'e ci-dessus.
+
+\item On note $\mathcal{X}$ la variable al\'eatoire comptant le nombre de bonnes r\'eponses fournies au QCM.
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer la loi de probabilit\'e de la variable al\'eatoire $\mathcal{X}$.
+
+\item Calculer l'esp\'erance de la variable al\'eatoire $\mathcal{X}$.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+En fin d'ann\'ee l'association des \'el\`eves d'un lyc\'ee organise une tombola : $100$ tickets sont mis en vente \`a $10$ euros l'unit\'e.
+
+Voici les diff\'erents tickets gagnants :
+
+\vskip\parskip
+\begin{itemize}
+\item 2 tickets gagnet $50\,$\euro ;
+
+\item 10 tickets gagnent $20\,$\euro ;
+
+\item 20 tickets gagnent $10\,$\euro.
+\end{itemize}
+
+\vskip\parskip
+\begin{enumerate}
+\item Quelle est la somme des gains de cette tombola?
+
+\item D\'eterminer les probabilit\'es des \'ev\'enements suivants  :
+
+\vskip\parskip
+\begin{itemize}
+\item $A$ : ``{\sl le ticket ne gagne rien}'' ;
+\item $B$ : ``{\sl le ticket gagne $10\,$\euro}'' ;
+\item $C$ : ``{\sl le ticket gagne $20\,$\euro}'' ;
+\item $D$ : ``{\sl le ticket gagne $50\,$\euro}'' ;
+ \end{itemize}
+
+\item On consid\`ere la variable al\'eatoire $\mathcal{X}$ qui associe \`a chaque ticket la valeur du ticket gagnant :
+
+\vskip\parskip
+\begin{enumerate}
+\item D\'eterminer l'esp\'erance $E(\mathcal{X})$ de la variable al\'eatoire $\mathcal{X}$.
+
+\item D\'eterminer la variance $V(\mathcal{X})$ et l'\'ecart type $\sigma(\mathcal{X})$ de la variable al\'eatoire $\mathcal{X}$. {\it(on arrondira les valeurs au dixi\`eme pr\`es)}.
+\end{enumerate}
+\end{enumerate}
+
+
+\leavevmode\exercice
+
+
+\dimen0=2.8cm\dimen1\hsize\advance\dimen1-\dimen0
+\begin{minipage}[t]{\dimen1}
+Un jeu consiste \`a tirer une carte dans un jeu de $32$ cartes. On associe \`a chaque carte un gain :
+\vskip0.2cm
+\begin{itemize}
+\item Le Roi de Coeur rapporte $5$\,\euro.
+
+\item Une autre figure de Coeur rapporte $3$\,\euro.
+
+\item Une autre figure rapporte $1$\,\euro.
+
+\item Les autres cartes ne font pas gagner.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{\dimen0}
+\leavevmode\hfill \Baisse{1}{42}\hbox{\Image{5189_dessin-1.pdf}{1}{25}{46}}
+\end{minipage}
+
+On mod\'elise le gain de ce jeu par la variable al\'eatoire $\mathcal{X}$.
+
+\vskip\parskip
+\begin{enumerate}
+\item Donner la loi de probabilit\'e de la variable al\'eatoire $\mathcal{X}$.
+
+\item \begin{enumerate}
+\item D\'eterminer la valeur exacte de l'esp\'erance de la variable al\'eatoire $\mathcal{X}$.
+
+\item Si la mise d'une partie est de $1$\,\euro, ce jeu est-il favorable ou d\'efavorable \`a l'organisateur.
+\end{enumerate}
+
+\item D\'eterminer la variance et l'\'ecart type de la variable al\'eatoire $\mathcal{X}$  arrondie au centi\`eme pr\`es.
+\end{enumerate}
+
+\leavevmode\exercice
+
+
+Une fabrique de chocolats construit dans l'ann\'ee des bo\^ites de chocolats dont $50\,\%$ avec du chocolats au lait, $30\,\%$ de chocolats noirs et $20\,\%$ de chocolats blancs.
+
+$70\,\%$ des bo\^ites pr\'esentent des chocolats natures alors que les autres bo\^ites contiennent des chocolats sont fourr\'es de caramel. Ces proportions sont ind\'ependantes du chocolat utilis\'e pour confectionner la boite.
+
+On consid\`ere les \'ev\`enements :
+\vskip\parskip
+\begin{itemize}
+\item $L$ : ``{\sl le chocolat au lait est utilis\'e}'' ;
+\item $N$ : ``{\sl le chocolat noir est utilis\'e}'' ;
+\item $B$ : ``{\sl le chocolat blanc est utilis\'e}'' ;
+\item $Na$ : ``{\sl les chocolats sont natures}'' ;
+\item $C$ : ``{\sl les chocolats sont fourr\'es au caramel}'' ;
+\end{itemize}
+
+Tous les r\'esultats seront donn\'es sous forme d\'ecimale.
+
+\vskip\parskip
+\begin{enumerate}
+\item Dresser l'arbre pond\'er\'e associ\'e \`a cette situation.
+
+\item On choisit en sortie d'usine, au hasard, une boite produite. D\'eterminer les probabilit\'es des \'ev\`enemnts suivants :
+
+\vskip\parskip
+\begin{enumerate}
+\item ``{\sl la boite contient des chocolats noir et nature}''
+
+\item ``{\sl la boite contient des chocolats noir ou nature}''
+\end{enumerate}
+
+\item L'entreprise fixe les prix des bo\^ites de la mani\`ere suivante :
+\vskip\parskip
+\begin{itemize}
+\item le prix de base d'une bo\^ite de chocolat est de $9$\,\euro ;
+
+\item si le chocolat utilis\'e est le chocolat noir alors le prix est major\'e de $4$\,\euro ;
+
+\item si le chocolat utilis\'e est le chocolat blanc alors le prix est major\'e de $2$\,\euro ;
+
+\item si les chocolats sont fourr\'es au caramel, le prix de la bo\^ite augmente de $2$\,\euro.
+\end{itemize}
+
+La variable al\'eatoire $\mathcal{X}$ associe \`a bo\^ite produit par l'usine son prix de ventre.
+
+\vskip\parskip
+\begin{enumerate}
+\item Dresser le tableau repr\'esentant la loi de probabilit\'e associ\'ee \`a la variable al\'eatoire $\mathcal{X}$.
+
+\item D\'eterminer l'esp\'erance de la variable al\'eatoire $\mathcal{X}$ arrondi au dixi\`eme pr\`es.
+\end{enumerate}
+\end{enumerate}
+
+
+\end{multicols*}
+
+
+\end{document}
